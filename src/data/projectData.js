@@ -7,7 +7,8 @@ export const mobileProjectData = [
         video: "videos/creepur1final.mp4",
         language: "Kotlin, Android SDK", 
         tech: "Retrofit, Firebase Database, LiveData, Fragments, MVVM",
-        videoClass: "videos"
+        videoClass: "videos",
+        projectClass: "mobileProjectSection"
     },    {
         projectName: "WithWtvr",
         floatSide: "right",
@@ -16,7 +17,8 @@ export const mobileProjectData = [
         video: "videos/video_ww_right_final.mp4",
         language: "Java, Android SDK", 
         tech: "Bluetooth, Google Maps and Google Places APIs, ROOM(MySQL)",
-        videoClass: "videos"
+        videoClass: "videos",
+        projectClass: "mobileProjectSection"
     },
     {
         projectName: "BushLand",
@@ -26,7 +28,8 @@ export const mobileProjectData = [
         video: "videos/KoalaMaybe.mp4",
         language: "Java, Android SDK", 
         tech: "Utilized Fragments, Lifecycles, Backstack Management, Touch Events, Firebase Messaging, JSON",
-        videoClass: "videos"
+        videoClass: "videos",
+        projectClass: "mobileProjectSection"
     }
 ]
 
@@ -39,7 +42,8 @@ export const otherProjectData = [
         video: "videos/CSA_Video.mp4",
         language: "Python", 
         tech: "Selenium, TkInter, BeautifulSoup4, MS Excel",
-        videoClass: "videosOther"
+        videoClass: "videosOther",
+        projectClass: "otherProjectSection"
     },
     {
         projectName: "Portfolio Website",
@@ -49,7 +53,8 @@ export const otherProjectData = [
         video: "videos/port_vid.mp4",
         language: "React", 
         tech: "HTML, CSS, Javascript, Premiere Pro",
-        videoClass: "videosOther"
+        videoClass: "videosOther",
+        projectClass: "otherProjectSection"
     },
     {
         projectName: "IIROC Forms",
@@ -59,7 +64,8 @@ export const otherProjectData = [
         video: "videos/iiroc_video_3.mp4",
         language: "Java", 
         tech: "JavaFX, SceneBuilder, MS Excel",
-        videoClass: "videosOther"
+        videoClass: "videosOther",
+        projectClass: "otherProjectSection"
     },    
     {
         projectName: "PyGame",
@@ -69,7 +75,8 @@ export const otherProjectData = [
         video: "videos/Python_Vid.mp4",
         language: "Python", 
         tech: "PyGame, Photoshop",
-        videoClass: "videosOther"
+        videoClass: "videosOther",
+        projectClass: "otherProjectSection"
     }
 ]
 

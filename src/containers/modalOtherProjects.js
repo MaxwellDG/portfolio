@@ -16,7 +16,8 @@ export default class ModalOtherProjects extends React.Component{
             video={ project.video }
             language={ project.language }
             tech={ project.tech }
-            videoClass={ project.videoClass }>
+            videoClass={ project.videoClass }
+            projectClass={ project.projectClass }>
         </ModalMediaBlock>
 ) 
 

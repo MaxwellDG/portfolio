@@ -17,7 +17,7 @@ const initialState = [
         index: 2
       },
       {
-        text: "Resume",
+        text: "My Resume",
         selected: false,
         index: 3
       }

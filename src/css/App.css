@@ -6,7 +6,7 @@ html, body, #root{
 
 .App {
   text-align: center;
-  background: url("../images/fall-wallpaper.png");
+  background: url("/images/fallpaper.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -50,22 +50,19 @@ html, body, #root{
   outline: none;
   padding: 15px;
   z-index: 3;
-  filter: blur(0px);
   font-family: Geneva, Tahoma, sans-serif;
 }
 
 .modalContentResume{
-  width: 50%;
+  width: 80%;
   height: 85%;
   border: 1px solid #ccc;
   background-color: rgba(25, 25, 25, .8);
   margin: 3% auto;
-  overflow: auto;
   border-radius: 3px;
   outline: none;
   padding: 15px;
   z-index: 3;
-  filter: blur(0px);
   overflow: hidden;
 }
 
@@ -80,7 +77,6 @@ html, body, #root{
   outline: none;
   padding: 15px;
   z-index: 3;
-  filter: blur(0px);
 }
 
 .modalOverlay{
@@ -89,6 +85,7 @@ html, body, #root{
   left: 0;
   right: 0;
   bottom: 0;
+  overflow: auto;
 }
 
 .modalOverlayProjects{
@@ -119,7 +116,6 @@ html, body, #root{
 .standardText{
   color: white;
   text-align: center;
-  line-height: "1.6";
   margin-top: "25px";
   font-family: "Verdana"
 }
@@ -144,7 +140,6 @@ html, body, #root{
 
 #photoAboutMe{
   width: 50%;
-  height: 40%; 
   display: block;
   margin: 25px auto 0px auto; 
   border-radius: 3px;
@@ -164,41 +159,47 @@ html, body, #root{
 }
 
 .iconSkill img{
-  height: 75px;
   width: 75px;
 }
 
-.projectSection{
+.mobileProjectSection{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid white;
+}
+
+.otherProjectSection{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
   padding: 15px;
   border-bottom: 1px solid white;
 }
 
 .videos{
-  height: 350px;
   width: 215px;
 }
 
 .projectVideoBlock{
-  height:350px;
-  width: 400px;
+  height: 100%;
 }
 
 .videosOther{
-  height: 350px;
-  width: 400px;
+  max-width: 350px;
 }
 
 .projectInfoBlock{
   display: inline-block;
-  overflow: auto;
   color: white;
   text-align: center;
-  overflow: auto;
   padding: 15px;
 }
 
@@ -211,6 +212,7 @@ html, body, #root{
   width: 25px;
   height: 25px;
   margin-right: 25px;
+  align-self: flex-start;
 }
 
 
@@ -219,14 +221,10 @@ html, body, #root{
 /* Buttons */
 
 #modalButtonsContainer{
+  display: flex;
+  justify-content: space-around;
   list-style-type: none;
   padding: 20px 0px 0px 0px;
-}
-
-.modalButton{
-  color: white;
-  display: inline-block;
-  margin: 0px 25px 0px 25px;
 }
 
 .modalButton :hover{
@@ -237,7 +235,7 @@ html, body, #root{
   background: none;
   border: 1px solid white;
   padding: 10px 30px 10px 30px;
-  margin: 0px 15px 0px 15px;
+  margin: 0px 10px 0px 10px;
   color: white;
   font-size: 14px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -248,14 +246,19 @@ html, body, #root{
 /* Profile Links */
 
 #mainImageLinks{
+  display: flex;
+  justify-content: center;
   list-style-type: none;
   padding: 0;
 }
 
 #mainImageLinks li{
-  display: inline-block;
   padding: 5px 15px 5px 15px;
   margin: 0px 15px 0px 15px;
+}
+
+#mainImageLinks img{
+  max-width: 75px;
 }
 
 
@@ -274,5 +277,156 @@ html, body, #root{
   font-weight: 600;  
 }
 
+
+/* Media Queries */
+
+@media screen and (max-width: 1350px){
+  .otherProjectSection{
+    flex-direction: column;
+  }
+
+  .otherProjectSection .sourceCode{
+    margin-right: 0px;
+  }
+
+  .otherProjectSection .sourceCode{
+    order: 1;
+  }
+
+  .otherProjectSection .projectInfoBlock{
+    order: 2;
+  }
+
+  .otherProjectSection .projectVideoBlock{
+    order: 3;
+  }
+
+  .videosOther{
+    max-height: 300px;
+  }
+}
+
+@media screen and (max-width: 1160px){
+  .iconSkill img{
+    height: 50px;
+    width: 50px;
+  }
+}
+
+
+@media screen and (max-width: 900px){
+  #myName{
+    padding-right: 35px;
+    padding-left: 35px;
+    margin: 0px 0px 20px 0px;
+    display: inline-block;
+    font-size: 40px;
+    color: white;
+    border-bottom: 1px solid white;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  #modalButtonsContainer{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modalButton{
+    margin: 10px 0px 10px 0px;
+  }
+
+  .modalHeader{
+    font-size: 20px;
+  }
+
+  .modalContentAbout{
+    width: 80%;
+  }
+
+  .modalContentResume{
+    width: 95%;
+  }
+
+  .modalContentProjects{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .videosOther{
+    max-width: 250px;
+  }
+
+  #mainBlock{
+    padding: 5px 0px 5px 0px;
+  }
+
+  #myName{
+    font-size: 24px;
+    margin: 0px 0px 5px 0px;
+  }
+
+  #modalButtonsContainer{
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .modalButtonP{
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .modalButton button{
+    padding: 5px 30px 5px 30px;
+    font-size: 10px;
+  }
+
+  #mainImageLinks{
+    margin: 0px;
+  }
+
+  #mainImageLinks img{
+    max-width: 45px;
+    padding: 0px;
+  }
+
+  .iconSkill{
+    margin: 0px 5px 0px 5px;
+  }
+
+  .iconSkill img{
+    max-width: 20px;
+  }
+
+  .mobileProjectSection{
+    flex-direction: column;
+  }
+
+  .mobileProjectSection .sourceCode{
+    margin-right: 0px;
+  }
+
+  .mobileProjectSection .sourceCode{
+    order: 1;
+  }
+
+  .mobileProjectSection .projectInfoBlock{
+    order: 2;
+  }
+
+  .mobileProjectSection .projectVideoBlock{
+    order: 3;
+  }
+
+  .videos{
+    max-height: 200px;
+  }
+
+  .videosOther{
+    max-width: 250px;
+  }
+
+}
 
 

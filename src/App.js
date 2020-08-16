@@ -18,7 +18,7 @@ class App extends React.Component{
     if(isButtonSelected.length === 0){
       main = (
         <div id="mainBlock">          
-          <p className="standardText" id="myName">Maxwell Dunk-Green</p>
+          <p className="standardText" id="myName">Maxwell Dunk&#8209;Green</p>
           <ImageLinksContainer></ImageLinksContainer>
           <ModalButtonsContainer> </ModalButtonsContainer>
         </div>

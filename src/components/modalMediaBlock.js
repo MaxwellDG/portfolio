@@ -4,11 +4,11 @@ export default class ModalMediaBlock extends React.Component{
 
     render(){
 
-        const { projectName, floatSide, githubLink, description, video, language, tech, videoClass } = this.props
+        const { projectName, projectClass, floatSide, githubLink, description, video, language, tech, videoClass } = this.props
 
         if(floatSide === "left"){
             return(
-                <div className="projectSection">
+                <div className={ projectClass }>
                     <div className="projectVideoBlock">
                         <video className={ videoClass } type="video/mp4" controls>
                             <source src={ video }/>
@@ -29,7 +29,7 @@ export default class ModalMediaBlock extends React.Component{
             )
         } else if (floatSide === "right"){
             return(
-            <div className="projectSection">
+            <div className={ projectClass }>
                 <a href={ githubLink } target="_blank" rel="noopener noreferrer" className="sourceCode">
                     <img alt="github_link" src="images/github_icon_white.png" width="50px" height="50px"/>
                 </a>
