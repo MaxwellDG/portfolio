@@ -9,12 +9,12 @@ class ImageLink extends PureComponent{
     }
 
     render(){
-        const { altText, image, link } = this.props
+        const { altText, image, link, id } = this.props
 
         return(
             <li>
                 <a href={ link } target="_blank" rel="noopener noreferrer">
-                    <img alt={ altText } src={ image }/>
+                    <img id={ id } alt={ altText } src={ image }/>
                 </a>
             </li> 
         )

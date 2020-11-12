@@ -35,6 +35,28 @@ export const mobileProjectData = [
 
 export const otherProjectData = [
     {
+        projectName: "Lucky13 Tattoos",
+        floatSide: "right",
+        githubLink: "https://github.com/MaxwellDG/lucky13",
+        description: "The website for the Toronto tattoo parlour. Static plus an e-commerce section.",
+        video: "videos/homepage-video.mp4",
+        language: "React.js(TS), Node.js", 
+        tech: "Stripe, Express, AWS",
+        videoClass: "videosOther",
+        projectClass: "otherProjectSection"
+    },
+    {
+        projectName: "Homebase",
+        floatSide: "left",
+        githubLink: "https://github.com/MaxwellDG/homebase",
+        description: "A homepage that is meant to increase productivity. There's no clutter, and instead there are groupings of customizable websites to expedite pre-determined tasks.",
+        video: "videos/homepage-video.mp4",
+        language: "React.js, Node.js", 
+        tech: "Redux, Express, MongoDB, Mongoose, AWS",
+        videoClass: "videosOther",
+        projectClass: "otherProjectSection"
+    },
+    {
         projectName: "CSA-Scraper",
         floatSide: "right",
         githubLink: "https://github.com/MaxwellDG/CSA_Scraper",
@@ -51,7 +73,7 @@ export const otherProjectData = [
         githubLink: "https://github.com/MaxwellDG/portfolio",
         description: "The website you're currently viewing!",
         video: "videos/port_vid.mp4",
-        language: "React", 
+        language: "React.js", 
         tech: "HTML, CSS, Javascript, Premiere Pro",
         videoClass: "videosOther",
         projectClass: "otherProjectSection"
