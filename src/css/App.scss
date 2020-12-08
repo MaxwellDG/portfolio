@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
 
+$color-accent: rgb(196, 122, 25);
+
 /* Main */
 
 html, body, #root{
   background: url("/images/fallpaper.jpg");
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 h1{
@@ -23,25 +26,25 @@ button{
   cursor: pointer;
 }
 
-iframe{
-  width: 100%;
-  height: 1500px;
-}
 
-.page{
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
 
 /* Page: Home */
+
+.page{
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+}
 
 #page-home{
   display: flex;
   justify-content: center;
   align-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 #section-name{
@@ -77,72 +80,132 @@ iframe{
   padding: 5px;
 }
 
-#container-buttons{
+.container-buttons{
   display: flex;
   flex-direction: column;
   list-style-type: none;
   padding: 0;
   justify-content: space-between;
   margin-left: 100px;
+  
+  li{
+    position: relative;
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid white;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+
+
+    cursor: pointer;
+
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(39, 39, 39, 0.8);
+      z-index: -1;
+      transition: 0.5s;
+      transform-origin: 0 0;
+      transform: scaleX(0);
+    }
+  
+    &:hover::before{
+      z-index: -1;
+      transform: scaleX(1);
+    }
+
+    button{
+      color: white;
+      font-size: 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-weight: 600;
+      white-space: nowrap;
+      border: none;
+      background: none;
+    }
+  }
 }
 
-#container-buttons button{
-  position: relative;
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid white;
-  padding: 10px 30px 10px 30px;
-  margin: 20px 10px 0px 10px;
-  color: white;
-  font-size: 20px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 600;
-  white-space: nowrap;
-}
+#home-cv-button{
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  font-size: 24px;
 
-#container-buttons button:hover{
-  cursor: pointer;
-}
+  div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
-#container-buttons button::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  .cv-top-div{
+    background: $color-accent;
+    padding: 15px;
+  }
+
+  &::before{
+    display: none;
+  }
+}  
+
+.cv-bot-div{
   width: 100%;
-  height: 100%;
-  background: rgba(227, 227, 227, 0.2);
-  z-index: -1;
-  transition: 0.5s;
-  transform-origin: 0 0;
-  transform: scaleX(0);
-}
+  display: flex;
+  justify-content: space-evenly;
 
-#container-buttons button:hover::before{
-  z-index: -1;
-  transform: scaleX(1);
-}
+  button{
+    height: 35px;
+    width: 40px;
+    background: none;
+    border: none;
+  }
 
+  #download{
+    background-image: url("/images/icon_download.png");
+    background-size: cover;
+
+    &:hover{
+      background-image: url("/images/icon_download_naranja.png");
+    }
+  }
+
+  #fullscreen{
+    background-image: url("/images/icon_fullscreen.png");
+    background-size: cover;
+
+    &:hover{
+      background-image: url("/images/icon_fullscreen_naranja.png");
+    }
+  }
+}
+  
+  
 .standardText{
   color: white;
   text-align: center;
   margin-top: "25px";
   font-family: 'Roboto Slab', serif;
 }
-
-
+  
+  
 /* About */
 
 #about-container{
   font-family: 'Roboto Slab', serif;
-  padding: 5% 20% 5% 20%;
+  top: 50%;
+  left: 50%;
 }
 
 #return-button{
   position: relative;
   background: rgba(0, 0, 0, 0.6);
-  border: 1px solid rgb(196, 122, 25);
+  border: 1px solid $color-accent;
   color: white;
   padding: 5px 30px 5px 30px;
   margin-bottom: 5px;
@@ -185,22 +248,30 @@ iframe{
   flex-direction: column;
 }
 
-#other-buttons button{
+#other-buttons li{
   position: relative;
   background: rgba(0, 0, 0, 0.6);
   border: 1px solid rgb(196, 122, 25);
-  color: white;
-  padding: 5px 30px 5px 30px;
   margin-bottom: 5px;
   z-index: 1;
+  color: white;
   font-family: 'Merienda', cursive;
+  list-style-type: none;
+  text-align: center;
 }
+.buttons-topSection{
+  padding: 5px 30px 5px 30px;
+  background: none;
+  border: none;
+  font-family: 'Merienda', cursive;
+  color: white;
 
-#other-buttons button:hover{
-  color: black;
-}
+  &:hover{
+      color: black;
+    }
+  }
 
-#other-buttons button::before{
+.buttons-topSection::before{
   content: "";
   position: absolute;
   top: 0;
@@ -214,11 +285,44 @@ iframe{
   transition: 0.5s;
   transform-origin: 0 0;
   transform: scaleX(0);
-
 }
 
-#other-buttons button:hover::before{
+.buttons-topSection:hover::before{
   transform: scaleX(1);
+}
+
+
+
+#cv-button{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+
+  div{
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .cv-top-div{
+    background: rgb(196, 122, 25);
+    position: relative;
+    width: 35px;
+    margin: 25px 0;
+    height: 100%;
+  }
+
+  p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    color: black;
+  }
 }
 
 #content-container{
@@ -245,9 +349,7 @@ iframe{
 
 /* Projects */
 
-.page{
-  padding: 2% 20% 2% 20%
-}
+
 
 .skillsIcons{
   margin: 0;
@@ -268,6 +370,7 @@ iframe{
 .iconSkill img{
   width: 75px;
 }
+
 
 .mobileProjectSection{
   display: flex;
@@ -337,13 +440,6 @@ iframe{
 }
 
 
-/* Resume */
-
-#iframe-container{
-  height: 100%;
-}
-
-
 /* Profile Links */
 
 #mainImageLinks{
@@ -366,7 +462,7 @@ iframe{
 /* Other */
 
 #textLang{
-  color: rgba(227, 140, 63);
+  color: rgb(236, 120, 18);
 }
 
 .textThing{
@@ -377,6 +473,7 @@ iframe{
 #hello{
   font-weight: 600;  
 }
+
 
 
 /* Media Queries */
@@ -413,10 +510,19 @@ iframe{
     height: 50px;
     width: 50px;
   }
+
+  
+
+  .page{
+    width: 90%;
+    margin: 0 auto;
+    top: 40%;
+  }
 }
 
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1000px){
+
   #myName{
     padding-right: 35px;
     padding-left: 35px;
@@ -426,6 +532,25 @@ iframe{
     border-bottom: 1px solid white;
     text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+  .container-buttons{
+    margin-left: 15px;
+
+    li{
+      padding: 5px 10px;
+    }
+  }
+
+  #photoAboutMe{
+    width: 150px;
+  }
+
+  #content-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
   }
 
   #temporaryBlock{
@@ -468,7 +593,38 @@ iframe{
   }
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 700px){
+
+  #page-home{
+    flex-direction: column;
+    width: 100%;
+
+    #section-name{
+      width: 100%;
+    }
+
+    .container-buttons{
+      width: 100%;
+      margin: 10px 0;
+
+      a{
+        width: 100%;
+        margin: 15px auto;
+
+
+        li{
+          padding: 10px 0;
+          border: none;
+        }
+      }
+    }
+  }
+
+  #home-cv-button{
+    width: 60%;
+    margin: 0 auto;
+  }
+
   .videosOther{
     max-width: 250px;
   }
@@ -516,13 +672,19 @@ iframe{
 
   .mobileProjectSection{
     flex-direction: column;
+    padding: 15px;
+  }
+
+  .projectInfoBlock{
+    padding: 10px;
+  }
+
+  .otherProjectSection{
+    padding: 15px;
   }
 
   .mobileProjectSection .sourceCode{
     margin-right: 0px;
-  }
-
-  .mobileProjectSection .sourceCode{
     order: 1;
   }
 

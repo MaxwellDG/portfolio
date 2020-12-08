@@ -1,12 +1,6 @@
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
 
 class ImageLink extends PureComponent{
-
-    static propTypes = {
-        altText: PropTypes.string,
-        image: PropTypes.string,
-    }
 
     render(){
         const { altText, image, link, id } = this.props

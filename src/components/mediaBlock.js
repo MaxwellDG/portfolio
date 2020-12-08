@@ -18,8 +18,8 @@ export default class MediaBlock extends React.Component{
                             <h3 className="projectHeader">{ projectName }</h3>
                             <p id="description">{ description }</p>
                             <ul style={{listStyleType: "none", padding: "0px"}}>
-                                <li ><div id="textLanguage"><p className="textThing">Language: </p><p id="textLang">{ language }</p></div></li>
-                                <li id="textTech"><p className="textThing">Tech: </p><p>{ tech }</p></li>
+                                <li key={ 0 }><div id="textLanguage"><p className="textThing">Language: </p><p id="textLang">{ language }</p></div></li>
+                                <li key={ 1 } id="textTech"><p className="textThing">Tech: </p><p>{ tech }</p></li>
                             </ul>
                     </div>
                     <a href={ githubLink } target="_blank" rel="noopener noreferrer" className="sourceCode">
@@ -31,14 +31,14 @@ export default class MediaBlock extends React.Component{
             return(
             <div className={ projectClass }>
                 <a href={ githubLink } target="_blank" rel="noopener noreferrer" className="sourceCode">
-                    <img class="githubLink" alt="github_link" src="images/github_icon_white.png" width="50px" height="50px"/>
+                    <img className="githubLink" alt="github_link" src="images/github_icon_white.png" width="50px" height="50px"/>
                 </a>
                 <div className="projectInfoBlock">
                     <h3 className="projectHeader">{ projectName }</h3>
                     <p id="description">{ description }</p>
                     <ul style={{listStyleType: "none", padding: "0px"}}>
-                        <li ><div id="textLanguage"><p className="textThing">Language: </p><p id="textLang">{ language }</p></div></li>
-                        <li id="textTech"><p className="textThing">Tech: </p><p>{ tech }</p></li>
+                        <li key={ 0 }><div id="textLanguage"><p className="textThing">Language: </p><p id="textLang">{ language }</p></div></li>
+                        <li key={ 1 }id="textTech"><p className="textThing">Tech: </p><p>{ tech }</p></li>
                     </ul>
                 </div>
                 <div className="projectVideoBlock">
