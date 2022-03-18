@@ -67,10 +67,10 @@ export const otherProjectData = [
     {
         projectName: "Duel Arena",
         floatSide: "left",
-        link: "https://github.com/MaxwellDG/lucky13",
+        link: "https://github.com/MaxwellDG/duel_arena",
         description: "A crypto gambling website. Instead of users having to take bad odds due to casinos taking a cut, they can bet directly against each other with 50/50 -> 2x odds.",
         subText: '* This is a personal project done for the purpose of learning Blockchain, and it\'s currently in development',
-        image: "bardsquill.png",
+        image: "images/duelarena.png",
         language: "Solidity, Vue.js", 
         tech: "Truffle, ChainLink, SkyNet",
         videoClass: "videosOther",
