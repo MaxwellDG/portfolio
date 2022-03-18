@@ -34,7 +34,7 @@ export default class MediaBlock extends React.Component{
                     {floatSide === 'left' ? 
                     <MultiMedia video={video} image={image} videoClass={videoClass}/> 
                     : 
-                    <GithubLink isNDA={isNDA} githubLink={link} toggleNDAModal={this.toggleNDAModal}/>
+                    <GithubLink isNDA={isNDA} link={link} toggleNDAModal={this.toggleNDAModal}/>
                     }
                     <div className="projectInfoBlock">
                             <h3 className="projectHeader">{ projectName }</h3>
@@ -45,7 +45,7 @@ export default class MediaBlock extends React.Component{
                             </ul>
                     </div>
                     {floatSide === 'left' ? 
-                    <GithubLink isNDA={isNDA} githubLink={link} toggleNDAModal={this.toggleNDAModal}/>
+                    <GithubLink isNDA={isNDA} link={link} toggleNDAModal={this.toggleNDAModal}/>
                     : 
                     <MultiMedia video={video} image={image} /> 
                     }
