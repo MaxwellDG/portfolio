@@ -10,20 +10,7 @@ export default class DesktopProjects extends React.Component{
 
     render(){
 
-        const otherProjects = ProjectData.otherProjectData.map((project, index) =>
-        <ModalMediaBlock 
-            key={ index }
-            projectName={ project.projectName }
-            floatSide={ project.floatSide }
-            githubLink={ project.githubLink }
-            description={ project.description }
-            video={ project.video }
-            language={ project.language }
-            tech={ project.tech }
-            videoClass={ project.videoClass }
-            projectClass={ project.projectClass }>
-        </ModalMediaBlock>
-) 
+        const otherProjects = ProjectData.otherProjectData.map((project, index) => <ModalMediaBlock key={ index } project={project} />) 
 
         return(
             <motion.div 

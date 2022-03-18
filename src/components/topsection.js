@@ -1,6 +1,5 @@
 import React from 'react' 
 import { Link } from 'react-router-dom'
-import fileDownload from 'js-file-download';
 
 export const TopSection = (props) => {
 
@@ -18,8 +17,8 @@ export const TopSection = (props) => {
                             <p>CV</p>
                         </div>
                     <div className="cv-bot-div">
-                        <a href={ process.env.PUBLIC_URL + 'images/MaxMDG.Resume.pdf' } download><button id="download" /></a>
-                        <a href={ process.env.PUBLIC_URL + 'images/MaxMDG.Resume.pdf' }><button id="fullscreen" /></a>
+                        <a href={ process.env.PUBLIC_URL + 'images/MaxwellMDG2022.pdf' } download><button id="download" /></a>
+                        <a href={ process.env.PUBLIC_URL + 'images/MaxwellMDG2022.pdf' }><button id="fullscreen" /></a>
                     </div>
                     </li>
                 </div>

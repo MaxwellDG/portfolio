@@ -10,20 +10,7 @@ export default class MobileProjects extends React.Component{
 
     render(){
 
-        const mobileProjects = ProjectData.mobileProjectData.map((project, index) =>
-                <MediaBlock 
-                    key={ index }
-                    projectName={ project.projectName }
-                    floatSide={ project.floatSide }
-                    githubLink={ project.githubLink }
-                    description={ project.description }
-                    video={ project.video }
-                    language={ project.language }
-                    tech={ project.tech }
-                    videoClass={ project.videoClass }
-                    projectClass={ project.projectClass }>
-                </MediaBlock>
-        ) 
+        const mobileProjects = ProjectData.mobileProjectData.map((project, index) => <MediaBlock key={ index } project={project} />)
 
         return(
             <div id="mobile-container">
