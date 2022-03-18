@@ -1,53 +1,57 @@
 import React from 'react'
+import MultiMedia from './media/multimedia';
+import GithubLink from './media/githubLink';
+import Modal from './modal';
+import NDAContent from './media/ndaContent'
 
 export default class MediaBlock extends React.Component{
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            isShowingNDAModal: false
+        };
+        this.toggleNDAModal = this.toggleNDAModal.bind(this);
+    }
+
+    toggleNDAModal(){
+        this.setState(prev => ({
+            isShowingNDAModal: !prev.isShowingNDAModal
+        }));
+    }
+
+
     render(){
 
-        const { projectName, projectClass, floatSide, githubLink, description, video, language, tech, videoClass } = this.props
+        const { projectName, projectClass, floatSide, isNDA, link, linkText, description, video, image, language, tech, videoClass } = this.props.project
 
-        if(floatSide === "left"){
-            return(
+        return(
+            <div>
+                <Modal closeModal={this.toggleNDAModal} isShowing={this.state.isShowingNDAModal}>
+                    <NDAContent linkText={linkText} link={link}/>
+                </Modal>
                 <div className={ projectClass }>
-                    <div className="projectVideoBlock">
-                        <video className={ videoClass } type="video/mp4" controls>
-                            <source src={ video }/>
-                        </video>
-                    </div> 
+                    {floatSide === 'left' ? 
+                    <MultiMedia video={video} image={image} videoClass={videoClass}/> 
+                    : 
+                    <GithubLink isNDA={isNDA} githubLink={link} toggleNDAModal={this.toggleNDAModal}/>
+                    }
                     <div className="projectInfoBlock">
                             <h3 className="projectHeader">{ projectName }</h3>
                             <p id="description">{ description }</p>
-                            <ul style={{listStyleType: "none", padding: "0px"}}>
+                            <ul style={{listStyleType: "none", padding: "0px", display: 'flex', justifyContent: 'space-evenly'}}>
                                 <li key={ 0 }><div id="textLanguage"><p className="textThing">Language: </p><p id="textLang">{ language }</p></div></li>
                                 <li key={ 1 } id="textTech"><p className="textThing">Tech: </p><p>{ tech }</p></li>
                             </ul>
                     </div>
-                    <a href={ githubLink } target="_blank" rel="noopener noreferrer" className="sourceCode">
-                        <img alt="github_link" src="images/github_icon_white.png" width="50px" height="50px"/>
-                    </a>
+                    {floatSide === 'left' ? 
+                    <GithubLink isNDA={isNDA} githubLink={link} toggleNDAModal={this.toggleNDAModal}/>
+                    : 
+                    <MultiMedia video={video} image={image} /> 
+                    }
                 </div>
-            )
-        } else if (floatSide === "right"){
-            return(
-            <div className={ projectClass }>
-                <a href={ githubLink } target="_blank" rel="noopener noreferrer" className="sourceCode">
-                    <img className="githubLink" alt="github_link" src="images/github_icon_white.png" width="50px" height="50px"/>
-                </a>
-                <div className="projectInfoBlock">
-                    <h3 className="projectHeader">{ projectName }</h3>
-                    <p id="description">{ description }</p>
-                    <ul style={{listStyleType: "none", padding: "0px"}}>
-                        <li key={ 0 }><div id="textLanguage"><p className="textThing">Language: </p><p id="textLang">{ language }</p></div></li>
-                        <li key={ 1 }id="textTech"><p className="textThing">Tech: </p><p>{ tech }</p></li>
-                    </ul>
-                </div>
-                <div className="projectVideoBlock">
-                    <video className={ videoClass } type="video/mp4" controls>
-                        <source src={ video }/>
-                    </video>
-                </div> 
-            </div>    
-            )}
+            </div>
+        )
     }
 }
                 
