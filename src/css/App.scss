@@ -335,6 +335,7 @@ button{
   border-radius: 5px;
   display: flex;
   padding: 25px;
+  margin-bottom: 10px;
 }
 
 #photoAboutMe{
@@ -355,6 +356,10 @@ button{
 
 
 .skillsIcons{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
   margin: 0;
   padding: 0;
   float: center;
@@ -365,7 +370,6 @@ button{
 }
 
 .iconSkill{
-  display: inline-block;
   margin-right: 10px;
   margin-left: 10px;
 }
@@ -408,7 +412,7 @@ button{
 }
 
 .projectImage{
-  width: 100%;
+  height: 200px;
 }
 
 .videosOther{
@@ -429,7 +433,6 @@ button{
 }
 
 .sourceCode{
-  width: 25px;
   height: 25px;
   margin-right: 25px;
   align-self: flex-start;
@@ -565,6 +568,7 @@ button{
     justify-content: center;
     align-items: center;
     padding: 5px;
+    margin-bottom: 10px;
   }
 
   #temporaryBlock{

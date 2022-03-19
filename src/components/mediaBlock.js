@@ -47,7 +47,7 @@ export default class MediaBlock extends React.Component{
                     {floatSide === 'left' ? 
                     <GithubLink isNDA={isNDA} link={link} toggleNDAModal={this.toggleNDAModal}/>
                     : 
-                    <MultiMedia video={video} image={image} /> 
+                    <MultiMedia video={video} image={image} videoClass={videoClass}/> 
                     }
                 </div>
             </div>
