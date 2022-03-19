@@ -26,9 +26,9 @@ export default class DesktopProjects extends React.Component{
                         <ul className="skillsIcons">
                             <IconSkill index={ 0 } alt="icon_css" src="images/CSS3_icon.png"></IconSkill>
                             <IconSkill index={ 1 } alt="icon_python" src="images/Python_icon.ico"></IconSkill>
-                            <IconSkill index={ 2 } alt="icon_java_other" src="images/java_icon.png"></IconSkill>
                             <IconSkill index={ 3 } alt="react-logo" src="images/react-logo.png"></IconSkill>
-                            <IconSkill index={ 4 } alt="mongoDB-logo" src="images/mongo-logo.png"></IconSkill>
+                            <IconSkill index={ 4 } alt="vue-logo" src="images/vue-logo.png"></IconSkill>
+                            <IconSkill index={ 2 } alt="icon_java_other" src="images/java_icon.png"></IconSkill>
                             <IconSkill index={ 5 } alt="icon_html" src="images/HTML5_icon.png"></IconSkill>
                         </ul>
                     </div>

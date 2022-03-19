@@ -26,12 +26,10 @@ export default class ModalAboutMe extends React.Component{
                     <div id="text-container">
                         <p className="standardText" id="hello">Hello!</p>
                         <p className="standardText">
-                            My name is Maxwell and I work as a freelance software developer. I specialize in React.js/Native and Android, 
-                            while also dabbling in Python/Java desktop software. Up until recently, I was going through University and working
-                            in the events industry. This allowed for me to develop great interpersonal skills in a wide variety of environments.
-                            While working in events, I spent time programming as a hobby. Overtime this hobby grew into a passion, and then a career pursuit.
-                            As my number of tech-skills grew, my interest followed suit, and I am now heavily focused on Mobile / Web App Development.
-                            My current aspiration is to find employment in a developer role that allows me to mesh these two worlds together. 
+                            My name is Maxwell and I work as a Frontend Software Developer. Previously, I worked in the hospitality industry while going through
+                            school and developed great personal skills in a wide variety of environments. While working in events, I spent time
+                            programming as a hobby. Overtime this hobby grew into a passion, and then a career. Now I've meshed the two worlds
+                            together and happily code software that connects us all through technology.
                         </p>
                     </div>
                 </div>
