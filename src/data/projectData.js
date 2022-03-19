@@ -2,9 +2,9 @@ export const mobileProjectData = [
     {
         projectName: "The Diabetes App",
         floatSide: "left",
-        link: "https://corporate.thediabetesapp.com/",
-        linkText: 'corporate.TheDiabetesApp.com',
-        description: "A social media app focused around people with diabetes. Users can make profiles, message each other, scroll the homefeed, there's app-wide video streaming events, and much more. I created v2 of this product which will be released in Fall 2022.",
+        link: "https://apps.apple.com/app/apple-store/id1522262547",
+        linkText: 'The Diabetes App on The App Store',
+        description: "A social media app focused around people with diabetes. Users can make profiles, message each other, scroll the homefeed, there's app-wide video streaming events, and much more. I created v2 of this product and at the moment I'm setup to create v3 as well.",
         image: 'images/tda.png',
         language: "React Native", 
         tech: "Oauth2, Pusher, Mux, Kevel",
@@ -36,18 +36,6 @@ export const mobileProjectData = [
         projectClass: "mobileProjectSection",
         isNDA: false
     },
-    {
-        projectName: "BushLand",
-        floatSide: "right",
-        link: "https://github.com/MaxwellDG/Bushland",
-        description: "An app created to exemplify the abilities I have in the Android SDK. For some reason it's about Koala bears.",
-        video: "videos/KoalaMaybe.mp4",
-        language: "Java, Android SDK", 
-        tech: "Utilized Fragments, Lifecycles, Backstack Management, Touch Events, Firebase Messaging, JSON",
-        videoClass: "videos",
-        projectClass: "mobileProjectSection",
-        isNDA: false
-    }
 ]
 
 export const otherProjectData = [
@@ -56,7 +44,7 @@ export const otherProjectData = [
         floatSide: "right",
         link: "https://thebardsquill.com",
         linkText: 'TheBardsQuill.com',
-        description: "A virtual tabletop and campaign-management system for the 'Storytelling Role-Playing Game' genre. The Bard's Quill works as an aide for popular titles such as: 'Dungeons & Dragons' and 'Pathfinder'. It is currently in its alpha stage and will be released to the public Spring 2022. Please refer to https://thebardsquill.com for more details.",
+        description: "A virtual tabletop and campaign-management system for the 'Storytelling Role-Playing Game' genre. The Bard's Quill works as an aide for popular titles such as: 'Dungeons & Dragons' and 'Pathfinder'. It is currently in its alpha stage and will be released to the public Spring 2022.",
         image: "images/bardsquill.png",
         language: "Vue.js", 
         tech: "WebRTC, Konva.js, IndexedDB",
@@ -69,7 +57,7 @@ export const otherProjectData = [
         floatSide: "left",
         link: "https://github.com/MaxwellDG/duel_arena",
         description: "A crypto gambling website. Instead of users having to take bad odds due to casinos taking a cut, they can bet directly against each other with 50/50 -> 2x odds.",
-        subText: '* This is a personal project done for the purpose of learning Blockchain, and it\'s currently in development',
+        subText: '* This is a personal project done for the purpose of learning Blockchain and is currently in development',
         image: "images/duelarena.png",
         language: "Solidity, Vue.js", 
         tech: "Truffle, ChainLink, SkyNet",
@@ -79,7 +67,7 @@ export const otherProjectData = [
     },
     {
         projectName: "Lucky13 Tattoos",
-        floatSide: "left",
+        floatSide: "right",
         link: "https://github.com/MaxwellDG/lucky13",
         description: "Website for the Toronto tattoo parlour. Static plus an e-commerce section.",
         video: "videos/lucky13.mp4",
@@ -91,7 +79,7 @@ export const otherProjectData = [
     },
     {
         projectName: "Homebase",
-        floatSide: "right",
+        floatSide: "left",
         link: "https://github.com/MaxwellDG/homebase",
         description: "A homepage that is meant to increase productivity. There's no clutter, and instead there are groupings of customizable websites to expedite pre-determined tasks.",
         video: "videos/homepage-video.mp4",
@@ -103,7 +91,7 @@ export const otherProjectData = [
     },
     {
         projectName: "CSA-Scraper",
-        floatSide: "left",
+        floatSide: "right",
         link: "https://github.com/MaxwellDG/CSA_Scraper",
         description: "A scraper for a client who wanted to track the status of Canadian securities administrators. 'Scrapes' the Canadian Securities Administrators Registry and produces a .csv after comparisons are made.",
         video: "videos/CSA_Video.mp4",
@@ -115,7 +103,7 @@ export const otherProjectData = [
     },
     {
         projectName: "PyGame",
-        floatSide: "right",
+        floatSide: "left",
         link: "https://github.com/MaxwellDG/python-pygame",
         description: "A videogame made in similar style to the classic 'The Legend of Zelda'. Defeat monsters, collect upgrades, and defeat the evil Mecha-Boss C++9000",
         video: "videos/Python_Vid.mp4",

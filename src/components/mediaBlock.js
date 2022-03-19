@@ -32,34 +32,45 @@ export default class MediaBlock extends React.Component{
 
     render(){
 
-        const { projectName, projectClass, floatSide, isNDA, link, linkText, description, video, image, language, tech, videoClass } = this.props.project
+        const { projectName, projectClass, floatSide, isNDA, link, linkText, description, subText, video, image, language, tech, videoClass } = this.props.project
 
         return(
-            <div>
-                <Modal closeModal={this.toggleNDAModal} isShowing={this.state.isShowingNDAModal}>
+            <div style={{position: 'relative'}}>
+                <Modal closeModal={this.toggleNDAModal} isShowing={this.state.isShowingNDAModal} contentDims={{width: '30%'}}>
                     <NDAContent linkText={linkText} link={link}/>
                 </Modal>
-                <Modal closeModal={this.toggleMediaModal} isShowing={this.state.isShowingMediaModal}>
+                <Modal closeModal={this.toggleMediaModal} isShowing={this.state.isShowingMediaModal} contentDims={{width: '70%', height: '70%'}}>
                     <MediaContent image={image} video={video} />
                 </Modal>
                 <div className={ projectClass }>
                     {floatSide === 'left' ? 
-                    <MultiMedia video={video} image={image} videoClass={videoClass} expandMedia={this.toggleMediaModal}/> 
+                    <MultiMedia side={floatSide} video={video} image={image} videoClass={videoClass} expandMedia={this.toggleMediaModal}/> 
                     : 
-                    <GithubLink isNDA={isNDA} link={link} toggleNDAModal={this.toggleNDAModal}/>
+                    <GithubLink side={floatSide} isNDA={isNDA} link={link} toggleNDAModal={this.toggleNDAModal}/>
                     }
                     <div className="projectInfoBlock">
+                        <div>
                             <h3 className="projectHeader">{ projectName }</h3>
                             <p id="description">{ description }</p>
-                            <ul style={{listStyleType: "none", padding: "0px", display: 'flex', justifyContent: 'space-evenly'}}>
-                                <li key={ 0 }><div id="textLanguage"><p className="textThing">Language: </p><p id="textLang">{ language }</p></div></li>
-                                <li key={ 1 } id="textTech"><p className="textThing">Tech: </p><p>{ tech }</p></li>
-                            </ul>
+                            {subText && <p style={{fontStyle: 'italic', fontSize: '10px'}}>{ subText }</p>}
+                        </div>
+                        <ul style={{listStyleType: "none", padding: "0px", display: 'flex', justifyContent: 'space-around', width: '100%'}}>
+                            <li key={ 0 } >
+                                <div id="textLanguage">
+                                    <p className="textThing">Language: </p><p id="textLang">{ language }</p>
+                                </div>
+                            </li>
+                            <li key={ 1 } id="textTech">
+                                <div>
+                                    <p className="textThing">Tech: </p><p>{ tech }</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     {floatSide === 'left' ? 
-                    <GithubLink isNDA={isNDA} link={link} toggleNDAModal={this.toggleNDAModal}/>
+                    <GithubLink side={floatSide} isNDA={isNDA} link={link} toggleNDAModal={this.toggleNDAModal}/>
                     : 
-                    <MultiMedia video={video} image={image} videoClass={videoClass} expandMedia={this.toggleMediaModal}/> 
+                    <MultiMedia side={floatSide} video={video} image={image} videoClass={videoClass} expandMedia={this.toggleMediaModal}/> 
                     }
                 </div>
             </div>
