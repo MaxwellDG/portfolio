@@ -53,6 +53,11 @@ export default class MediaBlock extends React.Component{
                             <h3 className="projectHeader">{ projectName }</h3>
                             <p id="description">{ description }</p>
                             {subText && <p style={{fontStyle: 'italic', fontSize: '10px'}}>{ subText }</p>}
+                            {linkText === "TheBardsQuill.com" || projectName === 'The Diabetes App' ?
+                                <a href={link} target="_blank" rel="noopener noreferrer" style={{color: 'rgb(236, 120, 18)', cursor: 'pointer'}}>{ linkText }</a>
+                                :
+                                null
+                            }
                         </div>
                         <ul style={{listStyleType: "none", padding: "0px", display: 'flex', justifyContent: 'space-around', width: '100%'}}>
                             <li key={ 0 } >

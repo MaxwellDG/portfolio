@@ -9,7 +9,7 @@ export default ({link, linkText}) => {
                 <img alt="github_link" src="images/github_icon_white.png" width="50px" height="50px"/>
             </div>
             <p>This repository is private due to NDA restrictions. On request I can supply code snippets if necessary. If you'd like more information on the project please refer to:</p>
-            <a href={link} target="_blank" rel="noopener noreferrer" style={{color: 'rgb(196, 122, 25)'}}>{linkText}</a>
+            <a href={link} target="_blank" rel="noopener noreferrer" style={{color: 'rgb(236, 120, 18)'}}>{linkText}</a>
             <div></div>
         </div>
     )

@@ -44,7 +44,7 @@ export const otherProjectData = [
         floatSide: "right",
         link: "https://thebardsquill.com",
         linkText: 'TheBardsQuill.com',
-        description: "A virtual tabletop and campaign-management system for the 'Storytelling Role-Playing Game' genre. The Bard's Quill works as an aide for popular titles such as: 'Dungeons & Dragons' and 'Pathfinder'. It is currently in its alpha stage and will be released to the public Spring 2022.",
+        description: "A virtual tabletop and campaign-management system for the 'Storytelling Role-Playing Game' genre. The Bard's Quill works as an aide for popular titles such as: 'Dungeons & Dragons' and 'Pathfinder'. It is currently in alpha stage and will be released to the public Spring 2022.",
         image: "images/bardsquill.png",
         language: "Vue.js", 
         tech: "WebRTC, Konva.js, IndexedDB",
