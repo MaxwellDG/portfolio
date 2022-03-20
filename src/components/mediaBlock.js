@@ -36,7 +36,7 @@ export default class MediaBlock extends React.Component{
 
         return(
             <div style={{position: 'relative'}}>
-                <Modal closeModal={this.toggleNDAModal} isShowing={this.state.isShowingNDAModal} contentDims={{width: '30%'}}>
+                <Modal closeModal={this.toggleNDAModal} isShowing={this.state.isShowingNDAModal} contentDims={{width: window.innerWidth > 700 ? '30%' : '70%'}}>
                     <NDAContent linkText={linkText} link={link}/>
                 </Modal>
                 <Modal closeModal={this.toggleMediaModal} isShowing={this.state.isShowingMediaModal} contentDims={{width: '70%', height: '70%'}}>

@@ -335,16 +335,11 @@ button{
   border-radius: 5px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   padding: 25px;
   margin-bottom: 10px;
 }
-
-#text-container{
-  background: rgba(25, 25, 25, 0.8);
-  padding: 1% 10% 5% 10%;
-  margin: 0 2% 0 2%;
-}
-
 
 /* Projects */
 
@@ -386,6 +381,10 @@ button{
 
 .videos{
   width: 215px;
+}
+
+#gitHubLink{
+  position: absolute;
 }
 
 .projectVideoBlock{
@@ -684,8 +683,11 @@ button{
     padding: 15px;
   }
 
-  .mobileProjectSection .sourceCode{
+  .mobileProjectSection #gitHubLink, .otherProjectSection #gitHubLink{
     margin-right: 0px;
+    position: relative;
+    left: 0;
+    right: 0;
     order: 1;
   }
 
