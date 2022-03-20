@@ -1,7 +1,7 @@
 {
   "name": "portfoliowebsite",
   "version": "0.1.0",
-  "homepage": "https://www.maxwellmdg.com",
+  "homepage": "https://www.maxwellmdg.info",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
