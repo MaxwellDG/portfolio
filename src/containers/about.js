@@ -20,8 +20,10 @@ export default class ModalAboutMe extends React.Component{
                 transition={ Framer.AnimationTransitions } >
                 <TopSection sectionName="About Me" text={ ["Mobile Projects", "Desktop Projects"] } url={ ["/mobile", "/desktop"] } />
                 <div id="content-container">
-                    <img alt="aboutMe_Img" src="images/minca.jpg" style={{width: '40%', borderRadius: '2px'}}/>
-                    <div id="text-container">
+                    <div style={{width: '50%', borderRadius: '50%', margin: '0 2%'}}>
+                        <img alt="aboutMe_Img" src="images/minca.jpg" style={{width: '100%', borderRadius: '50%'}}/>
+                    </div>
+                    <div style={{ background: 'rgba(25, 25, 25, 0.8)', width: '50%', padding: '1% 10% 5% 10%', margin: '0 2% 0 2%'}}>
                         <p className="standardText" id="hello">Hello!</p>
                         <p className="standardText">
                             My name is Maxwell and I work as a Frontend Software Developer. Previously, I worked in the hospitality industry while going through

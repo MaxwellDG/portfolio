@@ -4,7 +4,6 @@ export default ({isNDA, link, toggleNDAModal, side}) => {
 
 
     var styles = {
-        position: 'absolute',
         top: '10px',
         left: side === 'left' ? undefined : '10px',
         right: side === 'right' ? undefined : '10px',
@@ -12,7 +11,7 @@ export default ({isNDA, link, toggleNDAModal, side}) => {
     
 
     return(
-        <div style={styles}>
+        <div id="gitHubLink" style={styles}>
             {isNDA ?
                 <button className="NDA sourceCode" onClick={toggleNDAModal}>
                     <img alt="github_link" src="images/github_icon_white.png" width="50px" height="50px"/>

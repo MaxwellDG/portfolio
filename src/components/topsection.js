@@ -18,7 +18,7 @@ export const TopSection = (props) => {
                         </div>
                     <div className="cv-bot-div">
                         <a href={ process.env.PUBLIC_URL + 'images/MaxwellMDG2022.pdf' } download><button id="download" /></a>
-                        <a href={ process.env.PUBLIC_URL + 'images/MaxwellMDG2022.pdf' }><button id="fullscreen" /></a>
+                        <a href={ process.env.PUBLIC_URL + 'images/MaxwellMDG2022.pdf' } target='_blank' rel="noopener noreferrer"><button id="fullscreen" /></a>
                     </div>
                     </li>
                 </div>
