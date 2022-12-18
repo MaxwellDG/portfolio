@@ -365,6 +365,8 @@ button{
 
 .iconSkill img{
   width: 75px;
+  height: 75px;
+  aspect-ratio: 1;
 }
 
 .mobileProjectSection, .otherProjectSection{
@@ -407,6 +409,7 @@ button{
 
 .projectInfoBlock{
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   align-items: center;
   color: white;
@@ -508,6 +511,7 @@ button{
   .iconSkill img{
     height: 50px;
     width: 50px;
+    aspect-ratio: 1;
   }
 
   
@@ -668,6 +672,8 @@ button{
 
   .iconSkill img{
     max-width: 30px;
+    max-height: 30px;
+    aspect-ratio: 1;
   }
 
   .mobileProjectSection{

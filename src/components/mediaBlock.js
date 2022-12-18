@@ -31,8 +31,9 @@ export default class MediaBlock extends React.Component{
 
 
     render(){
-
-        const { projectName, projectClass, floatSide, isNDA, link, linkText, description, subText, video, image, language, tech, videoClass } = this.props.project
+        const { projectName, projectClass, isNDA, link, linkText, description, subText, video, image, language, tech, videoClass } = this.props.project
+        const hasLink = ['The Bard\'s Quill', 'The Diabetes App', 'SMART Studio App'].includes(projectName)
+        const floatSide = this.props.index % 2 === 0 ? 'left' : 'right'
 
         return(
             <div style={{position: 'relative'}}>
@@ -44,19 +45,19 @@ export default class MediaBlock extends React.Component{
                 </Modal>
                 <div className={ projectClass }>
                     {floatSide === 'left' ? 
-                    <MultiMedia side={floatSide} video={video} image={image} videoClass={videoClass} expandMedia={this.toggleMediaModal}/> 
+                        <MultiMedia side={floatSide} video={video} image={image} videoClass={videoClass} expandMedia={this.toggleMediaModal}/> 
                     : 
-                    <GithubLink side={floatSide} isNDA={isNDA} link={link} toggleNDAModal={this.toggleNDAModal}/>
+                        <GithubLink side={floatSide} isNDA={isNDA} link={link} toggleNDAModal={this.toggleNDAModal}/>
                     }
                     <div className="projectInfoBlock">
                         <div>
                             <h3 className="projectHeader">{ projectName }</h3>
                             <p id="description">{ description }</p>
                             {subText && <p style={{fontStyle: 'italic', fontSize: '10px'}}>{ subText }</p>}
-                            {linkText === "TheBardsQuill.com" || projectName === 'The Diabetes App' ?
-                                <a href={link} target="_blank" rel="noopener noreferrer" style={{color: 'rgb(236, 120, 18)', cursor: 'pointer'}}>{ linkText }</a>
+                            {hasLink ?
+                                    <a href={link} target="_blank" rel="noopener noreferrer" style={{color: 'rgb(236, 120, 18)', cursor: 'pointer'}}>{ linkText }</a>
                                 :
-                                null
+                                    null
                             }
                         </div>
                         <ul style={{listStyleType: "none", padding: "0px", display: 'flex', justifyContent: 'space-around', width: '100%'}}>
@@ -73,9 +74,9 @@ export default class MediaBlock extends React.Component{
                         </ul>
                     </div>
                     {floatSide === 'left' ? 
-                    <GithubLink side={floatSide} isNDA={isNDA} link={link} toggleNDAModal={this.toggleNDAModal}/>
+                        <GithubLink side={floatSide} isNDA={isNDA} link={link} toggleNDAModal={this.toggleNDAModal}/>
                     : 
-                    <MultiMedia side={floatSide} video={video} image={image} videoClass={videoClass} expandMedia={this.toggleMediaModal}/> 
+                        <MultiMedia side={floatSide} video={video} image={image} videoClass={videoClass} expandMedia={this.toggleMediaModal}/> 
                     }
                 </div>
             </div>

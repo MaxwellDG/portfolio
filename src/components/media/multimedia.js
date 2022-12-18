@@ -11,6 +11,7 @@ export default ({video, image, expandMedia}) => {
                         <div style={{position: 'absolute', top: '50%', left: '50%', marginLeft: '1px', transform: 'translate(-50%, -50%)', borderTop: '7px solid transparent', borderBottom: '7px solid transparent', borderLeft: '7px solid white'}}></div>
                         <video type="video/mp4" style={{maxWidth: '100%', maxHeight: '100%'}}>
                             <source src={ video }/>
+                            <source src={ image} />
                         </video>
                     </>
                     :

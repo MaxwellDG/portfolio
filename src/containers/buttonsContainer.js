@@ -15,8 +15,8 @@ export default class ButtonsContainer extends React.Component{
                             <p>CV</p>
                         </div>
                     <div className="cv-bot-div">
-                        <a href={ process.env.PUBLIC_URL + 'images/MaxwellMDG2022.pdf' } download><button id="download" /></a>
-                        <a href={ process.env.PUBLIC_URL + 'images/MaxwellMDG2022.pdf' } target='_blank' rel="noopener noreferrer"><button id="fullscreen" /></a>
+                        <a href={ process.env.PUBLIC_URL + 'images/MDG-Resume-2023.pdf' } download><button id="download" /></a>
+                        <a href={ process.env.PUBLIC_URL + 'images/MDG-Resume-2023.pdf' } target='_blank' rel="noopener noreferrer"><button id="fullscreen" /></a>
                     </div>
                 </li>
             </ul> 
