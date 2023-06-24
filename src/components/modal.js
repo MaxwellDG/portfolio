@@ -26,7 +26,6 @@ export default ({closeModal, isShowing, children, contentDims}) => {
             isOpen={isShowing}
             onRequestClose={closeModal}
             style={customStyles}
-            contentLabel="Example Modal"
         >
             {children}
         </Modal>
