@@ -369,7 +369,7 @@ button{
   aspect-ratio: 1;
 }
 
-.mobileProjectSection, .otherProjectSection{
+.hobbyProjectSection, .enterpriseProjectSection{
   display: flex;
   align-items: center;
   padding: 30px;
@@ -481,23 +481,23 @@ button{
 /* Media Queries */
 
 @media screen and (max-width: 1350px){
-  .otherProjectSection{
+  .enterpriseProjectSection{
     flex-direction: column;
   }
 
-  .otherProjectSection .sourceCode{
+  .enterpriseProjectSection .sourceCode{
     margin-right: 0px;
   }
 
-  .otherProjectSection .sourceCode{
+  .enterpriseProjectSection .sourceCode{
     order: 1;
   }
 
-  .otherProjectSection .projectInfoBlock{
+  .enterpriseProjectSection .projectInfoBlock{
     order: 2;
   }
 
-  .otherProjectSection .projectVideoBlock{
+  .enterpriseProjectSection .projectVideoBlock{
     order: 3;
   }
 
@@ -676,7 +676,7 @@ button{
     aspect-ratio: 1;
   }
 
-  .mobileProjectSection{
+  .hobbyProjectSection{
     flex-direction: column;
     padding: 15px;
   }
@@ -685,11 +685,11 @@ button{
     padding: 10px;
   }
 
-  .otherProjectSection{
+  .enterpriseProjectSection{
     padding: 15px;
   }
 
-  .mobileProjectSection #gitHubLink, .otherProjectSection #gitHubLink{
+  .hobbyProjectSection #gitHubLink, .enterpriseProjectSection #gitHubLink{
     margin-right: 0px;
     position: relative;
     left: 0;
@@ -697,11 +697,11 @@ button{
     order: 1;
   }
 
-  .mobileProjectSection .projectInfoBlock{
+  .hobbyProjectSection .projectInfoBlock{
     order: 2;
   }
 
-  .mobileProjectSection .projectVideoBlock{
+  .hobbyProjectSection .projectVideoBlock{
     order: 3;
   }
 
