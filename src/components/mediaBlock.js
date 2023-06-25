@@ -61,7 +61,23 @@ export default class MediaBlock extends React.Component{
                             <h3 className="projectHeader">{ name }</h3>
                             <p id="desc">{ desc }</p>
                             {!!linkTexts.length 
-                                ? <a href={links} target="_blank" rel="noopener noreferrer" style={{color: 'rgb(236, 120, 18)', cursor: 'pointer'}}>{ linkTexts }</a>
+                                ? <div style={{ display: "flex", flexDirection: "row", justifyContent: "center" }}>
+                                    {links.map((link, i) => {
+                                        return (
+                                            <p>
+                                                <a 
+                                                    href={link} 
+                                                    target="_blank" 
+                                                    rel="noopener noreferrer" 
+                                                    style={{color: 'rgb(236, 120, 18)', cursor: 'pointer'}}
+                                                >
+                                                    { `${linkTexts[i]}` }
+                                                </a>
+                                                &nbsp;
+                                            </p>
+                                            )
+                                    })}
+                                    </div>
                                 : null
                             }
                         </div>
