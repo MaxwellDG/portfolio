@@ -38,11 +38,11 @@ export const hobbyProjectData = [
 export const enterpriseProjectData = [
     {
         name: "Stache",
-        links: ["https://www.app.stache.io", "https://www.stache.io"],
+        links: ["https://app.stache.io", "https://www.stache.io"],
         linkTexts: ["Stache App", "Stache Intro"],
         desc:
             "A Solana blockchain infrastructure and application project. First we brought 'Smart Wallet' technology to Solana. Then we created the 'Stache' application to build on that. The main attraction is currently the ability for users to make their own shops, thus decentralizing the currently centralized marketplace model.",
-        video: "videos/smart-studio-ready.mp4",
+        image: "images/StacheApp.png",
         languages: ["React Native Web", "NodeJS"],
         tech: "Solana, NestJS, PSQL, Typescript, Recoil",
     },
