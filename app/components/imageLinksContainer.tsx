@@ -1,5 +1,5 @@
 import React from 'react'
-import ImageLink from '../components/imageLink'
+import ImageLink from '../../src/components/imageLink'
 
 
 /* Not using this component until you have a LinkedIn that doesn't suck */

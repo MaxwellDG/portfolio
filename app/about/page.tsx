@@ -1,12 +1,11 @@
 import React from 'react'
-import { TopSection } from '../components/topsection'
+import { TopSection } from '../../src/components/topsection'
 import { motion } from 'framer-motion'
-import * as Framer from '../data/animationVariants'
+import * as Framer from '../../src/data/animationVariants'
 
 
-export default class ModalAboutMe extends React.Component{
+export default function About(){
 
-    render(){
 
         return(          
             <motion.div 
@@ -39,5 +38,4 @@ export default class ModalAboutMe extends React.Component{
                 </div>
             </motion.div>
         )
-    }
 }

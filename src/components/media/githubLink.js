@@ -1,5 +1,6 @@
-import React from 'react';
-import useWindowDimensions from '../../hooks/useDimensions';
+"use client";
+
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 export default ({ isEnterprise, link, isLeftSide }) => {
 

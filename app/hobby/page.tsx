@@ -1,23 +1,23 @@
 import React from "react";
-import IconSkill from "../components/iconSkill";
-import MediaBlock from "../components/mediaBlock";
-import * as ProjectData from "../data/projectData";
-import { TopSection } from "../components/topsection";
+import IconSkill from "../../src/components/iconSkill";
+import MediaBlock from "../../src/components/mediaBlock";
+import * as ProjectData from "../../src/data/projectData";
+import { TopSection } from "../../src/components/topsection";
 import { motion } from "framer-motion";
-import * as Framer from "../data/animationVariants";
+import * as Framer from "../../src/data/animationVariants";
 
-export default class HobbyProjects extends React.Component {
-  render() {
-    const hobbyProjects = ProjectData.hobbyProjectData.map(
-      (project, index) => (
-        <MediaBlock 
-          key={index} 
-          index={index} 
-          project={project} 
-          isEnterprise={false}
-        />
-      )
-    );
+const hobbyProjects = ProjectData.hobbyProjectData.map(
+  (project, index) => (
+    <MediaBlock 
+      key={index} 
+      index={index} 
+      project={project} 
+      isEnterprise={false}
+    />
+  )
+);
+
+export default function HobbyProjects() {
 
     return (
       <div id="hobby-container">
@@ -71,5 +71,4 @@ export default class HobbyProjects extends React.Component {
         </motion.div>
       </div>
     );
-  }
 }

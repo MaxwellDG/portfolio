@@ -1,23 +1,23 @@
 import React from "react";
-import IconSkill from "../components/iconSkill";
-import * as ProjectData from "../data/projectData";
-import ModalMediaBlock from "../components/mediaBlock";
-import { TopSection } from "../components/topsection";
+import IconSkill from "../../src/components/iconSkill";
+import * as ProjectData from "../../src/data/projectData";
+import ModalMediaBlock from "../../src/components/mediaBlock";
+import { TopSection } from "../../src/components/topsection";
 import { motion } from "framer-motion";
-import * as Framer from "../data/animationVariants";
+import * as Framer from "../../src/data/animationVariants";
 
-export default class EnterpriseProjects extends React.Component {
-  render() {
-    const enterpriseProjects = ProjectData.enterpriseProjectData.map(
-      (project, index) => (
-        <ModalMediaBlock 
-          key={index} 
-          index={index} 
-          project={project} 
-          isEnterprise={true}
-        />
-      )
-    );
+const enterpriseProjects = ProjectData.enterpriseProjectData.map(
+  (project, index) => (
+    <ModalMediaBlock 
+      key={index} 
+      index={index} 
+      project={project} 
+      isEnterprise={true}
+    />
+  )
+);
+
+export default function EnterpriseProjects() {
 
     return (
       <motion.div
@@ -71,5 +71,4 @@ export default class EnterpriseProjects extends React.Component {
         {enterpriseProjects}
       </motion.div>
     );
-  }
 }
