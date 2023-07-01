@@ -3,56 +3,50 @@ import MultiMedia from './media/multimedia';
 import GithubLink from './media/githubLink';
 import Modal from './modal';
 import MediaContent from "./media/mediaContent"
-import githubLink from './media/githubLink';
+import { Project } from '../data/projectData';
 
-export default class MediaBlock extends React.Component{
+interface Props {
+    project: Project,
+    isEnterprise: boolean
+}
 
-    constructor() {
-        super();
-        this.state = {
-            isShowingNDAModal: false,
-            isShowingMediaModal: false,
-        };
-        this.toggleMediaModal = this.toggleMediaModal.bind(this);
-    }
+export default function MediaBlock({project, isEnterprise}: Props){
 
-    toggleMediaModal(){
-        this.setState(prev => ({
-            isShowingMediaModal: !prev.isShowingMediaModal
-        }));
-    }
+    const [isShowingMediaModal, toggleMediaModal] = React.useState(false);
 
-
-    render(){
-        const { 
-            name, 
-            github,
-            links, 
-            linkTexts, 
-            desc, 
-            video, 
-            image, 
-            languages, 
-            tech, 
-        } = this.props.project;
-        const floatsLeft = this.props.index % 2 === 0;
+    const { 
+        name, 
+        github,
+        links, 
+        linkTexts, 
+        desc, 
+        video, 
+        image, 
+        languages, 
+        tech, 
+    } = project;
+    const floatsLeft = this.props.index % 2 === 0;
 
         return(
             <div style={{position: 'relative'}}>
-                <Modal closeModal={this.toggleMediaModal} isShowing={this.state.isShowingMediaModal} contentDims={{width: '70%', height: '70%'}}>
+                <Modal 
+                    closeModal={() => toggleMediaModal(!isShowingMediaModal)} 
+                    isShowing={isShowingMediaModal} 
+                    contentDims={{width: '70%', height: '70%'}}
+                >
                     <MediaContent image={image} video={video} />
                 </Modal>
-                <div className={ this.props.isEnterprise ? "enterpriseProjectSection" : "hobbyProjectSection" }>
+                <div className={ isEnterprise ? "enterpriseProjectSection" : "hobbyProjectSection" }>
                     {floatsLeft ? 
                         <MultiMedia 
                             video={video} 
                             image={image} 
-                            expandMedia={this.toggleMediaModal}
+                            expandMedia={() => toggleMediaModal(!isShowingMediaModal)}
                         /> 
                     : 
                         <GithubLink 
                             isLeftSide={floatsLeft} 
-                            isEnterprise={this.props.isEnterprise} 
+                            isEnterprise={isEnterprise} 
                             link={github} 
                         />
                     }
@@ -97,19 +91,18 @@ export default class MediaBlock extends React.Component{
                     {floatsLeft ? 
                         <GithubLink 
                             isLeftSide={floatsLeft} 
-                            isEnterprise={this.props.isEnterprise} 
+                            isEnterprise={isEnterprise} 
                             link={github} 
                         />
                     : 
                         <MultiMedia 
                             video={video} 
                             image={image} 
-                            expandMedia={this.toggleMediaModal}
+                            expandMedia={() => toggleMediaModal(!isShowingMediaModal)}
                         /> 
                     }
                 </div>
             </div>
         )
-    }
 }
                 

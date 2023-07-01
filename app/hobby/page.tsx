@@ -21,7 +21,7 @@ export default function HobbyProjects() {
 
     return (
       <div id="hobby-container">
-        <motion.div
+        {/* <motion.div
           key="/hobby"
           className="page"
           initial="initial"
@@ -29,7 +29,7 @@ export default function HobbyProjects() {
           exit="exit"
           variants={Framer.standardVariants}
           transition={Framer.AnimationTransitions}
-        >
+        > */}
           <TopSection
             sectionName="Hobby Projects"
             text={["About Me", "Enterprise Projects"]}
@@ -64,11 +64,11 @@ export default function HobbyProjects() {
             <IconSkill
               index={5}
               alt="git_icon"
-              src="images/gitbash_icon.png"
+              src="images/nextjs.png"
             ></IconSkill>
           </ul>
           {hobbyProjects}
-        </motion.div>
+        {/* </motion.div> */}
       </div>
     );
 }

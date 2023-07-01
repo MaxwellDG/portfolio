@@ -1,17 +1,22 @@
 import React from 'react' 
 import Link from "next/link";
 
-export const TopSection = (props) => {
+interface Props {
+    url: string,
+    text: string,
+    sectionName: string
+}
 
-    const { url, text, sectionName } = props
+export const TopSection = ({ url, text, sectionName }: Props) => {
+
 
     return(
         <div className="top-section">
             <ul className="nav-bar">
-                <Link to="/"><button id="return-button">Return</button></Link>
+                <Link href="/"><button id="return-button">Return</button></Link>
                 <div id="other-buttons">
-                    <li><Link to={ url[0] }><button className="buttons-topSection">{ text[0] }</button></Link></li>
-                    <li><Link to={ url[1] }><button className="buttons-topSection">{ text[1] }</button></Link></li>
+                    <li><Link href={ url[0] }><button className="buttons-topSection">{ text[0] }</button></Link></li>
+                    <li><Link href={ url[1] }><button className="buttons-topSection">{ text[1] }</button></Link></li>
                     <li id="cv-button">
                         <div className="cv-top-div">
                             <p>CV</p>
@@ -26,5 +31,4 @@ export const TopSection = (props) => {
             <h1>{ sectionName }</h1>
         </div>
     )
-
 }

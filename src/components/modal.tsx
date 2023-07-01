@@ -1,8 +1,14 @@
 import React from 'react';
 import Modal from 'react-modal';
 
+interface Props {
+    closeModal: () => void,
+    isShowing: boolean,
+    contentDims: any,
+    children: React.ReactNode
+}
 
-export default ({closeModal, isShowing, children, contentDims}) => {
+export default ({closeModal, isShowing, children, contentDims}: Props) => {
     
     const customStyles = {
         content: {

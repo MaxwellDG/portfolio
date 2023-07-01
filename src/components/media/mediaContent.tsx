@@ -1,10 +1,15 @@
 import React from 'react'
 
-export default ({image, video}) => {
+interface Props {
+    image?: string,
+    video?: string
+}
+
+export default ({image, video}: Props) => {
 
     return(
             video ?
-                <video style={{height: '100%', width: '100%'}} type="video/mp4" controls autoplay>
+                <video style={{height: '100%', width: '100%'}} typeof="video/mp4" controls autoPlay>
                     <source src={ video }/>
                 </video>
                 :

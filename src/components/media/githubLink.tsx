@@ -2,7 +2,13 @@
 
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 
-export default ({ isEnterprise, link, isLeftSide }) => {
+interface Props {
+    isEnterprise: boolean
+    link: string,
+    isLeftSide: boolean
+}
+
+export default ({ isEnterprise, link, isLeftSide }: Props) => {
 
     const dimensions = useWindowDimensions();
 

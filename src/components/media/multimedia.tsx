@@ -1,6 +1,12 @@
 import React from 'react';
 
-export default ({video, image, expandMedia}) => {
+interface Props {
+    expandMedia: () => void
+    video?: string,
+    image?: string,
+}
+
+export default ({video, image, expandMedia}: Props) => {
 
     return(
         <div className="mediaButton" style={{maxWidth: '300px', borderRadius: '3px'}}>
@@ -9,7 +15,7 @@ export default ({video, image, expandMedia}) => {
                     <>
                         <span style={{height: '30px', width: '30px', backgroundColor: '#000', borderRadius: '50%', display: 'inline-block', position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)'}} />
                         <div style={{position: 'absolute', top: '50%', left: '50%', marginLeft: '1px', transform: 'translate(-50%, -50%)', borderTop: '7px solid transparent', borderBottom: '7px solid transparent', borderLeft: '7px solid white'}}></div>
-                        <video type="video/mp4" style={{maxWidth: '100%', maxHeight: '100%'}}>
+                        <video typeof="video/mp4" style={{maxWidth: '100%', maxHeight: '100%'}}>
                             <source src={ video }/>
                             <source src={ image} />
                         </video>
@@ -20,5 +26,4 @@ export default ({video, image, expandMedia}) => {
             </button> 
         </div>
     )
-
 }

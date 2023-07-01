@@ -1,4 +1,16 @@
-export const hobbyProjectData = [
+export interface Project {
+    name: string,
+    links: string[],
+    linkTexts: string[],
+    desc: string,
+    tech: string,
+    languages: string[],
+    video?: string
+    image?: string,
+    github?: string,
+}
+
+export const hobbyProjectData: Project[] = [
     {
         name: "Duel Arena",
         github: "https://github.com/MaxwellDG/duel_arena",
@@ -35,7 +47,7 @@ export const hobbyProjectData = [
     },
 ];
 
-export const enterpriseProjectData = [
+export const enterpriseProjectData: Project[] = [
     {
         name: "Stache",
         links: ["https://app.stache.io", "https://www.stache.io"],

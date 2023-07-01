@@ -64,7 +64,7 @@ export default function EnterpriseProjects() {
             <IconSkill
               index={5}
               alt="icon_html"
-              src="images/HTML5_icon.png"
+              src="images/nestjs.png"
             ></IconSkill>
           </ul>
         </div>

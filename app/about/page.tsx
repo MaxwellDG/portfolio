@@ -8,15 +8,16 @@ export default function About(){
 
 
         return(          
-            <motion.div 
-                key="/about"
-                id="about-container"
-                className="page" 
-                initial="initial" 
-                animate="animateTo" 
-                exit="exit"
-                variants={ Framer.standardVariants }
-                transition={ Framer.AnimationTransitions } >
+            // <motion.div 
+            //     key="/about"
+            //     id="about-container"
+            //     className="page" 
+            //     initial="initial" 
+            //     animate="animateTo" 
+            //     exit="exit"
+            //     variants={ Framer.standardVariants }
+            //     transition={ Framer.AnimationTransitions } >
+            <div>
                 <TopSection 
                     sectionName="About Me" 
                     text={ ["Hobby Projects", "Enterprise Projects"] } 
@@ -36,6 +37,7 @@ export default function About(){
                         </p>
                     </div>
                 </div>
-            </motion.div>
+            </div>
+            // </motion.div>
         )
 }
