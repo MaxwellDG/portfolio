@@ -2,8 +2,8 @@ import React from 'react'
 import Link from "next/link";
 
 interface Props {
-    url: string,
-    text: string,
+    url: string[],
+    text: string[],
     sectionName: string
 }
 

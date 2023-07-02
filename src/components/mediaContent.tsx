@@ -5,7 +5,7 @@ interface Props {
     video?: string
 }
 
-export default ({image, video}: Props) => {
+export default function MediaContent({image, video}: Props){
 
     return(
             video ?

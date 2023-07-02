@@ -6,7 +6,6 @@ $color-accent: rgb(196, 122, 25);
 /* Main */
 
 html, body, #root{
-  background: url("/images/fallpaper.jpg");
   background-attachment: fixed;
   overflow-x: hidden;
 }
@@ -32,16 +31,6 @@ button{
 
 .page{
   width: 70%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-}
-
-#page-home{
-  display: flex;
-  justify-content: center;
-  align-content: center;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -85,12 +74,6 @@ button{
 }
 
 .container-buttons{
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  padding: 0;
-  justify-content: space-between;
-  margin-left: 100px;
   
   li{
     position: relative;
@@ -149,7 +132,6 @@ button{
   }
 
   .cv-top-div{
-    background: $color-accent;
     padding: 15px;
   }
 
@@ -449,10 +431,6 @@ button{
   margin: 0px 15px 0px 15px;
 }
 
-#mainImageLinks img{
-  max-width: 75px;
-}
-
 
 /* Other */
 
@@ -659,11 +637,6 @@ button{
 
   #mainImageLinks{
     margin: 0px;
-  }
-
-  #mainImageLinks img{
-    max-width: 45px;
-    padding: 0px;
   }
 
   .iconSkill{

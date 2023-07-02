@@ -12,7 +12,7 @@ export const ImageLink = ({ altText, image, link, id }: Props) => {
     return (
         <li>
             <a href={ link } target="_blank" rel="noopener noreferrer">
-                <img id={ id } alt={ altText } src={ image }/>
+                <img className="h-12 w-12 md:h-20 md:w-20" id={ id } alt={ altText } src={ image }/>
             </a>
         </li> 
     )
