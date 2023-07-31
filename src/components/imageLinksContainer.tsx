@@ -3,7 +3,7 @@ import ImageLink from "./imageLink";
 
 export default function ImageLinksContainer() {
   return (
-    <ul id="mainImageLinks">
+    <ul className="flex flex-row list-none gap-x-2">
       <ImageLink
         id="largeGitHub"
         altText="Img_GitHub"

@@ -2,7 +2,7 @@ import React from "react";
 import IconSkill from "../../src/components/iconSkill";
 import MediaBlock from "../../src/components/mediaBlock";
 import * as ProjectData from "../../src/data/projectData";
-import { TopSection } from "../../src/components/topsection";
+import { TopSection } from "../../src/components/topSection";
 // import { motion } from "framer-motion";
 // import * as Framer from "../../src/data/animationVariants";
 
@@ -17,7 +17,7 @@ const hobbyProjects = ProjectData.hobbyProjectData.map((project, index) => (
 
 export default function HobbyProjects() {
   return (
-    <div id="hobby-container">
+    <div className="flex h-3/4 w-3/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex-col">
       {/* <motion.div
           key="/hobby"
           className="page"
@@ -29,38 +29,10 @@ export default function HobbyProjects() {
         > */}
       <TopSection
         sectionName="Hobby Projects"
-        text={["About Me", "Enterprise Projects"]}
-        url={["/about", "/enterprise"]}
+        text={["Skills", "Enterprise Projects"]}
+        url={["/skills", "/enterprise"]}
       />
-      <ul className="skillsIcons">
-        <IconSkill
-          index={0}
-          alt="java_icon"
-          src="images/java_icon.png"
-        ></IconSkill>
-        <IconSkill
-          index={1}
-          alt="react-logo"
-          src="images/react-logo.png"
-        ></IconSkill>
-        <IconSkill
-          index={2}
-          alt="android_icon"
-          src="images/android_sdk_icon.png"
-        ></IconSkill>
-        <IconSkill
-          index={3}
-          alt="kotlin_icon"
-          src="images/kotlin_icon.png"
-        ></IconSkill>
-        <IconSkill
-          index={4}
-          alt="sql_icon"
-          src="images/sql_icon.png"
-        ></IconSkill>
-        <IconSkill index={5} alt="git_icon" src="images/nextjs.png"></IconSkill>
-      </ul>
-      {/* {hobbyProjects} */}
+      {hobbyProjects}
       {/* </motion.div> */}
     </div>
   );

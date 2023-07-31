@@ -4,6 +4,8 @@
   "homepage": "https://www.maxwellmdg.info",
   "private": true,
   "dependencies": {
+    "@react-three/drei": "^9.78.0",
+    "@react-three/fiber": "^8.13.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -14,13 +16,15 @@
     "framer-motion": "^2.9.5",
     "js-cookie": "^2.2.1",
     "js-file-download": "^0.4.12",
+    "leva": "^0.9.35",
     "next": "^13.4.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
     "react-transition-group": "^4.4.1",
     "redux": "^4.2.0",
-    "sass": "^1.29.0"
+    "sass": "^1.63.6",
+    "three": "^0.154.0"
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
@@ -46,6 +50,7 @@
   },
   "devDependencies": {
     "@types/node": "20.3.2",
+    "@types/three": "^0.152.1",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2",

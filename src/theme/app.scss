@@ -6,7 +6,6 @@ $color-accent: rgb(196, 122, 25);
 /* Main */
 
 html, body, #root{
-  background-attachment: fixed;
   overflow-x: hidden;
 }
 
@@ -34,16 +33,6 @@ button{
   position: absolute;
   top: 50%;
   left: 50%;
-}
-
-#section-name{
-  padding: 50px 100px 50px 100px;
-  position: relative;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.35);
 }
 
 #myName{
@@ -76,12 +65,6 @@ button{
 .container-buttons{
   
   li{
-    position: relative;
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid white;
-    padding: 10px 30px 10px 30px;
-    text-align: center;
-
 
     cursor: pointer;
 
@@ -105,52 +88,20 @@ button{
       z-index: -1;
       transform: scaleX(1);
     }
-
-    button{
-      color: white;
-      font-size: 20px;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-weight: 600;
-      white-space: nowrap;
-      border: none;
-      background: none;
-    }
   }
 }
-
-#home-cv-button{
-  cursor: default;
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  font-size: 24px;
-
-  div{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .cv-top-div{
-    padding: 15px;
-  }
-
-  &::before{
-    display: none;
-  }
-}  
 
 .cv-bot-div{
   width: 100%;
   display: flex;
   justify-content: space-evenly;
 
-  button{
-    height: 35px;
-    width: 40px;
-    background: none;
-    border: none;
-  }
+  // button{
+  //   height: 35px;
+  //   width: 40px;
+  //   background: none;
+  //   border: none;
+  // }
 
   #download{
     background-image: url("/images/icon_download.png");
@@ -174,8 +125,6 @@ button{
   
 .standardText{
   color: white;
-  text-align: center;
-  margin-top: "25px";
   font-family: 'Roboto Slab', serif;
 }
   
@@ -186,17 +135,6 @@ button{
   font-family: 'Roboto Slab', serif;
   top: 50%;
   left: 50%;
-}
-
-#return-button{
-  position: relative;
-  background: rgba(0, 0, 0, 0.6);
-  border: 1px solid $color-accent;
-  color: white;
-  padding: 5px 30px 5px 30px;
-  margin-bottom: 5px;
-  font-family: 'Merienda', cursive;
-  z-index: 1;
 }
 
 #return-button::before{
@@ -223,17 +161,6 @@ button{
   transform: scaleX(1);
 }
 
-.nav-bar{
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-}
-
-#other-buttons{
-  display: flex;
-  flex-direction: column;
-}
-
 #other-buttons li{
   position: relative;
   background: rgba(0, 0, 0, 0.6);
@@ -245,17 +172,6 @@ button{
   list-style-type: none;
   text-align: center;
 }
-.buttons-topSection{
-  padding: 5px 30px 5px 30px;
-  background: none;
-  border: none;
-  font-family: 'Merienda', cursive;
-  color: white;
-
-  &:hover{
-      color: black;
-    }
-  }
 
 .buttons-topSection::before{
   content: "";
@@ -415,22 +331,6 @@ button{
   border-radius: 5px;
   padding: 5px;
 }
-
-
-/* Profile Links */
-
-#mainImageLinks{
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  padding: 0;
-}
-
-#mainImageLinks li{
-  padding: 5px 15px 5px 15px;
-  margin: 0px 15px 0px 15px;
-}
-
 
 /* Other */
 
@@ -633,10 +533,6 @@ button{
   .modalButton button{
     padding: 5px 30px 5px 30px;
     font-size: 10px;
-  }
-
-  #mainImageLinks{
-    margin: 0px;
   }
 
   .iconSkill{

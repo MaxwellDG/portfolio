@@ -6,7 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-
+      colors: {
+        transparentContainer: "rgba(0, 0, 0, 0.65)",
+      },
+      width: {
+        infoBox: "400px"
+      }
     }
   },
   plugins: [],

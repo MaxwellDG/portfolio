@@ -5,7 +5,7 @@ import React, { createContext, useContext, useState } from "react";
 export enum Theme {
     AUTUMN = "Autumn",
     JUNGLE = "Jungle",
-    MOUNTAIN = "Mountains"
+    MOUNTAINS = "Mountains"
 }
 
 export const ThemeContext = createContext<Theme>(Theme.AUTUMN);
@@ -17,24 +17,22 @@ interface ButtonProps {
     isActive: boolean
 }
 
-const BACKGROUND_IMGS = [
-    '/images/fallpaper.jpg',
-    '/images/jungle.jpeg',
-    '/images/mountains.jpeg',
-]
+const BACKGROUND_IMGS = {
+    Autumn: '/images/fallpaper.jpg',
+    Jungle: '/images/jungle.jpeg',
+    Mountains: '/images/mountains.jpeg',
+}
 
 function ButtonTheme({theme, isActive, setTheme, index}: ButtonProps){
 
     function handlePress(){
-        console.log("PRessing! ", theme);
         setTheme(theme)
     }
 
     return (
         <button 
             onClick={handlePress}
-            className={`py-2 h-10 flex flex-row justify-center flex-1 border-none`}
-            style={{ backgroundImage: `url('${BACKGROUND_IMGS[index]}')` }}
+            className="h-3 w-3 bg-white"
         >
         </button>
     )
@@ -51,12 +49,16 @@ function ThemeBackground({children, currentTheme, setTheme}: ThemeBackgroundProp
     
     return (
         <div 
-            className="absolute top-0 left-0 h-full w-full"
-            // style={{ backgroundImage: `url('${BACKGROUND_IMGS[index]}')` }}
+            className="flex flex-1"
         >
-            <div className="w-full flex flex-row">
-                {[Theme.AUTUMN, Theme.JUNGLE, Theme.MOUNTAIN].map((theme, i) => 
+            <div 
+                className="absolute top-0 left-0 h-full w-full"
+                style={{ backgroundImage: `url('${BACKGROUND_IMGS[currentTheme]}')`, zIndex: -1 }}
+            />
+            <div className="flex absolute top-2 right-2 flex-row gap-x-2 mt-3 mr-3">
+                {[Theme.AUTUMN, Theme.JUNGLE, Theme.MOUNTAINS].map((theme, i) => 
                     <ButtonTheme 
+                        key={i}
                         theme={theme} 
                         isActive={theme === currentTheme}
                         setTheme={setTheme}

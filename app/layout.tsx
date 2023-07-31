@@ -15,8 +15,8 @@ export default function RootLayout({
 }) {
 
   return (
-    <html lang="en" className="h-full">
-      <body className="h-full">
+    <html lang="en" className="h-screen">
+      <body className="h-screen flex">
         <ThemeProvider>
           {children}
         </ThemeProvider>

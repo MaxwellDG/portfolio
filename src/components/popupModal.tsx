@@ -7,8 +7,8 @@ import Modal from 'react-modal';
 interface Props {
     closeModal: () => void,
     isShowing: boolean,
-    contentDims: any,
     children: React.ReactNode
+    contentDims?: any,
 }
 
 export const PopupModal = ({closeModal, isShowing, children, contentDims}: Props) => {
