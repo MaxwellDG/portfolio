@@ -17,9 +17,9 @@ export default function FullscreenIcon() {
             onMouseOut={() => toggleHover(false)}
         >
             <a
-                className="items-center justify-center flex flex-row"
-                href={process.env.PUBLIC_URL + 'images/Maxwell2023.pdf'}
-                download
+                href={'images/Maxwell2023.pdf'}
+                target="_blank"
+                rel="noopener noreferrer"
             >
                 <Fullscreen
                     height={35}
