@@ -1,4 +1,4 @@
-$height:35;
+$height:45;
 $depth:6;
 $color: #9C6A49;
 $text-color:darken($color,10%);
@@ -6,23 +6,26 @@ $lighten-on-hover:7%;
 $button-speed:.06;
 $timing-function: ease-out;
 
+.shaded-button{
+  background: linear-gradient(to bottom,
+  saturate(lighten($color,15%),35%) 0%,
+  saturate(lighten($color,12%),15%) 26%,
+  $color 100%);
+}
+
 
 .button {
   cursor:pointer;
   margin-left:5px;
   margin-bottom:15px;
   box-sizing:border-box;
-  font-family: Helvetica, Arial, Sans-Serif;
   text-decoration:none;
-  font-weight:bold;
   color:$text-color;
   &:visited {
     color:$text-color;
   }
   height:$height+px;
-  line-height:$height+px;
   padding: 0 (($height/2)+px);
-  display:inline-block;
   width:auto;
   background: linear-gradient(to bottom,
     saturate(lighten($color,15%),35%) 0%,

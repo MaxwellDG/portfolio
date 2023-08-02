@@ -55,7 +55,7 @@ function ThemeBackground({children, currentTheme, setTheme}: ThemeBackgroundProp
                 className="absolute top-0 left-0 h-full w-full"
                 style={{ backgroundImage: `url('${BACKGROUND_IMGS[currentTheme]}')`, zIndex: -1 }}
             />
-            <div className="flex absolute top-2 right-2 flex-row gap-x-2 mt-3 mr-3">
+            {/* <div className="flex absolute top-2 right-2 flex-row gap-x-2 mt-3 mr-3">
                 {[Theme.AUTUMN, Theme.JUNGLE, Theme.MOUNTAINS].map((theme, i) => 
                     <ButtonTheme 
                         key={i}
@@ -65,7 +65,7 @@ function ThemeBackground({children, currentTheme, setTheme}: ThemeBackgroundProp
                         index={i} 
                     />
                 )}
-            </div>
+            </div> */}
             {children}
         </div>
     )
