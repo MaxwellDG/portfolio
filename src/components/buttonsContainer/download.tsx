@@ -1,12 +1,16 @@
 'use client';
 
-import { Theme, useThemeContext } from '../themeProvider';
-import './style.scss';
+import { Theme, useThemeContext } from '../../contexts/themeContext';
+import './styles.scss';
 import Download from '../../../public/icons/download.svg';
 import React from 'react';
 import { COLORS } from '../../theme';
 
-export default function DownloadIcon() {
+type Props = {
+    size: number;
+};
+
+export default function DownloadIcon({ size }: Props) {
     const theme: Theme = useThemeContext();
 
     const [isHovering, toggleHover] = React.useState(false);
@@ -22,8 +26,8 @@ export default function DownloadIcon() {
                 download
             >
                 <Download
-                    height={38}
-                    width={38}
+                    height={size}
+                    width={size}
                     stroke={isHovering ? COLORS[theme].primary : 'white'}
                     strokeWidth={1}
                 />

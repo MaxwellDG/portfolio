@@ -1,26 +1,28 @@
-import { useState } from "react";
-import ThemeProvider, { Theme } from "../src/components/themeProvider";
-import "../globals.css";
-import "../src/theme/app.scss";
+import React, { useState } from 'react';
+import ThemeProvider, { Theme } from '../src/contexts/themeContext';
+import '../globals.css';
+import '../src/theme/app.scss';
+import ScreenProvider from '../src/contexts/screenContext';
 
 export const metadata = {
-  title: 'Maxwell Dunk-Green',
-  description: 'Portfolio',
-}
+    title: 'Maxwell Dunk-Green',
+    description: 'Portfolio',
+};
 
 export default function RootLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode;
 }) {
-
-  return (
-    <html lang="en" className="h-screen">
-      <body className="h-screen flex">
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
-  )
+    return (
+        <html lang="en" className="h-screen">
+            <body className="h-screen flex">
+                <ThemeProvider>
+                    <ScreenProvider>
+                        {children}
+                    </ScreenProvider>
+                </ThemeProvider>
+            </body>
+        </html>
+    );
 }

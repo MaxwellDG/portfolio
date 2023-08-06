@@ -1,12 +1,16 @@
 'use client';
 
-import { Theme, useThemeContext } from '../themeProvider';
-import './style.scss';
+import { Theme, useThemeContext } from '../../contexts/themeContext';
+import './styles.scss';
 import Fullscreen from '../../../public/icons/fullscreen.svg';
 import React from 'react';
 import { COLORS } from '../../theme';
 
-export default function FullscreenIcon() {
+type Props = {
+    size: number;
+};
+
+export default function FullscreenIcon({ size }: Props) {
     const theme: Theme = useThemeContext();
 
     const [isHovering, toggleHover] = React.useState(false);
@@ -22,8 +26,8 @@ export default function FullscreenIcon() {
                 rel="noopener noreferrer"
             >
                 <Fullscreen
-                    height={35}
-                    width={35}
+                    height={size}
+                    width={size}
                     stroke={isHovering ? COLORS[theme].primary : 'white'}
                 />
             </a>

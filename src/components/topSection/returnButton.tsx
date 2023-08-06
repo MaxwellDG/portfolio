@@ -1,21 +1,21 @@
-"use client"
+'use client';
 
-import Link from "next/link"
-import { Theme, useThemeContext } from "../themeProvider"
-import { COLORS } from "../../theme";
+import Link from 'next/link';
+import { Theme, useThemeContext } from '../../contexts/themeContext';
+import { COLORS } from '../../theme';
+import '../buttonsContainer/styles.scss';
 
-export default function ReturnButton(){
-
+export default function ReturnButton() {
     const theme: Theme = useThemeContext();
 
     return (
-        <Link href="/">
-            <button 
-                className="bg-transparentContainer text-white py-2 px-8 border"
-                style={{ borderColor: COLORS[theme].primary }}
-            >
+        <Link
+            href="/"
+            className={`flex flex-row justify-center items-center self-start text-center short-button before:h-2 before:w-3`}
+        >
+            <p className="text-white font-extralight whitespace-nowrap">
                 Return
-            </button>
+            </p>
         </Link>
-    )
+    );
 }

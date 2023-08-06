@@ -1,5 +1,5 @@
 // "use client"
-import { Theme, useThemeContext } from '../themeProvider';
+import { Theme, useThemeContext } from '../../contexts/themeContext';
 import { useMemo } from 'react';
 
 const style = {

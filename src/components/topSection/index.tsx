@@ -1,28 +1,28 @@
-import React from 'react' 
-import Link from "next/link";
+import React from 'react';
 import ReturnButton from './returnButton';
-import NavButtons from './navButtons';
-import CVButton from './cvButton';
+import CVButton from '../buttonsContainer/cvButton';
+import { RouteButton } from '../buttonsContainer/routeButton';
+import { SCREEN_TYPE } from '../../contexts/screenContext/types';
 
 interface Props {
-    url: string[],
-    text: string[],
-    sectionName: string
+    routes: SCREEN_TYPE[];
+    sectionName: string;
 }
 
-export const TopSection = ({ url, text, sectionName }: Props) => {
-
-
-    return(
-        <div className="top-section">
-            <ul className="flex justify-between p-0">
-                <ReturnButton />
-                <div className="flex flex-col">
-                    <NavButtons text={text} url={url} />
-                    <CVButton />
+export const TopSection = ({ routes, sectionName }: Props) => {
+    return (
+        <div className="top-section mb-2">
+            <div className="flex justify-between p-0">
+                <div className="flex flex-col justify-between">
+                    <ReturnButton />
+                    <h1 className="text-2xl">{sectionName}</h1>
                 </div>
-            </ul>
-            <h1>{ sectionName }</h1>
+                <div className="flex flex-col w-[163px]">
+                    <RouteButton route={routes[0]} isBig={false} shouldNav={false} />
+                    <RouteButton route={routes[1]} isBig={false} shouldNav={false} />
+                    <CVButton isBig={false} />
+                </div>
+            </div>
         </div>
-    )
-}
+    );
+};
