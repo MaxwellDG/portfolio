@@ -1,5 +1,5 @@
 import ButtonsContainer from '../src/components/buttonsContainer';
-import ImageLinksContainer from '../src/components/imageLinksContainer';
+import ImageLinksContainer from '../src/components/socials/container';
 import Self from '../src/components/self';
 
 export default function App() {
