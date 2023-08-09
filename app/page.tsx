@@ -1,6 +1,7 @@
 import ButtonsContainer from '../src/components/buttonsContainer';
 import ImageLinksContainer from '../src/components/socials/container';
 import Self from '../src/components/self';
+import Expertise from '../src/components/expertise';
 
 export default function App() {
     return (
@@ -10,26 +11,17 @@ export default function App() {
                     className="relative justify-around items-center flex text-center"
                     style={{}}
                 >
-                    <Self />
-                    <div className="flex flex-1 h-full flex-col items-start pl-2 relative">
+                    <div className="hidden md:flex">
+                        <Self isMobile={false}/>
+                    </div>
+                    <div className="flex gap-y-2 flex-1 h-full flex-col items-start pl-2 relative">
                         <p
                             style={{ border: '3px outset rgba(0,0,0,0.3)' }}
-                            className="text-white mb-3 text-5xl font-light bg-transparentContainer p-2"
+                            className="text-white text-5xl font-light bg-transparentContainer p-2"
                         >
                             Maxwell Dunk&#8209;Green
                         </p>
-                        <div
-                            style={{ border: '3px outset rgba(0,0,0,0.3)' }}
-                            className="flex text-white self-start text-start text-2xl font-extralight mb-3 bg-transparentContainer p-2"
-                        >
-                            <p className="inline" style={{ color: '#c98659' }}>
-                                {'{ '}
-                            </p>
-                            <p>&nbsp;Javascript Software Developer&nbsp;</p>
-                            <p className="inline" style={{ color: '#c98659' }}>
-                                {' }'}
-                            </p>
-                        </div>
+                        <Expertise />
 
                         <div
                             style={{ border: '3px outset rgba(0,0,0,0.3)' }}
@@ -75,13 +67,7 @@ export default function App() {
                             </span>
                         </div>
                         <div
-                            className="absolute top-0 right-0 bg-transparentContainer p-2"
-                            style={{
-                                border: '3px outset rgba(0,0,0,0.3)',
-                                borderLeft: 'none',
-                                borderLeftStyle: 'none',
-                                borderLeftWidth: 0,
-                            }}
+                            className="hidden md:flex absolute top-0 right-0"
                         >
                             <ImageLinksContainer />
                         </div>

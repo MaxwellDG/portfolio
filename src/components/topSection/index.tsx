@@ -11,15 +11,15 @@ interface Props {
 
 export const TopSection = ({ routes, sectionName }: Props) => {
     return (
-        <div className="top-section mb-2">
+        <div className="hidden md:flex top-section mb-2">
             <div className="flex justify-between p-0">
                 <div className="flex flex-col justify-between">
                     <ReturnButton />
                     <h1 className="text-2xl">{sectionName}</h1>
                 </div>
                 <div className="flex flex-col w-[163px]">
-                    <RouteButton route={routes[0]} isBig={false} shouldNav={false} />
-                    <RouteButton route={routes[1]} isBig={false} shouldNav={false} />
+                    <RouteButton route={routes[0]} isBig={false} shouldNav={false} isMobile={false}/>
+                    <RouteButton route={routes[1]} isBig={false} shouldNav={false} isMobile={false}/>
                     <CVButton isBig={false} />
                 </div>
             </div>

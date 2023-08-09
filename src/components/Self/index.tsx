@@ -1,4 +1,3 @@
-// "use client"
 import { Theme, useThemeContext } from '../../contexts/themeContext';
 import { useMemo } from 'react';
 
@@ -7,7 +6,11 @@ const style = {
     width: '100%',
 };
 
-export default function Self() {
+type Props = {
+    isMobile: boolean;
+};
+
+export default function Self({ isMobile }: Props) {
     // const theme: Theme = useThemeContext();
 
     // const pic = useMemo(() => {
@@ -22,7 +25,7 @@ export default function Self() {
         <div
             className="bg-transparentContainer"
             style={{
-                height: '500px',
+                height: isMobile ? '150px' : '500px',
                 aspectRatio: '0.833',
                 border: '4px outset rgba(0,0,0,0.3)',
             }}

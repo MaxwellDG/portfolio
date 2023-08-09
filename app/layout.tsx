@@ -3,6 +3,7 @@ import ThemeProvider, { Theme } from '../src/contexts/themeContext';
 import '../globals.css';
 import '../src/theme/app.scss';
 import ScreenProvider from '../src/contexts/screenContext';
+import MobileNav from '../src/components/mobileNav';
 
 export const metadata = {
     title: 'Maxwell Dunk-Green',
@@ -20,6 +21,7 @@ export default function RootLayout({
                 <ThemeProvider>
                     <ScreenProvider>
                         {children}
+                        <MobileNav />
                     </ScreenProvider>
                 </ThemeProvider>
             </body>
