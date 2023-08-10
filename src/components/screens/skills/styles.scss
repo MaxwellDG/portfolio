@@ -1,0 +1,27 @@
+.carousel-con{
+    transition: transform 1s ease-in-out;
+    height: 100%;
+
+    .carousel-slot{
+        display: flex;
+        flex: 1 0 100%;
+        flex-basis: 100%;
+        margin-right: 8px;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
+.carousel-con.sliding{
+    transition: none;
+}
+
+.carousel-con.sliding.next{
+    transform: translateX(0%);
+}
+
+.carousel-con.sliding.prev{
+    transform: translateX(calc(2 * (-100%))); // todo add margin
+}
