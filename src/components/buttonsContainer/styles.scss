@@ -15,6 +15,15 @@ $timing-function: ease-out;
   $color 100%);
 }
 
+.floating-cv{
+  &:hover {
+    background: linear-gradient(to bottom,
+      lighten(saturate(lighten($color,15%),35%),$lighten-on-hover) 0%,
+      lighten(saturate(lighten($color,12%),15%),$lighten-on-hover) 26%,
+      lighten($color,$lighten-on-hover) 100%);
+  }
+}
+
 
 .button {
   cursor:pointer;

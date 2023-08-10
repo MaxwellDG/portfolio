@@ -19,13 +19,17 @@ import {
     hobbyProjectData,
 } from '../../src/data/projectData';
 import ProjectSide from '../../src/components/project/side';
+import SkillsBottom from '../../src/components/screens/skills/bottom';
+import ProjectBottom from '../../src/components/project/bottom';
+import SkillsMobile from '../../src/components/screens/skills/mobile';
+import ProjectMobile from '../../src/components/project/mobile';
 
 export default function Main() {
     const screen = useContext(ScreenContext);
-    const { width, height } = useWindowDimensions();
+    const { width } = useWindowDimensions();
 
     const [focusedIndex, setFocusedIndex] = React.useState(0);
-    const [isModal, toggleModal] = React.useState(false);
+    // const [isModal, toggleModal] = React.useState(false);
 
     const maxIndex = React.useMemo(() => {
         switch (screen) {
@@ -65,6 +69,34 @@ export default function Main() {
         }
     }, [screen, focusedIndex]);
 
+    const getMainMobileComponent = React.useCallback(() => {
+        switch (screen) {
+            case SCREEN_TYPE.SKILLS:
+                return (
+                    <SkillsMobile
+                        focusedIndex={focusedIndex}
+                        setFocusedIndex={setFocusedIndex}
+                    />
+                );
+            case SCREEN_TYPE.HOBBY:
+                return (
+                    <ProjectMobile
+                        focusedIndex={focusedIndex}
+                        setFocusedIndex={setFocusedIndex}
+                        array={hobbyProjectData}
+                    />
+                );
+            case SCREEN_TYPE.ENTERPRISE:
+                return (
+                    <ProjectMobile
+                        focusedIndex={focusedIndex}
+                        setFocusedIndex={setFocusedIndex}
+                        array={enterpriseProjectData}
+                    />
+                );
+        }
+    }, [screen, focusedIndex]);
+
     const getSideComponent = React.useCallback(() => {
         switch (screen) {
             case SCREEN_TYPE.SKILLS:
@@ -83,6 +115,33 @@ export default function Main() {
                 return (
                     enterpriseProjectData[focusedIndex] && (
                         <ProjectSide
+                            project={enterpriseProjectData[focusedIndex]}
+                        />
+                    )
+                );
+        }
+    }, [screen, focusedIndex]);
+
+    const getBottomComponent = React.useCallback(() => {
+        switch (screen) {
+            case SCREEN_TYPE.SKILLS:
+                return (
+                    skillsData[focusedIndex] && (
+                        <SkillsBottom focusedIndex={focusedIndex} />
+                    )
+                );
+            case SCREEN_TYPE.HOBBY:
+                return (
+                    hobbyProjectData[focusedIndex] && (
+                        <ProjectBottom
+                            project={hobbyProjectData[focusedIndex]}
+                        />
+                    )
+                );
+            case SCREEN_TYPE.ENTERPRISE:
+                return (
+                    enterpriseProjectData[focusedIndex] && (
+                        <ProjectBottom
                             project={enterpriseProjectData[focusedIndex]}
                         />
                     )
@@ -110,7 +169,6 @@ export default function Main() {
     }, [screen]);
 
     const handleArrowPress = (num: number, max: number) => {
-        console.log('jesus christ what the cunt', num, max);
         if (focusedIndex === 0 && num === -1) {
             setFocusedIndex(max);
         } else if (focusedIndex === max && num === 1) {
@@ -121,9 +179,9 @@ export default function Main() {
     };
 
     return (
-        <div className="flex h-5/6 w-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex-col">
+        <div className="flex w-full h-full md:h-5/6 md:w-5/6 flex-col m-2">
             <TopSection sectionName={screen} routes={screenRoutes} />
-            <div className="h-full w-full flex">
+            <div className="h-full w-full flex flex-col md:flex-row">
                 <div className="flex flex-1 w-full relative">
                     <div className="absolute top-0 left-0 h-full w-full flex flex-1 justify-between z-0">
                         <img src="/images/box-left.jpeg" className="box-side" />
@@ -133,10 +191,16 @@ export default function Main() {
                             className="box-side"
                         />
                     </div>
-                    {getMainComponent()}
+                    {width > 768 ? (
+                        getMainComponent()
+                    ) : (
+                        <div className="flex w-full h-full relative">
+                            {getMainMobileComponent()}
+                        </div>
+                    )}
                 </div>
 
-                {width > 700 && (
+                {width > 768 ? (
                     <div
                         className="h-full flex flex-col w-[200px]"
                         style={{
@@ -168,31 +232,21 @@ export default function Main() {
                             </div>
                         </div>
                     </div>
+                ) : (
+                    <div
+                        className="flex h-24 mb-[58px] mt-2"
+                        style={{
+                            borderTop: '2px outset #AEAAAC',
+                            borderRight: '2px outset #AEAAAC',
+                            borderLeft: '2px outset #AEAAAC',
+                            background:
+                                'linear-gradient(135deg, #AEAAAC, #8C8681)',
+                        }}
+                    >
+                        {getBottomComponent()}
+                    </div>
                 )}
             </div>
-            {/* <PopupModal
-                isShowing={isModal}
-                closeModal={() => toggleModal(false)}
-            >
-                <div className="h-full w-full flex flex-col">
-                    <div className="flex justify-end">
-                        <div onClick={() => toggleModal(false)}>
-                            <p>X</p>
-                        </div>
-                    </div>
-                    <div className="flex flex-col">
-                        {skillsData[focusedIndex].skills.map((skill) => (
-                            <div
-                                key={skill.name}
-                                className="flex items-center gap-x-3"
-                            >
-                                <img src={skill.icon} className="h-4 w-4" />
-                                <p>&nbsp;-&nbsp;{skill.name}</p>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </PopupModal> */}
         </div>
     );
 }
