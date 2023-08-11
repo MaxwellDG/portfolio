@@ -28,7 +28,7 @@ export default function Main() {
     const screen = useContext(ScreenContext);
     const { width } = useWindowDimensions();
 
-    const [focusedIndex, setFocusedIndex] = React.useState(0);
+    const [focusedIndex, setFocusedIndex] = React.useState(0); 
     // const [isModal, toggleModal] = React.useState(false);
 
     const maxIndex = React.useMemo(() => {

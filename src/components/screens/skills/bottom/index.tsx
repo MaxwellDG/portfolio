@@ -7,7 +7,7 @@ type Props = {
 export default function SkillsBottom({ focusedIndex }: Props) {
     return (
         <div className="flex flex-1">
-            <div className="flex flex-wrap flex-col flex-start items-start content-start justify-center flex-1 overflow-auto p-2">
+            <div className="flex flex-wrap justify-between flex-1 overflow-y-auto p-2">
                 {skillsData[focusedIndex].skills.map((skill) => (
                     <div
                         key={skill.name}

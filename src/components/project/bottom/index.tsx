@@ -13,16 +13,22 @@ export default function ProjectBottom({ project }: Props) {
                 {links.length ? (
                     <div className="flex flex-col mb-2">
                         {links.map((link: string, i: number) => (
-                            <a
-                                key={i}
-                                href={link}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <div
+                                className={`shaded-button shaded-hover px-2 self-start ${
+                                    i !== links.length - 1 ? 'mb-2' : ''
+                                } text-white rounded-sm border-black border`}
                             >
-                                <p className="font-extralight">
-                                    {linkTexts[i]}
-                                </p>
-                            </a>
+                                <a
+                                    key={i}
+                                    href={link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <p className="font-extralight">
+                                        {linkTexts[i]}
+                                    </p>
+                                </a>
+                            </div>
                         ))}
                     </div>
                 ) : null}

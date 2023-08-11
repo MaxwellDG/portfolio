@@ -11,7 +11,7 @@ type Props = {
     setFocusedIndex: (num: number) => void;
 };
 
-// todo maybe have absolute div at bottom for quick click? With hover showing name of project
+// ** The array has its order manipulated here in order to get the css transition animation offset correctly ** //
 
 export default function SkillsMobile({ focusedIndex, setFocusedIndex }: Props) {
     return (
@@ -20,7 +20,10 @@ export default function SkillsMobile({ focusedIndex, setFocusedIndex }: Props) {
                 focusedIndex={focusedIndex}
                 setFocusedIndex={setFocusedIndex}
             >
-                {skillsData.map((skill: SkillSet, i: number) => (
+                {[
+                    skillsData[skillsData.length - 1],
+                    ...skillsData.slice(0, skillsData.length - 1),
+                ].map((skill: SkillSet, i: number) => (
                     <div className="w-full flex justify-center">
                         <div
                             key={skill.name}

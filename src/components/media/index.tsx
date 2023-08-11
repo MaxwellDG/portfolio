@@ -13,7 +13,7 @@ export default ({ video, image, expandMedia }: Props) => {
 
     return (
         <div
-            className="flex hover:bg-[rgba(174,170,172,0.1)] rounded-sm flex-col justify-center"
+            className="flex items-center hover:bg-[rgba(174,170,172,0.1)] rounded-sm flex-col justify-center"
         >
             <button
                 onClick={expandMedia}

@@ -17,7 +17,7 @@ export default function Project({ project }: Props) {
 
     return (
         <div
-            className="flex bg-transparentContainer m-12 max-w-2xl p-2"
+            className="flex flex-col lg:flex-row bg-transparentContainer m-12 max-w-2xl p-2"
             style={{ border: '2px outset rgba(0,0,0,0.3)' }}
         >
             <Multimedia
