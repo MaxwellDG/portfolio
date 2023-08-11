@@ -1,6 +1,10 @@
+'use client';
+
 import React from 'react';
 import { Project } from '../../data/projectData';
 import Multimedia from '../media';
+import { PopupModal } from '../modals/skillsInfo';
+import MediaContent from '../media/mediaContent';
 
 interface Props {
     project: Project;
@@ -27,6 +31,13 @@ export default function Project({ project }: Props) {
                     {desc}
                 </p>
             </div>
+            <PopupModal
+                closeModal={() => toggleMediaModal(!isShowingMediaModal)}
+                isShowing={isShowingMediaModal}
+                contentDims={{ width: '70%', height: '70%' }}
+            >
+                <MediaContent image={image} video={video} />
+            </PopupModal>
         </div>
     );
 }

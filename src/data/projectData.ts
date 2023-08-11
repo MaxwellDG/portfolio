@@ -63,7 +63,7 @@ export const enterpriseProjectData: Project[] = [
         links: [],
         linkTexts: [],
         desc:
-            "Designed for medical companies to generate informative videos for their workers and patients. Utilizes Deepfake technology in order to quickly mass-produce video content of doctors speaking to patients in any languages. AI support bots currently in development in order to automatically generate deepfake videos in response to textual input.",
+            "Designed for medical companies to generate informative videos for their workers and patients. Utilizes Deepfake technology in order to quickly mass-produce video content of doctors speaking to patients in any language. AI support bots currently in development in order to generate deepfake videos in response to textual input.",
         video: "videos/smart-studio-ready.mp4",
         languages: ["React Native"],
         tech: ["Deepfakes, GraphQL, AWS, Expo"],
@@ -95,7 +95,7 @@ export const enterpriseProjectData: Project[] = [
         linkTexts: ["The Diabetes App on The App Store"],
         desc:
         "A social media app focused around people with diabetes. Users can make profiles, message each other, scroll the homefeed, there's app-wide video streaming events, and much more.",
-        image: "images/tda.png",
+        image: "images/tda.jpeg",
         languages: ["React Native"],
         tech: ["Oauth2, Pusher, Mux, Kevel"],
     },

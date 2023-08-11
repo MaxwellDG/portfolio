@@ -5,10 +5,8 @@ import { SCREEN_TYPE } from '../../contexts/screenContext/types';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 export default function ButtonsContainer() {
-
-
     return (
-        <div className="hidden md:flex">
+        <div className="hidden lg:flex">
             <div className="flex flex-col list-none p-0 justify-between ml-2 gap-y-1">
                 <div>
                     {[

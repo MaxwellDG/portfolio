@@ -10,11 +10,15 @@ export default function FloatingTop() {
     const [isExpanded, toggleExpanded] = React.useState(false);
 
     return (
-        <div className="md:hidden flex absolute top-4 left-0 right-0 w-full justify-between items-center z-50">
+        <div className="lg:hidden flex absolute top-4 left-0 right-0 w-full justify-between items-center z-50">
             <div className="mx-4">
                 <ReturnButton />
             </div>
-            <button type="button" onClick={() => toggleExpanded(!isExpanded)} className="mx-4 flex h-10 cursor-pointer">
+            <button
+                type="button"
+                onClick={() => toggleExpanded(!isExpanded)}
+                className="mx-4 flex h-10 cursor-pointer"
+            >
                 <div
                     className="floating-cv flex justify-center items-center h-10 w-10 shaded-button"
                     style={{

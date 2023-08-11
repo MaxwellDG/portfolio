@@ -11,6 +11,30 @@ interface Props {
     contentDims?: any,
 }
 
+const customStyles = {
+    content : {
+        width: 'fit-content',
+        maxHeight: '600px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignSelf: 'center', 
+        justifySelf: 'center',
+        backgroundColor: 'transparent',
+        border: 'none',
+        padding: 0,
+        inset: 0,
+        margin: 'auto'
+    },
+    overlay: {
+        zIndex: 1000,
+        backgroundColor: 'rgba(0,0,0,0.6)',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
+  };
+
 export const PopupModal = ({closeModal, isShowing, children, contentDims}: Props) => {
     
     return(
@@ -18,9 +42,12 @@ export const PopupModal = ({closeModal, isShowing, children, contentDims}: Props
             isOpen={isShowing}
             onRequestClose={closeModal}
             ariaHideApp={false}
-            // style={customStyles}
+            style={customStyles}
         >
             {children}
+            <button onClick={closeModal} className="absolute top-2 right-2 p-2 h-6 w-6 flex justify-center items-center rounded-sm border-none bg-[#8C8681]">
+                <p className="text-white">X</p>
+            </button>
         </Modal>
     )
 }

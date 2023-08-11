@@ -8,42 +8,38 @@ export default function ProjectSide({ project }: Props) {
     const { name, github, links, linkTexts, languages, tech } = project;
 
     return (
-        <div className="flex flex-col flex-1 relative">
+        <div className="flex flex-col flex-1 relative overflow-y-auto">
             <h1 className="mx-2 mt-2 text-xl underline">{name}</h1>
-            <div className="flex flex-col flex-1 overflow-auto p-2">
+            <div className="flex flex-col flex-1 p-2">
                 {links.length ? (
                     <div className="flex flex-col mb-2">
                         {links.map((link: string, i: number) => (
-                            <a
-                                key={i}
-                                href={link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <p className="font-extralight">
-                                    {linkTexts[i]}
-                                </p>
-                            </a>
+                            <div className={`shaded-button shaded-hover ${i !== links.length - 1 ? 'mb-2' : ''} text-white rounded-sm border-black border`}>
+                                <a
+                                    key={i}
+                                    href={link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <p className="font-extralight text-center">
+                                        {linkTexts[i]}
+                                    </p>
+                                </a>
+                            </div>
                         ))}
                     </div>
                 ): null}
                 <h2>Language:</h2>
                 <div className="flex mb-2">
-                    {languages.map((lang: string, i: number) => (
-                        <p key={i} className="font-extralight">
-                            {lang}
-                            {i !== languages.length - 1 ? ', ' : ''}
-                        </p>
-                    ))}
+                    <p className="font-extralight">
+                        {languages.join(', ')}
+                    </p>
                 </div>
                 <h2>Tech stack:</h2>
                 <div className="flex mb-2">
-                    {tech.map((t: string, i: number) => (
-                        <p key={i} className="font-extralight">
-                            {t}
-                            {i !== tech.length - 1 ? ', ' : ''}
+                        <p className="font-extralight">
+                            {tech.join(', ')}
                         </p>
-                    ))}
                 </div>
             </div>
             {github ? (

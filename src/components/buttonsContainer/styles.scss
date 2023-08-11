@@ -15,7 +15,7 @@ $timing-function: ease-out;
   $color 100%);
 }
 
-.floating-cv{
+.shaded-hover{
   &:hover {
     background: linear-gradient(to bottom,
       lighten(saturate(lighten($color,15%),35%),$lighten-on-hover) 0%,
@@ -23,7 +23,6 @@ $timing-function: ease-out;
       lighten($color,$lighten-on-hover) 100%);
   }
 }
-
 
 .button {
   cursor:pointer;

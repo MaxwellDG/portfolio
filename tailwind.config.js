@@ -11,6 +11,10 @@ module.exports = {
       },
       width: {
         infoBox: "400px"
+      },
+      screens: {
+        xs: "458px",
+        xxs: "385px"
       }
     }
   },

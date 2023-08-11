@@ -5,25 +5,27 @@ import Expertise from '../src/components/expertise';
 
 export default function App() {
     return (
-        <div className="flex flex-1 justify-center items-center">
-            <div className="flex w-5/6 max-w-6xl h-[500px] flex-col md:flex-row">
+        <div className="flex flex-1 justify-center xs:items-center">
+            <div className="flex m-2 lg:max-w-6xl max-w-2xl h-[500px] flex-col lg:flex-row">
                 <div
                     className="relative justify-around items-center flex text-center"
                     style={{}}
                 >
-                    <div className="hidden md:flex">
-                        <Self isMobile={false}/>
+                    <div className="hidden lg:flex">
+                        <Self isMobile={false} />
                     </div>
-                    <div className="flex gap-y-2 flex-1 h-full flex-col items-start pl-2 relative">
-                        <p
-                            style={{ border: '3px outset rgba(0,0,0,0.3)' }}
-                            className="text-white text-5xl font-light bg-transparentContainer p-2"
-                        >
-                            Maxwell Dunk&#8209;Green
-                        </p>
+                    <div className="flex gap-y-2 flex-1 h-full flex-col items-start lg:pl-2 relative">
+                        <div className="w-full flex justify-center xs:justify-start">
+                            <p
+                                style={{ border: '3px outset rgba(0,0,0,0.3)' }}
+                                className="text-white text-3xl xs:text-5xl font-light bg-transparentContainer p-2"
+                            >
+                                Maxwell Dunk&#8209;Green
+                            </p>
+                        </div>
                         <Expertise />
 
-                        <div
+                        <span
                             style={{ border: '3px outset rgba(0,0,0,0.3)' }}
                             className="text-white text-start font-extralight bg-transparentContainer p-2"
                         >
@@ -36,7 +38,7 @@ export default function App() {
                             </span>
                             <br />
                             <br />
-                            <span style={{ whiteSpace: 'nowrap' }}>
+                            <span>
                                 If you are doing anything
                             </span>
                             <span style={{ color: '#c98659' }}>&nbsp;Web3</span>
@@ -65,12 +67,7 @@ export default function App() {
                                 couldn't be happier to continue doing much of
                                 the same.
                             </span>
-                        </div>
-                        <div
-                            className="hidden md:flex absolute top-0 right-0"
-                        >
-                            <ImageLinksContainer />
-                        </div>
+                        </span>
                     </div>
                 </div>
                 <ButtonsContainer />
