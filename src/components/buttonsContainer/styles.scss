@@ -1,141 +1,239 @@
-$height:45;
-$depth:6;
+$height: 45;
+$depth: 6;
 $short-height: 30;
 $short-depth: 4;
-$color: #9C6A49;
-$text-color:darken($color,10%);
-$lighten-on-hover:7%;
-$button-speed:.06;
+$color: #9c6a49;
+$text-color: darken($color, 10%);
+$lighten-on-hover: 7%;
+$button-speed: 0.06;
 $timing-function: ease-out;
 
-.shaded-button{
-  background: linear-gradient(to bottom,
-  saturate(lighten($color,15%),35%) 0%,
-  saturate(lighten($color,12%),15%) 26%,
-  $color 100%);
+.shaded-button {
+    background: linear-gradient(
+        to bottom,
+        saturate(lighten($color, 15%), 35%) 0%,
+        saturate(lighten($color, 12%), 15%) 26%,
+        $color 100%
+    );
 }
 
-.shaded-hover{
-  &:hover {
-    background: linear-gradient(to bottom,
-      lighten(saturate(lighten($color,15%),35%),$lighten-on-hover) 0%,
-      lighten(saturate(lighten($color,12%),15%),$lighten-on-hover) 26%,
-      lighten($color,$lighten-on-hover) 100%);
-  }
+.shaded-hover {
+    &:hover {
+        background: linear-gradient(
+            to bottom,
+            lighten(saturate(lighten($color, 15%), 35%), $lighten-on-hover) 0%,
+            lighten(saturate(lighten($color, 12%), 15%), $lighten-on-hover) 26%,
+            lighten($color, $lighten-on-hover) 100%
+        );
+    }
 }
 
 .button {
-  cursor:pointer;
-  box-sizing:border-box;
-  text-decoration:none;
-  color:$text-color;
-  &:visited {
-    color:$text-color;
-  }
-  height:$height+px;
-  padding: 0 (($height/2)+px);
-  background: linear-gradient(to bottom,
-    saturate(lighten($color,15%),35%) 0%,
-    saturate(lighten($color,12%),15%) 26%,
-    $color 100%);
-  // border-top:1px solid lighten($color,22%);
-  border-bottom:1px solid lighten($color,20%);
-  top:0;
-  transition:all ($button-speed + s) $timing-function;
-  position:relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: $text-color;
+    &:visited {
+        color: $text-color;
+    }
+    height: $height + px;
+    padding: 0 (($height/2) + px);
+    background: linear-gradient(
+        to bottom,
+        saturate(lighten($color, 15%), 35%) 0%,
+        saturate(lighten($color, 12%), 15%) 26%,
+        $color 100%
+    );
+    // border-top:1px solid lighten($color,22%);
+    border-bottom: 1px solid lighten($color, 20%);
+    top: 0;
+    transition: all ($button-speed + s) $timing-function;
+    position: relative;
 
-  &:hover {
-    background: linear-gradient(to bottom,
-      lighten(saturate(lighten($color,15%),35%),$lighten-on-hover) 0%,
-      lighten(saturate(lighten($color,12%),15%),$lighten-on-hover) 26%,
-      lighten($color,$lighten-on-hover) 100%);
-  }
+    &:hover {
+        background: linear-gradient(
+            to bottom,
+            lighten(saturate(lighten($color, 15%), 35%), $lighten-on-hover) 0%,
+            lighten(saturate(lighten($color, 12%), 15%), $lighten-on-hover) 26%,
+            lighten($color, $lighten-on-hover) 100%
+        );
+    }
 }
 .button:active {
-  top:$depth+px;
-       text-shadow:0 -2px 0 darken($color,0%),0 1px 1px lighten($color,20%), 0 0 4px white ;
-  color:lighten($color,45%);
-  &:before {
-    top:0;
-    box-shadow: 0 3px 3px rgba(0,0,0,.7),0 3px 9px rgba(0,0,0,.2);
-
-  }
+    top: $depth + px;
+    text-shadow: 0 -2px 0 darken($color, 0%), 0 1px 1px lighten($color, 20%),
+        0 0 4px white;
+    color: lighten($color, 45%);
+    &:before {
+        top: 0;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.7), 0 3px 9px rgba(0, 0, 0, 0.2);
+    }
 }
 .button:before {
-  display:inline-block;
-  content:'';
-  position:absolute;
-  left:-2px;
-  right:0;
-  z-index:-1;
-  top:($short-depth)+px;
-  height:($height)+px;
-  width: 100%;
-  background: linear-gradient(to top,
-    saturate(darken($color,40%),15%) 0%,
-    saturate(darken($color,25%),10%) $short-depth+px);
-  transition:all (($button-speed*1.3) + s) $timing-function;
-  box-shadow:
-    0 1px 0 2px rgba(0,0,0,.3),
-    0 5px ($short-depth*.4+px) rgba(0,0,0,.5),
-    0 ($short-depth*1.8+px) 9px rgba(0,0,0,.2);
+    display: inline-block;
+    content: '';
+    position: absolute;
+    left: -2px;
+    right: 0;
+    z-index: -1;
+    top: ($short-depth) + px;
+    height: ($height) + px;
+    width: 100%;
+    background: linear-gradient(
+        to top,
+        saturate(darken($color, 40%), 15%) 0%,
+        saturate(darken($color, 25%), 10%) $short-depth + px
+    );
+    transition: all (($button-speed * 1.3) + s) $timing-function;
+    box-shadow: 0 1px 0 2px rgba(0, 0, 0, 0.3),
+        0 5px ($short-depth * 0.4 + px) rgba(0, 0, 0, 0.5),
+        0 ($short-depth * 1.8 + px) 9px rgba(0, 0, 0, 0.2);
 }
 
 .short-button {
-  cursor:pointer;
-  margin-bottom:10px;
-  box-sizing:border-box;
-  text-decoration:none;
-  color:$text-color;
-  &:visited {
-    color:$text-color;
-  }
-  height:$short-height+px;
-  padding: 0 (($short-height/2)+px);
-  width:auto;
-  background: linear-gradient(to bottom,
-    saturate(lighten($color,15%),35%) 0%,
-    saturate(lighten($color,12%),15%) 26%,
-    $color 100%);
-  // border-top:1px solid lighten($color,22%);
-  border-bottom:1px solid lighten($color,20%);
-  top:0;
-  transition:all ($button-speed + s) $timing-function;
-  position:relative;
+    cursor: pointer;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: $text-color;
+    &:visited {
+        color: $text-color;
+    }
+    height: $short-height + px;
+    padding: 0 (($short-height/2) + px);
+    width: auto;
+    background: linear-gradient(
+        to bottom,
+        saturate(lighten($color, 15%), 35%) 0%,
+        saturate(lighten($color, 12%), 15%) 26%,
+        $color 100%
+    );
+    // border-top:1px solid lighten($color,22%);
+    border-bottom: 1px solid lighten($color, 20%);
+    top: 0;
+    transition: all ($button-speed + s) $timing-function;
+    position: relative;
 
-  &:hover {
-    background: linear-gradient(to bottom,
-      lighten(saturate(lighten($color,15%),35%),$lighten-on-hover) 0%,
-      lighten(saturate(lighten($color,12%),15%),$lighten-on-hover) 26%,
-      lighten($color,$lighten-on-hover) 100%);
-  }
+    &:hover {
+        background: linear-gradient(
+            to bottom,
+            lighten(saturate(lighten($color, 15%), 35%), $lighten-on-hover) 0%,
+            lighten(saturate(lighten($color, 12%), 15%), $lighten-on-hover) 26%,
+            lighten($color, $lighten-on-hover) 100%
+        );
+    }
 }
 .short-button:active {
-  top:$short-depth+px;
-       text-shadow:0 -2px 0 darken($color,0%),0 1px 1px lighten($color,20%), 0 0 4px white ;
-  color:lighten($color,45%);
-  &:before {
-    top:0;
-    box-shadow: 0 3px 3px rgba(0,0,0,.7),0 3px 9px rgba(0,0,0,.2);
-
-  }
+    top: $short-depth + px;
+    text-shadow: 0 -2px 0 darken($color, 0%), 0 1px 1px lighten($color, 20%),
+        0 0 4px white;
+    color: lighten($color, 45%);
+    &:before {
+        top: 0;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.7), 0 3px 9px rgba(0, 0, 0, 0.2);
+    }
 }
 .short-button:before {
-  display:inline-block;
-  content:'';
-  position:absolute;
-  left:-2px;
-  right:0;
-  z-index:-1;
-  top:($short-depth)+px;
-  height:($short-height)+px;
-  width: 100%;
-  background: linear-gradient(to top,
-    saturate(darken($color,40%),15%) 0%,
-    saturate(darken($color,25%),10%) $short-depth+px);
-  transition:all (($button-speed*1.3) + s) $timing-function;
-  box-shadow:
-    0 1px 0 2px rgba(0,0,0,.3),
-    0 5px ($short-depth*.4+px) rgba(0,0,0,.5),
-    0 ($short-depth*1.8+px) 9px rgba(0,0,0,.2);
+    display: inline-block;
+    content: '';
+    position: absolute;
+    left: -2px;
+    right: 0;
+    z-index: -1;
+    top: ($short-depth) + px;
+    height: ($short-height) + px;
+    width: 100%;
+    background: linear-gradient(
+        to top,
+        saturate(darken($color, 40%), 15%) 0%,
+        saturate(darken($color, 25%), 10%) $short-depth + px
+    );
+    transition: all (($button-speed * 1.3) + s) $timing-function;
+    box-shadow: 0 1px 0 2px rgba(0, 0, 0, 0.3),
+        0 5px ($short-depth * 0.4 + px) rgba(0, 0, 0, 0.5),
+        0 ($short-depth * 1.8 + px) 9px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button {
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: $text-color;
+    &:visited {
+        color: $text-color;
+    }
+    height: $height + px;
+    padding: 0 (($height/2) + px);
+    background: linear-gradient(
+        to bottom,
+        saturate(lighten($color, 15%), 35%) 0%,
+        saturate(lighten($color, 12%), 15%) 26%,
+        $color 100%
+    );
+    // border-top:1px solid lighten($color,22%);
+    border-bottom: 5px solid darken($color, 20%);
+
+    &:hover {
+        background: linear-gradient(
+            to bottom,
+            lighten(saturate(lighten($color, 15%), 35%), $lighten-on-hover) 0%,
+            lighten(saturate(lighten($color, 12%), 15%), $lighten-on-hover) 26%,
+            lighten($color, $lighten-on-hover) 100%
+        );
+    }
+}
+
+.active-nav-button {
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: $text-color;
+    &:visited {
+        color: $text-color;
+    }
+    height: $height - 2 + px;
+    margin-top: 2px;
+    padding: 0 (($height/2) + px);
+}
+
+.dark-border-left {
+    border-left: 2px solid darken(#9c6a49, 20%);
+}
+
+.left-active-nav {
+    background: linear-gradient(
+        to right,
+        saturate(lighten($color, 15%), 35%) 0%,
+        saturate(lighten($color, 12%), 15%) 26%,
+        $color 100%
+    );
+    border-right: 2px solid darken($color, 20%);
+}
+
+.mid-active-nav {
+    background: linear-gradient(
+        to right,
+        darken($color, 10%) 0%,
+        $color 26%,
+        $color 100%
+    );
+    border-right: 2px solid darken($color, 20%);
+}
+
+.right-active-nav {
+    background: linear-gradient(
+        to left,
+        saturate(lighten($color, 15%), 35%) 0%,
+        saturate(lighten($color, 12%), 15%) 26%,
+        $color 100%
+    );
+    border-left: 2px solid darken($color, 20%);
+}
+
+.right-nav{
+  border-left: 1px solid darken($color, 20%);
+}
+
+.left-nav{
+  border-right: 1px solid darken($color, 20%);
 }
