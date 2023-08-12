@@ -23,9 +23,8 @@ export default function Self({ isMobile }: Props) {
 
     return (
         <div
-            className="bg-transparentContainer"
+            className="bg-transparentContainer h-[125px] xxs:h-[150px] lg:h-[500px]"
             style={{
-                height: isMobile ? '150px' : '500px',
                 aspectRatio: '0.833',
                 border: '4px outset rgba(0,0,0,0.3)',
             }}

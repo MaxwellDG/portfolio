@@ -1,3 +1,4 @@
+import iconsHashmap from '../../../data/iconsHashmap';
 import { Project } from '../../../data/projectData';
 
 interface Props {
@@ -8,41 +9,63 @@ export default function ProjectSide({ project }: Props) {
     const { name, github, links, linkTexts, languages, tech } = project;
 
     return (
-        <div className="flex flex-col flex-1 relative">
+        <div className="flex flex-col flex-1 relative overflow-y-auto">
             <h1 className="mx-2 mt-2 text-xl underline">{name}</h1>
-            <div className="flex flex-col flex-1 overflow-auto p-2">
+            <div className="flex flex-col flex-1 p-2">
                 {links.length ? (
                     <div className="flex flex-col mb-2">
                         {links.map((link: string, i: number) => (
-                            <a
-                                key={i}
-                                href={link}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <div
+                                className={`shaded-button shaded-hover ${
+                                    i !== links.length - 1 ? 'mb-2' : ''
+                                } text-white rounded-sm border-black border`}
                             >
-                                <p className="font-extralight">
-                                    {linkTexts[i]}
-                                </p>
-                            </a>
+                                <a
+                                    key={i}
+                                    href={link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    <p className="font-extralight text-center">
+                                        {linkTexts[i]}
+                                    </p>
+                                </a>
+                            </div>
                         ))}
                     </div>
-                ): null}
+                ) : null}
                 <h2>Language:</h2>
-                <div className="flex mb-2">
-                    {languages.map((lang: string, i: number) => (
-                        <p key={i} className="font-extralight">
-                            {lang}
-                            {i !== languages.length - 1 ? ', ' : ''}
-                        </p>
+                <div className="flex flex-col p-2">
+                    {languages.map((lang) => (
+                        <div
+                            key={lang}
+                            className="flex items-center gap-x-2 mb-2"
+                        >
+                            <img
+                                src={`/images/${
+                                    iconsHashmap[lang.replaceAll(' ', '')]
+                                }`}
+                                className="h-6 w-6"
+                            />
+                            <p className="font-extralight">{lang}</p>
+                        </div>
                     ))}
                 </div>
                 <h2>Tech stack:</h2>
-                <div className="flex mb-2">
-                    {tech.map((t: string, i: number) => (
-                        <p key={i} className="font-extralight">
-                            {t}
-                            {i !== tech.length - 1 ? ', ' : ''}
-                        </p>
+                <div className="flex flex-col p-2">
+                    {tech.map((tech) => (
+                        <div
+                            key={tech}
+                            className="flex items-center gap-x-2 mb-2"
+                        >
+                            <img
+                                src={`/images/${
+                                    iconsHashmap[tech.replaceAll(' ', '')]
+                                }`}
+                                className="h-6 w-6"
+                            />
+                            <p className="font-extralight">{tech}</p>
+                        </div>
                     ))}
                 </div>
             </div>

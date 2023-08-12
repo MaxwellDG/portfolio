@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 
 interface Props {
@@ -7,15 +9,11 @@ interface Props {
 }
 
 export default ({ video, image, expandMedia }: Props) => {
-
-
     return (
-        <div
-            className="flex"
-        >
+        <div className="flex items-center hover:bg-[rgba(174,170,172,0.1)] rounded-sm flex-col justify-center z-50 pointer-events-auto cursor-pointer">
             <button
                 onClick={expandMedia}
-                className="flex justify-center items-center relative rounded p-2 bg-transparent h-[250px] w-[250px]"
+                className="flex justify-center items-center relative rounded lg:p-2 mb-2 lg:mb-0 bg-transparent max-h-[250px] w-[250px]"
             >
                 {video ? (
                     <>
@@ -58,7 +56,7 @@ export default ({ video, image, expandMedia }: Props) => {
                         key={image}
                         src={image}
                         alt="img_project"
-                        className="w-full h-full"
+                        className="max-w-full max-h-full"
                     />
                 )}
             </button>

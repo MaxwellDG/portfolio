@@ -1,21 +1,21 @@
-'use client';
+// 'use client';
 
 import { COLORS } from '../../theme';
 import DownloadIcon from './download';
 import FullscreenIcon from './fullscreen';
-import { Theme, useThemeContext } from '../../contexts/themeContext';
+// import { Theme, useThemeContext } from '../../contexts/themeContext';
 
 type Props = {
     isBig: boolean;
 };
 
 export default function CVButton({ isBig }: Props) {
-    const theme: Theme = useThemeContext();
+    // const theme: Theme = useThemeContext();
 
     return (
         <div
             className={`flex ${
-                isBig ? 'h-15' : 'h-10'
+                isBig ? 'h-15' : 'h-12'
             }  flex-row bg-transparentContainer`}
         >
             <div

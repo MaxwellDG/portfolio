@@ -16,7 +16,7 @@ export default function Skills({focusedIndex, setFocusedIndex}: Props) {
                         <div
                             key={i}
                             onClick={() => setFocusedIndex(i)}
-                            className="cursor-pointer m-4 rounded h-32 w-32 p-4 flex flex-row justify-center items-center bg-transparentContainer"
+                            className="hover:bg-[rgba(174,170,172,0.1)] cursor-pointer m-4 rounded h-32 w-32 p-4 flex flex-row justify-center items-center bg-transparentContainer"
                             style={{
                                 border:
                                     focusedIndex === i
@@ -37,7 +37,7 @@ export default function Skills({focusedIndex, setFocusedIndex}: Props) {
                         <div
                             key={i + 3}
                             onClick={() => setFocusedIndex(i + 3)}
-                            className="cursor-pointer m-4 rounded h-32 w-32 p-4 flex flex-row justify-center items-center bg-transparentContainer"
+                            className="hover:bg-[rgba(174,170,172,0.1)] cursor-pointer m-4 rounded h-32 w-32 p-4 flex flex-row justify-center items-center bg-transparentContainer"
                             style={{
                                 border:
                                     focusedIndex === i + 3

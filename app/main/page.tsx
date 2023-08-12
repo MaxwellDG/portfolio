@@ -179,73 +179,88 @@ export default function Main() {
     };
 
     return (
-        <div className="flex w-full h-full md:h-5/6 md:w-5/6 flex-col m-2">
-            <TopSection sectionName={screen} routes={screenRoutes} />
-            <div className="h-full w-full flex flex-col md:flex-row">
-                <div className="flex flex-1 w-full relative">
-                    <div className="absolute top-0 left-0 h-full w-full flex flex-1 justify-between z-0">
-                        <img src="/images/box-left.jpeg" className="box-side" />
-                        <div className="flex flex-1 box-center-repeat" />
-                        <img
-                            src="/images/box-right.jpeg"
-                            className="box-side"
-                        />
+        <div className="flex flex-1 justify-center items-center">
+            <div className="flex w-full h-full lg:h-5/6 lg:w-5/6 flex-col m-2">
+                <TopSection sectionName={screen} routes={screenRoutes} />
+                <div className="h-full w-full flex flex-col lg:flex-row">
+                    <div className="flex flex-1 w-full relative">
+                        <div className="absolute top-2 left-0 pb-2 h-full w-full flex flex-1 z-0 justify-center">
+                            {width >= 1024 ? (
+                                <>
+                                    <img
+                                        src="/images/box-left.jpeg"
+                                        className="box-side"
+                                    />
+                                    <div className="flex flex-1 box-center-repeat" />
+                                    <img
+                                        src="/images/box-right.jpeg"
+                                        className="box-side"
+                                    />
+                                </>
+                            ) : (
+                                <img src="/images/black-box.jpg" />
+                            )}
+                        </div>
+                        {width >= 1024 ? (
+                            getMainComponent()
+                        ) : (
+                            <div className="flex w-full h-full relative">
+                                {getMainMobileComponent()}
+                            </div>
+                        )}
                     </div>
-                    {width > 768 ? (
-                        getMainComponent()
+
+                    {width >= 1024 ? (
+                        <div
+                            className="h-full flex flex-col w-[200px]"
+                            style={{
+                                border: '2px outset #AEAAAC',
+                                // borderTop: '2px outset #AEAAAC',
+                                // borderRight: '2px outset #AEAAAC',
+                                // borderBottom: '2px outset #AEAAAC',
+                                background:
+                                    'linear-gradient(135deg, #AEAAAC, #8C8681)',
+                            }}
+                        >
+                            {getSideComponent()}
+                            <div className="w-full flex">
+                                <div
+                                    onClick={() =>
+                                        handleArrowPress(-1, maxIndex)
+                                    }
+                                    className="keyboard-button flex justify-center items-center"
+                                >
+                                    <div className="rotate-[315deg]" style={{}}>
+                                        <LeftArrow height={20} width={30} />
+                                    </div>
+                                </div>
+                                <div
+                                    onClick={() =>
+                                        handleArrowPress(1, maxIndex)
+                                    }
+                                    className="keyboard-button flex justify-center items-center"
+                                >
+                                    <div className="rotate-[135deg]" style={{}}>
+                                        <LeftArrow height={20} width={30} />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     ) : (
-                        <div className="flex w-full h-full relative">
-                            {getMainMobileComponent()}
+                        <div
+                            className="flex h-24 mb-[52px] mt-2"
+                            style={{
+                                borderTop: '2px outset #AEAAAC',
+                                borderRight: '2px outset #AEAAAC',
+                                borderLeft: '2px outset #AEAAAC',
+                                background:
+                                    'linear-gradient(135deg, #AEAAAC, #8C8681)',
+                            }}
+                        >
+                            {getBottomComponent()}
                         </div>
                     )}
                 </div>
-
-                {width > 768 ? (
-                    <div
-                        className="h-full flex flex-col w-[200px]"
-                        style={{
-                            border: '2px outset #AEAAAC',
-                            // borderTop: '2px outset #AEAAAC',
-                            // borderRight: '2px outset #AEAAAC',
-                            // borderBottom: '2px outset #AEAAAC',
-                            background:
-                                'linear-gradient(135deg, #AEAAAC, #8C8681)',
-                        }}
-                    >
-                        {getSideComponent()}
-                        <div className="w-full flex ">
-                            <div
-                                onClick={() => handleArrowPress(-1, maxIndex)}
-                                className="keyboard-button flex justify-center items-center"
-                            >
-                                <div className="rotate-[315deg]" style={{}}>
-                                    <LeftArrow height={20} width={30} />
-                                </div>
-                            </div>
-                            <div
-                                onClick={() => handleArrowPress(1, maxIndex)}
-                                className="keyboard-button flex justify-center items-center"
-                            >
-                                <div className="rotate-[135deg]" style={{}}>
-                                    <LeftArrow height={20} width={30} />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                ) : (
-                    <div
-                        className="flex h-24 mb-[58px] mt-2"
-                        style={{
-                            borderTop: '2px outset #AEAAAC',
-                            borderRight: '2px outset #AEAAAC',
-                            borderLeft: '2px outset #AEAAAC',
-                            background:
-                                'linear-gradient(135deg, #AEAAAC, #8C8681)',
-                        }}
-                    >
-                        {getBottomComponent()}
-                    </div>
-                )}
             </div>
         </div>
     );
