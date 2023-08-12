@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import React from 'react';
 
@@ -9,12 +9,8 @@ interface Props {
 }
 
 export default ({ video, image, expandMedia }: Props) => {
-
-
     return (
-        <div
-            className="flex items-center hover:bg-[rgba(174,170,172,0.1)] rounded-sm flex-col justify-center"
-        >
+        <div className="flex items-center hover:bg-[rgba(174,170,172,0.1)] rounded-sm flex-col justify-center z-50 pointer-events-auto cursor-pointer">
             <button
                 onClick={expandMedia}
                 className="flex justify-center items-center relative rounded p-2 bg-transparent max-h-[250px] w-[250px]"

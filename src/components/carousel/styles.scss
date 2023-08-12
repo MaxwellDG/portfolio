@@ -9,7 +9,7 @@
 .carousel-container {
     display: flex;
     transition: transform .4s ease;
-    transform: translateX(calc(-100% - 16px))
+    transform: translateX(calc(-100% - 0.5rem))
 }
 
 .carousel-container.sliding {
@@ -21,13 +21,13 @@
 }
 
 .carousel-container.sliding.prev {
-    transform: translateX(calc(2 * (-100% - 16px)))
+    transform: translateX(calc(2 * (-100% - 0.5rem)))
 }
 
 .carousel-slot {
     flex: 1 0 100%;
     flex-basis: 100%;
-    margin-right: 16px;
+    margin: auto 0.5rem auto 0;
 }
 
 .carousel-slot img {

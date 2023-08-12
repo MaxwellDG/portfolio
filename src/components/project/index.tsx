@@ -8,16 +8,17 @@ import MediaContent from '../media/mediaContent';
 
 interface Props {
     project: Project;
+    isMobile: boolean;
 }
 
-export default function Project({ project }: Props) {
+export default function Project({ project, isMobile }: Props) {
     const [isShowingMediaModal, toggleMediaModal] = React.useState(false);
 
     const { name, desc, video, image } = project;
 
     return (
         <div
-            className="flex flex-col lg:flex-row bg-transparentContainer m-12 max-w-2xl p-2"
+            className="flex flex-col lg:flex-row bg-transparentContainer m-12 max-w-2xl p-2 relative"
             style={{ border: '2px outset rgba(0,0,0,0.3)' }}
         >
             <Multimedia
@@ -34,7 +35,7 @@ export default function Project({ project }: Props) {
             <PopupModal
                 closeModal={() => toggleMediaModal(!isShowingMediaModal)}
                 isShowing={isShowingMediaModal}
-                contentDims={{ width: '70%', height: '70%' }}
+                isMobile={isMobile}
             >
                 <MediaContent image={image} video={video} />
             </PopupModal>

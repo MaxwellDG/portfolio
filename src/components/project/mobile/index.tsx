@@ -19,8 +19,8 @@ export default function ProjectMobile({
                     array[array.length - 1],
                     ...array.slice(0, array.length - 1),
                 ].map((project: ProjectType, i: number) => (
-                    <div className="w-full flex justify-center">
-                        <Project project={project} />
+                    <div key={i} className="w-full flex justify-center">
+                        <Project project={project} isMobile/>
                     </div>
                 ))}
             </Carousel>

@@ -14,12 +14,12 @@ export default function ProjectBottom({ project }: Props) {
                     <div className="flex flex-col mb-2">
                         {links.map((link: string, i: number) => (
                             <div
+                                key={i}
                                 className={`shaded-button shaded-hover px-2 self-start ${
                                     i !== links.length - 1 ? 'mb-2' : ''
                                 } text-white rounded-sm border-black border`}
                             >
                                 <a
-                                    key={i}
                                     href={link}
                                     target="_blank"
                                     rel="noopener noreferrer"
