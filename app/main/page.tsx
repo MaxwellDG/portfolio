@@ -204,7 +204,7 @@ export default function Main() {
                         )}
                     </div>
 
-                    {width > 768 ? (
+                    {width > 1024 ? (
                         <div
                             className="h-full flex flex-col w-[200px]"
                             style={{
@@ -242,7 +242,7 @@ export default function Main() {
                         </div>
                     ) : (
                         <div
-                            className="flex h-24 mb-[58px] mt-2"
+                            className="flex max-h-24 mb-[58px] mt-2"
                             style={{
                                 borderTop: '2px outset #AEAAAC',
                                 borderRight: '2px outset #AEAAAC',

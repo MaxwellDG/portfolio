@@ -1,3 +1,4 @@
+import iconsHashmap from '../../../data/iconsHashmap';
 import { Project } from '../../../data/projectData';
 
 interface Props {
@@ -14,7 +15,11 @@ export default function ProjectSide({ project }: Props) {
                 {links.length ? (
                     <div className="flex flex-col mb-2">
                         {links.map((link: string, i: number) => (
-                            <div className={`shaded-button shaded-hover ${i !== links.length - 1 ? 'mb-2' : ''} text-white rounded-sm border-black border`}>
+                            <div
+                                className={`shaded-button shaded-hover ${
+                                    i !== links.length - 1 ? 'mb-2' : ''
+                                } text-white rounded-sm border-black border`}
+                            >
                                 <a
                                     key={i}
                                     href={link}
@@ -28,18 +33,40 @@ export default function ProjectSide({ project }: Props) {
                             </div>
                         ))}
                     </div>
-                ): null}
+                ) : null}
                 <h2>Language:</h2>
-                <div className="flex mb-2">
-                    <p className="font-extralight">
-                        {languages.join(', ')}
-                    </p>
+                <div className="flex flex-col p-2">
+                    {languages.map((lang) => (
+                        <div
+                            key={lang}
+                            className="flex items-center gap-x-2 mb-2"
+                        >
+                            <img
+                                src={`/images/${
+                                    iconsHashmap[lang.replaceAll(' ', '')]
+                                }`}
+                                className="h-6 w-6"
+                            />
+                            <p className="font-extralight">{lang}</p>
+                        </div>
+                    ))}
                 </div>
                 <h2>Tech stack:</h2>
-                <div className="flex mb-2">
-                        <p className="font-extralight">
-                            {tech.join(', ')}
-                        </p>
+                <div className="flex flex-col p-2">
+                    {tech.map((tech) => (
+                        <div
+                            key={tech}
+                            className="flex items-center gap-x-2 mb-2"
+                        >
+                            <img
+                                src={`/images/${
+                                    iconsHashmap[tech.replaceAll(' ', '')]
+                                }`}
+                                className="h-6 w-6"
+                            />
+                            <p className="font-extralight">{tech}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
             {github ? (

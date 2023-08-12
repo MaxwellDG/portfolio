@@ -24,9 +24,11 @@ export default function SkillsMobile({ focusedIndex, setFocusedIndex }: Props) {
                     skillsData[skillsData.length - 1],
                     ...skillsData.slice(0, skillsData.length - 1),
                 ].map((skill: SkillSet, i: number) => (
-                    <div className="w-full flex justify-center">
+                    <div
+                        key={skill.name}
+                        className="w-full flex justify-center"
+                    >
                         <div
-                            key={skill.name}
                             className="flex cursor-pointer m-4 rounded h-32 w-32 p-4 justify-center items-center bg-transparentContainer"
                             style={{
                                 border: '3px outset #9C6A49',

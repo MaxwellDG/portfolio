@@ -1,3 +1,4 @@
+import iconsHashmap from '../../../data/iconsHashmap';
 import { Project } from '../../../data/projectData';
 
 interface Props {
@@ -9,50 +10,21 @@ export default function ProjectBottom({ project }: Props) {
 
     return (
         <div className="flex flex-1 flex-col relative">
-            <div className="flex flex-col flex-1 overflow-auto p-2">
-                {links.length ? (
-                    <div className="flex flex-col mb-2">
-                        {links.map((link: string, i: number) => (
-                            <div
-                                key={i}
-                                className={`shaded-button shaded-hover px-2 self-start ${
-                                    i !== links.length - 1 ? 'mb-2' : ''
-                                } text-white rounded-sm border-black border`}
-                            >
-                                <a
-                                    href={link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <p className="font-extralight">
-                                        {linkTexts[i]}
-                                    </p>
-                                </a>
-                            </div>
-                        ))}
+            <div className={`flex flex-wrap flex-1 overflow-auto p-2 ${github ? 'pr-12' : ''}`}>
+                {[...languages, ...tech].map((item) => (
+                    <div key={item} className="flex gap-x-1 mr-4 my-2">
+                        <img
+                            src={`/images/${
+                                iconsHashmap[item.replaceAll(' ', '')]
+                            }`}
+                            className="h-6 w-6"
+                        />
+                        <p className="font-extralight">{item}</p>
                     </div>
-                ) : null}
-                <h2>Language:</h2>
-                <div className="flex mb-2">
-                    {languages.map((lang: string, i: number) => (
-                        <p key={i} className="font-extralight">
-                            {lang}
-                            {i !== languages.length - 1 ? ', ' : ''}
-                        </p>
-                    ))}
-                </div>
-                <h2>Tech stack:</h2>
-                <div className="flex mb-2">
-                    {tech.map((t: string, i: number) => (
-                        <p key={i} className="font-extralight">
-                            {t}
-                            {i !== tech.length - 1 ? ', ' : ''}
-                        </p>
-                    ))}
-                </div>
+                ))}
             </div>
             {github ? (
-                <div className="absolute top-2 right-2 z-20">
+                <div className="absolute top-0 right-0 z-20">
                     <a
                         href={github}
                         target="_blank"
@@ -62,8 +34,8 @@ export default function ProjectBottom({ project }: Props) {
                         <img
                             alt="github_link"
                             src="images/github_icon_white.png"
-                            width="50px"
-                            height="50px"
+                            width="40px"
+                            height="40px"
                         />
                     </a>
                 </div>
