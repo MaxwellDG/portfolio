@@ -6,7 +6,7 @@ interface Props {
 }
 
 export default function ProjectBottom({ project }: Props) {
-    const { name, github, links, linkTexts, languages, tech } = project;
+    const { github, languages, tech } = project;
 
     return (
         <div className="flex flex-1 flex-col relative">

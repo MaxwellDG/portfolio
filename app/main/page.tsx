@@ -28,7 +28,7 @@ export default function Main() {
     const screen = useContext(ScreenContext);
     const { width } = useWindowDimensions();
 
-    const [focusedIndex, setFocusedIndex] = React.useState(0); 
+    const [focusedIndex, setFocusedIndex] = React.useState(0);
     // const [isModal, toggleModal] = React.useState(false);
 
     const maxIndex = React.useMemo(() => {
@@ -184,18 +184,24 @@ export default function Main() {
                 <TopSection sectionName={screen} routes={screenRoutes} />
                 <div className="h-full w-full flex flex-col lg:flex-row">
                     <div className="flex flex-1 w-full relative">
-                        <div className="absolute top-0 left-0 h-full w-full flex flex-1 justify-between z-0">
-                            <img
-                                src="/images/box-left.jpeg"
-                                className="box-side"
-                            />
-                            <div className="flex flex-1 box-center-repeat" />
-                            <img
-                                src="/images/box-right.jpeg"
-                                className="box-side"
-                            />
+                        <div className="absolute top-2 left-0 pb-2 h-full w-full flex flex-1 z-0 justify-center">
+                            {width >= 1024 ? (
+                                <>
+                                    <img
+                                        src="/images/box-left.jpeg"
+                                        className="box-side"
+                                    />
+                                    <div className="flex flex-1 box-center-repeat" />
+                                    <img
+                                        src="/images/box-right.jpeg"
+                                        className="box-side"
+                                    />
+                                </>
+                            ) : (
+                                <img src="/images/black-box.jpg" />
+                            )}
                         </div>
-                        {width > 768 ? (
+                        {width >= 1024 ? (
                             getMainComponent()
                         ) : (
                             <div className="flex w-full h-full relative">
@@ -204,7 +210,7 @@ export default function Main() {
                         )}
                     </div>
 
-                    {width > 1024 ? (
+                    {width >= 1024 ? (
                         <div
                             className="h-full flex flex-col w-[200px]"
                             style={{
@@ -217,7 +223,7 @@ export default function Main() {
                             }}
                         >
                             {getSideComponent()}
-                            <div className="w-full flex ">
+                            <div className="w-full flex">
                                 <div
                                     onClick={() =>
                                         handleArrowPress(-1, maxIndex)
@@ -242,7 +248,7 @@ export default function Main() {
                         </div>
                     ) : (
                         <div
-                            className="flex max-h-24 mb-[58px] mt-2"
+                            className="flex h-24 mb-[52px] mt-2"
                             style={{
                                 borderTop: '2px outset #AEAAAC',
                                 borderRight: '2px outset #AEAAAC',
