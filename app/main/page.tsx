@@ -1,28 +1,26 @@
 'use client';
 
-import React, { useContext, useState } from 'react';
-import useWindowDimensions from '../../hooks/useWindowDimensions';
-import { Theme, useThemeContext } from '../../contexts/themeContext';
-import { TopSection } from '../../components/topSection';
-import skillsData, { SkillSet } from '../../data/skillsData';
-import { ScreenContext } from '../../contexts/screenContext';
-import LeftArrow from '../../public/icons/left-arrow.svg';
-import Skills from '../../components/screens/skills';
+import React, { useContext } from 'react';
+import ProjectBottom from '../../components/project/bottom';
+import ProjectMobile from '../../components/project/mobile';
+import ProjectSide from '../../components/project/side';
 import EnterpriseProjects from '../../components/screens/enterprise';
-import SkillsSide from '../../components/screens/skills/side';
 import HobbyProjects from '../../components/screens/hobby';
-import './styles.scss';
+import Skills from '../../components/screens/skills';
+import SkillsBottom from '../../components/screens/skills/bottom';
+import SkillsMobile from '../../components/screens/skills/mobile';
+import SkillsSide from '../../components/screens/skills/side';
+import { TopSection } from '../../components/topSection';
+import { ScreenContext } from '../../contexts/screenContext';
 import { SCREEN_TYPE } from '../../contexts/screenContext/types';
-import { PopupModal } from '../../components/modals/skillsInfo';
 import {
     enterpriseProjectData,
     hobbyProjectData,
 } from '../../data/projectData';
-import ProjectSide from '../../components/project/side';
-import SkillsBottom from '../../components/screens/skills/bottom';
-import ProjectBottom from '../../components/project/bottom';
-import SkillsMobile from '../../components/screens/skills/mobile';
-import ProjectMobile from '../../components/project/mobile';
+import skillsData from '../../data/skillsData';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
+import LeftArrow from '../../public/icons/left-arrow.svg';
+import './styles.scss';
 
 export default function Page() {
     const screen = useContext(ScreenContext);

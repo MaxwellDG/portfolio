@@ -9,7 +9,7 @@ export default function Expertise() {
     return (
         <div className="flex w-full gap-x-2">
             <div className="flex lg:hidden">
-                <Self isMobile />
+                <Self />
             </div>
             <div className="flex flex-col flex-1 items-center lg:items-start">
                 <div className="flex flex-col h-full lg:flex-row justify-center lg:justify-start lg:w-full lg:h-full">

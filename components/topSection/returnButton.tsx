@@ -1,11 +1,7 @@
-// 'use client';
 import Link from 'next/link';
-// import { Theme, useThemeContext } from '../../contexts/themeContext';
-import { COLORS } from '../../theme';
 import '../buttonsContainer/styles.scss';
 
 export default function ReturnButton() {
-    // const theme: Theme = useThemeContext();
 
     return (
         <Link

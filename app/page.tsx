@@ -11,7 +11,7 @@ export default function Page() {
                     style={{}}
                 >
                     <div className="hidden lg:flex">
-                        <Self isMobile={false} />
+                        <Self />
                     </div>
                     <div className="flex gap-y-2 flex-1 h-full flex-col items-start lg:pl-2 relative">
                         <div className="w-full flex justify-center xs:justify-start">

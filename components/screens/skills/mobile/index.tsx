@@ -1,10 +1,6 @@
-import React from 'react';
 import skillsData, { SkillSet } from '../../../../data/skillsData';
-import useWindowDimensions from '../../../../hooks/useWindowDimensions';
-import LeftArrow from '../../../../../public/icons/left-arrow.svg';
-import '../styles.scss';
-import { useSwipeable } from 'react-swipeable';
 import { Carousel } from '../../../carousel';
+import '../styles.scss';
 
 type Props = {
     focusedIndex: number;
