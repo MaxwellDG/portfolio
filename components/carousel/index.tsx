@@ -1,7 +1,8 @@
 import { useSwipeable } from 'react-swipeable';
 import React, { useState } from 'react';
-import LeftArrow from '../../public/icons/left-arrow.svg'
+import LeftArrow from '../../public/icons/left-arrow.svg';
 import './styles.scss';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 enum Direction {
     NEXT = 'next',
@@ -9,16 +10,24 @@ enum Direction {
 }
 
 const getOrder = (index: number, focusedIndex: number, numItems: number) => {
-    return index - focusedIndex < 0 ? numItems - Math.abs(index - focusedIndex) : index - focusedIndex;
+    return index - focusedIndex < 0
+        ? numItems - Math.abs(index - focusedIndex)
+        : index - focusedIndex;
 };
 
 type Props = {
     children: React.ReactNode;
     focusedIndex: number;
-    setFocusedIndex: (num: number) => void
+    setFocusedIndex: (num: number) => void;
 };
 
-export const Carousel = ({ children, focusedIndex, setFocusedIndex }: Props) => {
+export const Carousel = ({
+    children,
+    focusedIndex,
+    setFocusedIndex,
+}: Props) => {
+    const { width } = useWindowDimensions();
+
     const numItems = React.Children.count(children);
     const [sliding, setSliding] = useState(false);
     const [direction, setDirection] = useState('');
@@ -59,8 +68,15 @@ export const Carousel = ({ children, focusedIndex, setFocusedIndex }: Props) => 
     });
 
     return (
-        <div className="h-full w-full relative">
-            <div {...handlers} style={{ touchAction: 'pan-y' }} className="h-full w-full flex flex-col justify-center">
+        <div className="flex flex-1 w-full relative">
+            <div className="lg:hidden absolute top-0 left-0 pb-2 mb-2 lg:pb-0 h-full w-full flex flex-1 z-0 justify-center">
+                <img src="/images/black-box.jpg" />
+            </div>
+            <div
+                {...handlers}
+                style={{ touchAction: 'pan-y' }}
+                className="flex-1 w-full flex flex-col justify-center"
+            >
                 <div className="wrapper">
                     <div
                         className={`carousel-container ${direction} ${
@@ -70,7 +86,13 @@ export const Carousel = ({ children, focusedIndex, setFocusedIndex }: Props) => 
                         {React.Children.map(children, (child, index) => (
                             <div
                                 className="carousel-slot"
-                                style={{ order: getOrder(index, focusedIndex, numItems) }}
+                                style={{
+                                    order: getOrder(
+                                        index,
+                                        focusedIndex,
+                                        numItems
+                                    ),
+                                }}
                             >
                                 {child}
                             </div>
@@ -80,13 +102,13 @@ export const Carousel = ({ children, focusedIndex, setFocusedIndex }: Props) => 
             </div>
             <button
                 onClick={() => slide(Direction.PREV)}
-                className="rotate-[315deg] mx-2 absolute top-1/2 left-1"
+                className="rotate-[315deg] mx-2 absolute top-1/2 left-1 -translate-y-1/2"
             >
                 <LeftArrow height={20} width={30} fill={'#AEAAAC'} />
             </button>
             <button
                 onClick={() => slide(Direction.NEXT)}
-                className="rotate-[135deg] mx-2 absolute top-1/2 right-1"
+                className="rotate-[135deg] mx-2 absolute top-1/2 right-1 -translate-y-1/2"
             >
                 <LeftArrow height={20} width={30} fill={'#AEAAAC'} />
             </button>
