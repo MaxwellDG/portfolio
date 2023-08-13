@@ -2,7 +2,7 @@
 
 import { Theme, useThemeContext } from '../../contexts/themeContext';
 import './styles.scss';
-import Fullscreen from '../../../public/icons/fullscreen.svg';
+import Download from '../../public/icons/download.svg';
 import React from 'react';
 import { COLORS } from '../../theme';
 
@@ -10,7 +10,7 @@ type Props = {
     size: number;
 };
 
-export default function FullscreenIcon({ size }: Props) {
+export default function DownloadIcon({ size }: Props) {
     const theme: Theme = useThemeContext();
 
     const [isHovering, toggleHover] = React.useState(false);
@@ -21,14 +21,15 @@ export default function FullscreenIcon({ size }: Props) {
             onMouseOut={() => toggleHover(false)}
         >
             <a
-                href={'images/Maxwell2023.pdf'}
-                target="_blank"
-                rel="noopener noreferrer"
+                className="items-center justify-center flex flex-row"
+                href={process.env.PUBLIC_URL + 'images/Maxwell2023.pdf'}
+                download
             >
-                <Fullscreen
+                <Download
                     height={size}
                     width={size}
                     stroke={isHovering ? COLORS[theme].primary : 'white'}
+                    strokeWidth={1}
                 />
             </a>
         </div>
