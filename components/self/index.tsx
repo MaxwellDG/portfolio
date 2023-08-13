@@ -1,25 +1,11 @@
-import { Theme, useThemeContext } from '../../contexts/themeContext';
-import { useMemo } from 'react';
-
 const style = {
     height: '100%',
     width: '100%',
 };
 
-type Props = {
-    isMobile: boolean;
-};
 
-export default function Self({ isMobile }: Props) {
-    // const theme: Theme = useThemeContext();
+export default function Self() {
 
-    // const pic = useMemo(() => {
-    //     switch(theme){
-    //         case Theme.AUTUMN: return <img src="/images/Self_Autumn.png" style={style}/>
-    //         case Theme.JUNGLE: return <img src="/images/Self_Jungle.png" style={style}/>
-    //         case Theme.MOUNTAINS: return <img src="/images/Self_Mountains.png" style={style}/>
-    //     }
-    // }, [theme])
 
     return (
         <div

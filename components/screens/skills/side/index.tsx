@@ -1,5 +1,5 @@
-import skillsData from "../../../../data/skillsData";
-import iconsHashmap from "../../../../data/iconsHashmap";
+import skillsData from '../../../../data/skillsData';
+import iconsHashmap from '../../../../data/iconsHashmap';
 
 type Props = {
     focusedIndex: number;
@@ -13,11 +13,14 @@ export default function SkillsSide({ focusedIndex }: Props) {
             </h1>
             <div className="flex flex-col flex-1 overflow-auto p-2">
                 {skillsData[focusedIndex].skills.map((skill) => (
-                    <div
-                        key={skill}
-                        className="flex items-center gap-x-2 mb-2"
-                    >
-                        <img src={`/images/${iconsHashmap[skill.replaceAll(' ', '')]}`} className="h-6 w-6" />
+                    <div key={skill} className="flex items-center gap-x-2 mb-2">
+                        <img
+                            alt={'skill_' + skill}
+                            src={`/images/${
+                                iconsHashmap[skill.replaceAll(' ', '')]
+                            }`}
+                            className="h-6 w-6"
+                        />
                         <p className="font-extralight">{skill}</p>
                     </div>
                 ))}

@@ -1,16 +1,13 @@
 // 'use client';
 
-import { COLORS } from '../../theme';
 import DownloadIcon from './download';
 import FullscreenIcon from './fullscreen';
-// import { Theme, useThemeContext } from '../../contexts/themeContext';
 
 type Props = {
     isBig: boolean;
 };
 
 export default function CVButton({ isBig }: Props) {
-    // const theme: Theme = useThemeContext();
 
     return (
         <div
