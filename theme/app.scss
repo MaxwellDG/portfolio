@@ -10,17 +10,14 @@ html, body, #root{
 }
 
 h1{
-  font-family: 'Merienda', cursive;
   color: white;
   font-size: 64px;
-  margin: 0 0 15px 0;
 }
 
 button{
   cursor: pointer;
 }
 
-// todo great idea. Have 3 images, and repeat the middle part only!
 .inside-box{
   background: url('/testBox.png') no-repeat center center fixed;
   background-size: contain;
