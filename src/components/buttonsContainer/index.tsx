@@ -19,7 +19,6 @@ export default function ButtonsContainer() {
                             route={item}
                             isBig={true}
                             shouldNav
-                            isMobile={false}
                         />
                     ))}
                 </div>
