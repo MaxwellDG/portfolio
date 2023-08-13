@@ -17,10 +17,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className="h-screen">
-            <body className="h-full flex">
+            <body className="h-full flex relative">
                 <ThemeProvider>
                     <ScreenProvider>
-                        {children}
+                        {/* {children} */}
                         <MobileNav />
                     </ScreenProvider>
                 </ThemeProvider>
