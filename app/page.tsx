@@ -4,7 +4,7 @@ import Expertise from '../components/expertise';
 
 export default function Page() {
     return (
-        <div className="flex flex-1 justify-center xs:items-center">
+        <div className="flex flex-1 pb-[45px] justify-center xs:items-center">
             <div className="flex m-2 lg:max-w-6xl max-w-2xl h-[500px] flex-col lg:flex-row">
                 <div
                     className="relative justify-around items-center flex text-center"
