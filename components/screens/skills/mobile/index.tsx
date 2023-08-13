@@ -47,7 +47,9 @@ export default function SkillsMobile({ focusedIndex, setFocusedIndex }: Props) {
                     background: 'linear-gradient(135deg, #AEAAAC, #8C8681)',
                 }}
             >
-                <SkillsBottom focusedIndex={focusedIndex} />
+                {skillsData[focusedIndex] && (
+                    <SkillsBottom focusedIndex={focusedIndex} />
+                )}
             </div>
         </div>
     );
