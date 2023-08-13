@@ -37,7 +37,9 @@ export default function ProjectMobile({
                     background: 'linear-gradient(135deg, #AEAAAC, #8C8681)',
                 }}
             >
-                <ProjectBottom project={array[focusedIndex]} />
+                {array[focusedIndex] && (
+                    <ProjectBottom project={array[focusedIndex]} />
+                )}
             </div>
         </div>
     );
