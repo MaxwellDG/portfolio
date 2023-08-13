@@ -22,13 +22,11 @@ export const TopSection = ({ routes, sectionName }: Props) => {
                         route={routes[0]}
                         isBig={false}
                         shouldNav={false}
-                        isMobile={false}
                     />
                     <RouteButton
                         route={routes[1]}
                         isBig={false}
                         shouldNav={false}
-                        isMobile={false}
                     />
                     <CVButton isBig={false} />
                 </div>
