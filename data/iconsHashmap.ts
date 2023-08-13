@@ -53,6 +53,6 @@ export default {
     Kevel: 'kevel.png',
     Stripe: 'stripe.png',
     MailGun: 'mailgun.png',
-    Selenium: 'selenium.png',
+    Selenium: 'seleniummm.png',
     MSExcel: 'msexcel.png'
 };
