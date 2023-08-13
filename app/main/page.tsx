@@ -153,9 +153,9 @@ export default function Page() {
         <div className="flex flex-1 justify-center lg:items-center">
             <div className="flex flex-1 lg:flex-initial w-full lg:h-5/6 lg:w-5/6 flex-col m-2">
                 <TopSection sectionName={screen} routes={screenRoutes} />
-                <div className="h-full w-full flex flex-col lg:flex-row">
+                <div className="w-full flex flex-1 flex-col lg:flex-row">
                     <div className="flex flex-1 w-full relative">
-                        <div className="hidden lg:flex absolute top-2 lg:top-0 left-0 pb-2 mb-2 lg:pb-0 h-full w-full flex-1 z-0 justify-center">
+                        <div className="hidden lg:flex absolute top-2 lg:top-0 left-0 pb-2 mb-2 lg:pb-0 lg:h-full w-full flex-1 z-0 justify-center">
                             <img
                                 src="/images/box-left.jpeg"
                                 className="box-side"
