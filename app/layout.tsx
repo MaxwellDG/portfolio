@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className="h-screen">
-            <body className="h-screen flex">
+            <body className="h-full flex">
                 <ThemeProvider>
                     <ScreenProvider>
                         {children}
