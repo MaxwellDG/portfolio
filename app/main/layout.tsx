@@ -1,6 +1,6 @@
-import FloatingTop from '../../src/components/buttonsContainer/floatingCV';
+import FloatingTop from '../../components/buttonsContainer/floatingCV';
 
-export default function MainLayout({
+export default function Layout({
     children,
 }: {
     children: React.ReactNode;

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import ThemeProvider, { Theme } from '../src/contexts/themeContext';
+import ThemeProvider, { Theme } from '../contexts/themeContext';
 import '../globals.css';
-import '../src/theme/app.scss';
-import ScreenProvider from '../src/contexts/screenContext';
-import MobileNav from '../src/components/mobileNav';
+import '../theme/app.scss';
+import ScreenProvider from '../contexts/screenContext';
+import MobileNav from '../components/mobileNav';
 
 export const metadata = {
     title: 'Maxwell Dunk-Green',

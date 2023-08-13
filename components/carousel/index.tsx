@@ -1,6 +1,6 @@
 import { useSwipeable } from 'react-swipeable';
 import React, { useState } from 'react';
-import LeftArrow from '../../../public/icons/left-arrow.svg';
+import LeftArrow from '../../public/icons/left-arrow.svg'
 import './styles.scss';
 
 enum Direction {

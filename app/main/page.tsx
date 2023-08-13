@@ -1,30 +1,30 @@
 'use client';
 
 import React, { useContext, useState } from 'react';
-import useWindowDimensions from '../../src/hooks/useWindowDimensions';
-import { Theme, useThemeContext } from '../../src/contexts/themeContext';
-import { TopSection } from '../../src/components/topSection';
-import skillsData, { SkillSet } from '../../src/data/skillsData';
-import { ScreenContext } from '../../src/contexts/screenContext';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
+import { Theme, useThemeContext } from '../../contexts/themeContext';
+import { TopSection } from '../../components/topSection';
+import skillsData, { SkillSet } from '../../data/skillsData';
+import { ScreenContext } from '../../contexts/screenContext';
 import LeftArrow from '../../public/icons/left-arrow.svg';
-import Skills from '../../src/components/screens/skills';
-import EnterpriseProjects from '../../src/components/screens/enterprise';
-import SkillsSide from '../../src/components/screens/skills/side';
-import HobbyProjects from '../../src/components/screens/hobby';
+import Skills from '../../components/screens/skills';
+import EnterpriseProjects from '../../components/screens/enterprise';
+import SkillsSide from '../../components/screens/skills/side';
+import HobbyProjects from '../../components/screens/hobby';
 import './styles.scss';
-import { SCREEN_TYPE } from '../../src/contexts/screenContext/types';
-import { PopupModal } from '../../src/components/modals/skillsInfo';
+import { SCREEN_TYPE } from '../../contexts/screenContext/types';
+import { PopupModal } from '../../components/modals/skillsInfo';
 import {
     enterpriseProjectData,
     hobbyProjectData,
-} from '../../src/data/projectData';
-import ProjectSide from '../../src/components/project/side';
-import SkillsBottom from '../../src/components/screens/skills/bottom';
-import ProjectBottom from '../../src/components/project/bottom';
-import SkillsMobile from '../../src/components/screens/skills/mobile';
-import ProjectMobile from '../../src/components/project/mobile';
+} from '../../data/projectData';
+import ProjectSide from '../../components/project/side';
+import SkillsBottom from '../../components/screens/skills/bottom';
+import ProjectBottom from '../../components/project/bottom';
+import SkillsMobile from '../../components/screens/skills/mobile';
+import ProjectMobile from '../../components/project/mobile';
 
-export default function Main() {
+export default function Page() {
     const screen = useContext(ScreenContext);
     const { width } = useWindowDimensions();
 

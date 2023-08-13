@@ -1,9 +1,8 @@
-import ButtonsContainer from '../src/components/buttonsContainer';
-import ImageLinksContainer from '../src/components/socials/container';
-import Self from '../src/components/self';
-import Expertise from '../src/components/expertise';
+import ButtonsContainer from '../components/buttonsContainer';
+import Self from '../components/self';
+import Expertise from '../components/expertise';
 
-export default function App() {
+export default function Page() {
     return (
         <div className="flex flex-1 justify-center xs:items-center">
             <div className="flex m-2 lg:max-w-6xl max-w-2xl h-[500px] flex-col lg:flex-row">
@@ -38,9 +37,7 @@ export default function App() {
                             </span>
                             <br />
                             <br />
-                            <span>
-                                If you are doing anything
-                            </span>
+                            <span>If you are doing anything</span>
                             <span style={{ color: '#c98659' }}>&nbsp;Web3</span>
                             &nbsp;
                             <span>and/or</span>
