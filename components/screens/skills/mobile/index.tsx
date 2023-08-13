@@ -1,5 +1,6 @@
 import skillsData, { SkillSet } from '../../../../data/skillsData';
 import { Carousel } from '../../../carousel';
+import SkillsBottom from '../bottom';
 import '../styles.scss';
 
 type Props = {
@@ -11,7 +12,7 @@ type Props = {
 
 export default function SkillsMobile({ focusedIndex, setFocusedIndex }: Props) {
     return (
-        <div className="absolute top-0 left-0 z-50 h-full w-full">
+        <div className="absolute top-0 left-0 bottom-0 right-0 z-50 flex flex-col flex-1 w-full">
             <Carousel
                 focusedIndex={focusedIndex}
                 setFocusedIndex={setFocusedIndex}
@@ -37,6 +38,17 @@ export default function SkillsMobile({ focusedIndex, setFocusedIndex }: Props) {
                     </div>
                 ))}
             </Carousel>
+            <div
+                className="flex h-24"
+                style={{
+                    borderTop: '2px outset #AEAAAC',
+                    borderRight: '2px outset #AEAAAC',
+                    borderLeft: '2px outset #AEAAAC',
+                    background: 'linear-gradient(135deg, #AEAAAC, #8C8681)',
+                }}
+            >
+                <SkillsBottom focusedIndex={focusedIndex} />
+            </div>
         </div>
     );
 }
