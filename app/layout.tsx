@@ -20,7 +20,7 @@ export default function RootLayout({
             <body className="h-full flex relative">
                 <ThemeProvider>
                     <ScreenProvider>
-                        {/* {children} */}
+                        {children}
                         <MobileNav />
                     </ScreenProvider>
                 </ThemeProvider>
