@@ -80,13 +80,13 @@ export const Carousel = ({ children, focusedIndex, setFocusedIndex }: Props) => 
             </div>
             <button
                 onClick={() => slide(Direction.PREV)}
-                className="rotate-[315deg] mx-2 absolute top-0 bottom-0 left-1"
+                className="rotate-[315deg] mx-2 absolute top-1/2 left-1"
             >
                 <LeftArrow height={20} width={30} fill={'#AEAAAC'} />
             </button>
             <button
                 onClick={() => slide(Direction.NEXT)}
-                className="rotate-[135deg] mx-2 absolute top-0 bottom-0 right-1"
+                className="rotate-[135deg] mx-2 absolute top-1/2 right-1"
             >
                 <LeftArrow height={20} width={30} fill={'#AEAAAC'} />
             </button>

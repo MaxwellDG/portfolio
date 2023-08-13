@@ -18,7 +18,7 @@ export default function Project({ project, isMobile }: Props) {
 
     return (
         <div
-            className="flex flex-col lg:flex-row bg-transparentContainer m-12 max-w-2xl p-2 relative"
+            className="flex flex-col lg:flex-row bg-transparentContainer m-12 max-w-2xl xs:p-2 relative overflow-y-auto"
             style={{ border: '2px outset rgba(0,0,0,0.3)' }}
         >
             <Multimedia
