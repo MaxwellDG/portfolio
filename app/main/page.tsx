@@ -182,7 +182,7 @@ export default function Page() {
                 <TopSection sectionName={screen} routes={screenRoutes} />
                 <div className="h-full w-full flex flex-col lg:flex-row">
                     <div className="flex flex-1 w-full relative">
-                        <div className="absolute top-2 left-0 pb-2 h-full w-full flex flex-1 z-0 justify-center">
+                        <div className="absolute top-2 lg:top-0 left-0 pb-2 lg:pb-0 h-full w-full flex flex-1 z-0 justify-center">
                             {width >= 1024 ? (
                                 <>
                                     <img
