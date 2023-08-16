@@ -191,8 +191,8 @@ export default function Page() {
                                     }
                                     className="keyboard-button flex justify-center items-center"
                                 >
-                                    <div className="rotate-[315deg]" style={{}}>
-                                        <LeftArrow height={20} width={30} />
+                                    <div >
+                                        <LeftArrow height={30} width={30} fill={"black"}/>
                                     </div>
                                 </div>
                                 <div
@@ -201,8 +201,8 @@ export default function Page() {
                                     }
                                     className="keyboard-button flex justify-center items-center"
                                 >
-                                    <div className="rotate-[135deg]" style={{}}>
-                                        <LeftArrow height={20} width={30} />
+                                    <div className="rotate-[180deg]" style={{}}>
+                                        <LeftArrow height={30} width={30} fill={"black"}/>
                                     </div>
                                 </div>
                             </div>

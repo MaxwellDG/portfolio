@@ -5,6 +5,7 @@ export interface Project {
     desc: string,
     tech: string[],
     languages: string[],
+    thumb: string,
     video?: string
     image?: string,
     github?: string,
@@ -19,6 +20,7 @@ export const hobbyProjectData: Project[] = [
         desc:
             "A crypto gambling website. Instead of users having to take bad odds due to casinos taking a cut, they can bet directly against each other with 50/50 -> 2x odds.",
         image: "images/duelarena.png",
+        thumb: "images/duelarena_thumb.png",
         languages: ["Typescript", "Solidity", "Vue"],
         tech: ["Truffle", "Chainlink"],
     },
@@ -30,7 +32,7 @@ export const hobbyProjectData: Project[] = [
         desc:
             "A videogame made in similar style to the classic 'The Legend of Zelda'. Defeat monsters, collect upgrades, and defeat the evil Mecha-Boss C++9000",
         video: "videos/Python_Vid.mp4",
-        image: "images/pygame.png",
+        thumb: "images/Python_Vid_thumb.png",
         languages: ["Python"],
         tech: ["PyGame", "Photoshop"],
     },
@@ -42,6 +44,7 @@ export const hobbyProjectData: Project[] = [
         desc:
         '"Hey where do you want to go tonight?" "I\'m fine with whatever." An app designed to aid groups in decision-making. Utilizes Google Maps and Google Places APIs for extra suggestions.',
         video: "videos/video_ww_right_final.mp4",
+        thumb: "images/video_ww_right_final_thumb.png",
         languages: ["Java", "Android SDK"],
         tech: ["Bluetooth", "Google Maps", "SQL"],
     },
@@ -55,6 +58,7 @@ export const enterpriseProjectData: Project[] = [
         desc:
             "A Solana blockchain infrastructure and application project. First we brought 'Smart Wallet' technology to Solana. Then we created the 'Stache' application to build on that. The current main attraction is the ability for users to make their own shops, thus decentralizing the currently centralized marketplace model.",
         image: "images/StacheApp.png",
+        thumb: "images/StacheApp_thumb.png",
         languages: ["Typescript", "React Native Web", "Node.js"],
         tech: ["Solana", "Nest", "Postgres", "Recoil"],
     },
@@ -66,6 +70,7 @@ export const enterpriseProjectData: Project[] = [
             "Designed for medical companies to generate informative videos for their workers and patients. Utilizes Deepfake technology in order to quickly mass-produce video content of doctors speaking to patients in any language. AI support bots currently in development in order to generate deepfake videos in response to textual input.",
         video: "videos/smart-studio-ready.mp4",
         languages: ["Javascript", "React Native"],
+        thumb: "images/smart-studio-ready_thumb.png",
         tech: ["GraphQL", "AWS", "Expo"],
     },
     {
@@ -75,8 +80,8 @@ export const enterpriseProjectData: Project[] = [
         desc:
         "A virtual tabletop and campaign-management system for the 'Storytelling Role-Playing Game' genre. The Bard's Quill works as an aide for popular titles such as: 'Dungeons & Dragons' and 'Pathfinder'.",
         video: "videos/thebardsquill_cropped.mp4",
-        image: "images/bardsquill.png",
         languages: ["Javascript", "Vue"],
+        thumb: "images/thebardsquill_cropped_thumb.png",
         tech: ["WebRTC", "Konva.js", "IndexedDB"],
     },
     {
@@ -86,6 +91,7 @@ export const enterpriseProjectData: Project[] = [
         desc:
         "An offline-first Progressive Web App used by pharmaceutical sales reps during their meetings with health-care professionals. Utilizes ServiceWorkers and IndexedDB in order to persist data in offline-mode and sync it with the server when an internet connection is later established.",
         image: "images/Luye.png",
+        thumb: "images/Luye_thumb.png",
         languages: ["Typescript", "React Native Web"],
         tech: ["PWA", "IndexedDB"],
     },
@@ -96,6 +102,7 @@ export const enterpriseProjectData: Project[] = [
         desc:
         "A social media app focused around people with diabetes. Users can make profiles, message each other, scroll the homefeed, there's app-wide video streaming events, and much more.",
         image: "images/tda.jpeg",
+        thumb: "images/tda_thumb.jpeg",
         languages: ["Javascript", "React Native"],
         tech: ["OAuth2", "Pusher", "Kevel"],
     },
@@ -106,7 +113,7 @@ export const enterpriseProjectData: Project[] = [
         desc:
         "Website for the Toronto tattoo parlour. Static plus an e-commerce section.",
         video: "videos/lucky13.mp4",
-        image: "images/lucky13.png",
+        thumb: "images/lucky13_thumb.png",
         languages: ["Javascript", "React", "Node.js"],
         tech: ["Stripe", "MailGun", "AWS"],
     },
@@ -117,6 +124,7 @@ export const enterpriseProjectData: Project[] = [
         desc:
         "A scraper for a client who wanted to track the status of Canadian securities administrators. 'Scrapes' the Canadian Securities Administrators Registry and produces a .csv after comparisons are made.",
         video: "videos/CSA_Video.mp4",
+        thumb: "images/CDA_Video_thumb.png",
         image: "images/csa_scraper.png",
         languages: ["Python"],
         tech: ["Selenium", "MS Excel"],

@@ -4,18 +4,18 @@ import React from 'react';
 
 interface Props {
     expandMedia: () => void;
-    video?: string;
-    image?: string;
+    thumb: string;
+    hasVideo: boolean;
 }
 
-export default ({ video, image, expandMedia }: Props) => {
+export default ({ thumb, hasVideo, expandMedia }: Props) => {
     return (
         <div className="flex items-center hover:bg-[rgba(174,170,172,0.1)] rounded-sm flex-col justify-center z-50 pointer-events-auto cursor-pointer">
             <button
                 onClick={expandMedia}
                 className="flex justify-center items-center relative rounded lg:p-2 mb-2 lg:mb-0 bg-transparent max-h-[200px] w-[200px] xxs:max-h-[250px] xxs:max-w-[250px]"
             >
-                {video ? (
+                {hasVideo && (
                     <>
                         <span
                             style={{
@@ -42,23 +42,22 @@ export default ({ video, image, expandMedia }: Props) => {
                                 borderLeft: '7px solid white',
                             }}
                         ></div>
-                        <video
+                        {/* <video
                             key={video}
                             typeof="video/mp4"
                             style={{ maxWidth: '100%', maxHeight: '100%' }}
                         >
                             <source src={video} />
                             <source src={image} />
-                        </video>
+                        </video> */}
                     </>
-                ) : (
-                    <img
-                        key={image}
-                        src={image}
-                        alt="img_project"
-                        className="max-w-full max-h-full"
-                    />
                 )}
+                <img
+                    key={thumb}
+                    src={thumb}
+                    alt="img_project"
+                    className="max-w-full max-h-full"
+                />
             </button>
         </div>
     );

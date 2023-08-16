@@ -102,15 +102,15 @@ export const Carousel = ({
             </div>
             <button
                 onClick={() => slide(Direction.PREV)}
-                className="rotate-[315deg] mx-2 absolute top-1/2 left-1 -translate-y-1/2"
+                className="mx-2 absolute top-1/2 left-1 -translate-y-1/2"
             >
-                <LeftArrow height={20} width={30} fill={'#AEAAAC'} />
+                <LeftArrow height={35} width={35} fill={'#AEAAAC'} />
             </button>
             <button
                 onClick={() => slide(Direction.NEXT)}
-                className="rotate-[135deg] mx-2 absolute top-1/2 right-1 -translate-y-1/2"
+                className="rotate-[180deg] mx-2 absolute top-1/2 right-1 -translate-y-1/2"
             >
-                <LeftArrow height={20} width={30} fill={'#AEAAAC'} />
+                <LeftArrow height={35} width={35} fill={'#AEAAAC'} />
             </button>
         </div>
     );
