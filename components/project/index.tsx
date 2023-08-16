@@ -14,7 +14,7 @@ interface Props {
 export default function Project({ project, isMobile }: Props) {
     const [isShowingMediaModal, toggleMediaModal] = React.useState(false);
 
-    const { name, desc, video, image } = project;
+    const { name, desc, video, image, thumb } = project;
 
     return (
         <div
@@ -22,8 +22,8 @@ export default function Project({ project, isMobile }: Props) {
             style={{ border: '2px outset rgba(0,0,0,0.3)' }}
         >
             <Multimedia
-                video={video}
-                image={image}
+                hasVideo={!!video}
+                thumb={thumb}
                 expandMedia={() => toggleMediaModal(!isShowingMediaModal)}
             />
             <div className="mx-2">
