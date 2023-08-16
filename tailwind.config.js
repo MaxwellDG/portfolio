@@ -15,7 +15,8 @@ module.exports = {
       },
       screens: {
         xs: "458px",
-        xxs: "385px"
+        xxs: "385px",
+        // 'mobilePortrait': {'raw': '(max-height: 1234px)'},
       }
     }
   },
