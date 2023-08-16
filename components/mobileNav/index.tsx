@@ -2,8 +2,8 @@
 
 import { useContext } from 'react';
 import { SCREEN_TYPE } from '../../contexts/screenContext/types';
-import { MobileRouteButton, RouteButton } from '../buttonsContainer/routeButton';
-import { ScreenContext, ScreenUpdateContext } from '../../contexts/screenContext';
+import { MobileRouteButton } from '../buttonsContainer/routeButton';
+import { ScreenContext } from '../../contexts/screenContext';
 import { usePathname } from 'next/navigation';
 
 export default function MobileNav() {
@@ -11,7 +11,7 @@ export default function MobileNav() {
     const pathname = usePathname();
 
     return (
-        <div className="lg:hidden flex w-full absolute bottom-0 left-0 right-0">
+        <div className="lg:hidden flex w-full fixed bottom-0 left-0 right-0">
             <div className="flex w-full list-none p-0">
                 {[
                     SCREEN_TYPE.SKILLS,

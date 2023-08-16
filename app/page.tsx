@@ -5,7 +5,7 @@ import Expertise from '../components/expertise';
 export default function Page() {
     return (
         <div className="flex flex-1 pb-[45px] justify-center md:items-center">
-            <div className="flex mx-2 pt-2 lg:max-w-6xl max-w-2xl pb-[8px] flex-col lg:flex-row">
+            <div className="flex mx-2 pt-2 lg:max-w-6xl max-w-2xl pb-[8px] flex-col justify-center lg:flex-row">
                 <div
                     className="relative justify-around items-center flex text-center overflow-y-auto "
                     style={{}}
@@ -37,33 +37,30 @@ export default function Page() {
                             </span>
                             <br />
                             <br />
-                            <span>If you are doing anything</span>
-                            <span style={{ color: '#c98659' }}>&nbsp;Web3</span>
-                            &nbsp;
-                            <span>and/or</span>
-                            <span style={{ color: '#c98659' }}>
-                                &nbsp;Fullstack Javascript&nbsp;
-                            </span>
-                            <span>
+                            <p>
+                                If you are doing anything
+                                <span style={{ color: '#c98659' }}>
+                                    &nbsp;Web3
+                                </span>
+                                &nbsp; and/or
+                                <span style={{ color: '#c98659' }}>
+                                    &nbsp;Fullstack Javascript&nbsp;
+                                </span>
                                 related, i'm interested. I've spent the past
                                 several years creating applications for web,
                                 mobile, and desktop. And as for Web3, I've
                                 worked on
-                            </span>
-                            <span style={{ color: '#c98659' }}>
-                                &nbsp;Ethereum
-                            </span>
-                            &nbsp;
-                            <span>and&nbsp;</span>
-                            <span style={{ color: '#c98659' }}>
-                                &nbsp;Solana
-                            </span>
-                            &nbsp;
-                            <span>
-                                chains. I've had a great time doing so, and
-                                couldn't be happier to continue doing much of
-                                the same.
-                            </span>
+                                <span style={{ color: '#c98659' }}>
+                                    &nbsp;Ethereum
+                                </span>
+                                &nbsp; and&nbsp;
+                                <span style={{ color: '#c98659' }}>
+                                    &nbsp;Solana
+                                </span>
+                                &nbsp; chains. I've had a great time doing so,
+                                and couldn't be happier to continue doing much
+                                of the same.
+                            </p>
                         </span>
                     </div>
                 </div>
