@@ -10,10 +10,10 @@ interface Props {
 
 export default ({ thumb, hasVideo, expandMedia }: Props) => {
     return (
-        <div className="flex items-center hover:bg-[rgba(174,170,172,0.1)] rounded-sm flex-col justify-center z-50 pointer-events-auto cursor-pointer">
+        <div className="flex items-center hover:bg-[rgba(174,170,172,0.1)] mb-1 rounded-sm flex-col justify-center z-50 pointer-events-auto cursor-pointer">
             <button
                 onClick={expandMedia}
-                className="flex justify-center items-center relative rounded lg:p-2 mb-2 lg:mb-0 bg-transparent max-h-[200px] w-[200px] xxs:max-h-[250px] xxs:max-w-[250px]"
+                className="flex justify-center items-center relative rounded lg:p-2 my-1 bg-transparent max-h-[200px] w-[200px] xxs:max-h-[250px] xxs:max-w-[250px]"
             >
                 {hasVideo && (
                     <>
