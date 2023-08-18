@@ -43,7 +43,7 @@ function ThemeBackground({
     setTheme,
 }: ThemeBackgroundProps) {
     return (
-        <div className="flex flex-1">
+        <div className="flex flex-1 mb-[43px] lg:mb-0 relative">
             <div
                 className="absolute top-0 left-0 h-full w-full"
                 style={{

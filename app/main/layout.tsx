@@ -6,7 +6,7 @@ export default function Layout({
     children: React.ReactNode;
 }) {
     return (
-        <section className="relative flex flex-1 pb-[45px] lg:mb-0">
+        <section className="relative flex flex-1">
             {children}
             <FloatingTop />
         </section>
