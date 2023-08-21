@@ -48,7 +48,6 @@ $timing-function: ease-out;
     border-bottom: 1px solid lighten($color, 20%);
     top: 0;
     transition: all ($button-speed + s) $timing-function;
-    position: relative;
 
     &:hover {
         background: linear-gradient(
@@ -78,7 +77,6 @@ $timing-function: ease-out;
     z-index: -1;
     top: ($short-depth) + px;
     height: ($height) + px;
-    width: 100%;
     background: linear-gradient(
         to top,
         saturate(darken($color, 40%), 15%) 0%,
@@ -92,7 +90,6 @@ $timing-function: ease-out;
 
 .short-button {
     cursor: pointer;
-    margin-bottom: 10px;
     box-sizing: border-box;
     text-decoration: none;
     color: $text-color;
@@ -101,7 +98,6 @@ $timing-function: ease-out;
     }
     height: $short-height + px;
     padding: 0 (($short-height/2) + px);
-    width: auto;
     background: linear-gradient(
         to bottom,
         saturate(lighten($color, 15%), 35%) 0%,

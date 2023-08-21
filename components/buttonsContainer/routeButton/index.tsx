@@ -32,14 +32,18 @@ export function RouteButton({ route, isBig, shouldNav }: ButtonProps) {
 
     return (
         <div
-            onClick={handleRoutePress}
-            className={`flex mb-6 flex-row justify-center items-center text-center ${
-                !isBig ? 'short-button w-full' : 'button'
-            } before:h-2 before:w-3`}
+            className={`flex w-full ${!isBig ? 'mb-[10px]' : 'mb-6'}`}
+            onMouseUp={handleRoutePress}
         >
-            <p className="text-white font-extralight whitespace-nowrap">
-                {route}
-            </p>
+            <div
+                className={`flex w-full relative flex-row justify-center items-center text-center ${
+                    !isBig ? 'short-button w-full' : 'button'
+                }`}
+            >
+                <p className="text-white font-extralight whitespace-nowrap">
+                    {route}
+                </p>
+            </div>
         </div>
     );
 }
@@ -80,7 +84,7 @@ export function MobileRouteButton({
                     : !isActive && route === SCREEN_TYPE.ENTERPRISE
                     ? 'right-nav'
                     : ''
-            }`} 
+            }`}
         >
             <p className="text-white font-extralight whitespace-nowrap">
                 {route.split(' ')[0]}
