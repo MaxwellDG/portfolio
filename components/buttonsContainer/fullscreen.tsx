@@ -4,6 +4,7 @@ import { Theme, useThemeContext } from '../../contexts/themeContext';
 import './styles.scss';
 import Fullscreen from '../../public/icons/fullscreen.svg';
 import React from 'react';
+import { motion } from 'framer-motion';
 import { COLORS } from '../../theme';
 
 type Props = {
@@ -16,21 +17,27 @@ export default function FullscreenIcon({ size }: Props) {
     const [isHovering, toggleHover] = React.useState(false);
 
     return (
-        <div
-            onMouseOver={() => toggleHover(true)}
-            onMouseOut={() => toggleHover(false)}
+        <motion.div
+            whileHover={{ scale: 1.2 }}
+            onHoverStart={(e) => {}}
+            onHoverEnd={(e) => {}}
         >
-            <a
-                href={'images/Maxwell_2023.pdf'}
-                target="_blank"
-                rel="noopener noreferrer"
+            <div
+                onMouseOver={() => toggleHover(true)}
+                onMouseOut={() => toggleHover(false)}
             >
-                <Fullscreen
-                    height={size}
-                    width={size}
-                    stroke={isHovering ? COLORS[theme].primary : 'white'}
-                />
-            </a>
-        </div>
+                <a
+                    href={'images/Maxwell_2023.pdf'}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <Fullscreen
+                        height={size}
+                        width={size}
+                        stroke={isHovering ? COLORS[theme].primary : 'white'}
+                    />
+                </a>
+            </div>
+        </motion.div>
     );
 }

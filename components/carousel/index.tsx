@@ -2,7 +2,6 @@ import { useSwipeable } from 'react-swipeable';
 import React, { useState } from 'react';
 import LeftArrow from '../../public/icons/left-arrow.svg';
 import './styles.scss';
-import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 enum Direction {
     NEXT = 'next',
@@ -26,7 +25,6 @@ export const Carousel = ({
     focusedIndex,
     setFocusedIndex,
 }: Props) => {
-    const { width } = useWindowDimensions();
 
     const numItems = React.Children.count(children);
     const [sliding, setSliding] = useState(false);

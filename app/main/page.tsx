@@ -24,10 +24,8 @@ import './styles.scss';
 
 export default function Page() {
     const screen = useContext(ScreenContext);
-    const { width } = useWindowDimensions();
 
     const [focusedIndex, setFocusedIndex] = React.useState(0);
-    // const [isModal, toggleModal] = React.useState(false);
 
     const maxIndex = React.useMemo(() => {
         switch (screen) {
@@ -153,7 +151,7 @@ export default function Page() {
         <div className="flex flex-1 justify-center lg:items-center">
             <div className="flex flex-1 lg:flex-initial w-full lg:h-5/6 lg:w-5/6 flex-col m-2">
                 <TopSection sectionName={screen} routes={screenRoutes} />
-                <div className="w-full flex flex-1 flex-col lg:flex-row">
+                <div className="flex flex-1 flex-col lg:flex-row">
                     <div className="flex flex-1 w-full relative overflow-y-auto">
                         <div className="hidden lg:flex absolute top-2 lg:top-0 left-0 pb-2 mb-2 lg:pb-0 lg:h-full w-full flex-1 z-0 justify-center">
                             <img
@@ -161,53 +159,58 @@ export default function Page() {
                                 className="box-side"
                             />
                             <div className="flex flex-1 box-center-repeat" />
+                            {/* <img src="/images/box-center.jpeg" /> */}
                             <img
                                 src="/images/box-right.jpeg"
                                 className="box-side"
                             />
                         </div>
-                        {width >= 1024
-                            ? getMainComponent()
-                            : getMainMobileComponent()}
+                        <div className="hidden lg:flex flex-1">
+                            {getMainComponent()}
+                        </div>
+                        <div className="flex flex-1 lg:hidden">
+                            {getMainMobileComponent()}
+                        </div>
                     </div>
 
-                    {width >= 1024 ? (
-                        <div
-                            className="h-full flex flex-col w-[200px]"
-                            style={{
-                                border: '2px outset #AEAAAC',
-                                // borderTop: '2px outset #AEAAAC',
-                                // borderRight: '2px outset #AEAAAC',
-                                // borderBottom: '2px outset #AEAAAC',
-                                background:
-                                    'linear-gradient(135deg, #AEAAAC, #8C8681)',
-                            }}
-                        >
-                            {getSideComponent()}
-                            <div className="w-full flex">
-                                <div
-                                    onClick={() =>
-                                        handleArrowPress(-1, maxIndex)
-                                    }
-                                    className="keyboard-button flex justify-center items-center"
-                                >
-                                    <div >
-                                        <LeftArrow height={30} width={30} fill={"black"}/>
-                                    </div>
+                    <div
+                        className="hidden lg:flex h-full flex-col w-[200px]"
+                        style={{
+                            borderTop: '2px outset #AEAAAC',
+                            borderRight: '2px outset #AEAAAC',
+                            borderBottom: '2px outset #AEAAAC',
+                            background:
+                                'linear-gradient(135deg, #AEAAAC, #8C8681)',
+                        }}
+                    >
+                        {getSideComponent()}
+                        <div className="w-full flex">
+                            <div
+                                onClick={() => handleArrowPress(-1, maxIndex)}
+                                className="keyboard-button flex justify-center items-center"
+                            >
+                                <div>
+                                    <LeftArrow
+                                        height={30}
+                                        width={30}
+                                        fill={'black'}
+                                    />
                                 </div>
-                                <div
-                                    onClick={() =>
-                                        handleArrowPress(1, maxIndex)
-                                    }
-                                    className="keyboard-button flex justify-center items-center"
-                                >
-                                    <div className="rotate-[180deg]" style={{}}>
-                                        <LeftArrow height={30} width={30} fill={"black"}/>
-                                    </div>
+                            </div>
+                            <div
+                                onClick={() => handleArrowPress(1, maxIndex)}
+                                className="keyboard-button flex justify-center items-center"
+                            >
+                                <div className="rotate-[180deg]" style={{}}>
+                                    <LeftArrow
+                                        height={30}
+                                        width={30}
+                                        fill={'black'}
+                                    />
                                 </div>
                             </div>
                         </div>
-                    ) : null}
+                    </div>
                 </div>
             </div>
         </div>
