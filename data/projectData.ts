@@ -63,17 +63,6 @@ export const enterpriseProjectData: Project[] = [
         tech: ["Solana", "Nest", "Postgres", "Recoil"],
     },
     {
-        name: "SMART Studio",
-        links: [],
-        linkTexts: [],
-        desc:
-            "Designed for medical companies to generate informative videos for their workers and patients. Utilizes Deepfake technology in order to quickly mass-produce video content of doctors speaking to patients in any language. AI support bots currently in development in order to generate deepfake videos in response to textual input.",
-        video: "videos/smart-studio-ready.mp4",
-        languages: ["Javascript", "React Native"],
-        thumb: "images/smart-studio-ready_thumb.png",
-        tech: ["GraphQL", "AWS", "Expo"],
-    },
-    {
         name: "The Bard's Quill",
         links: ["https://thebardsquill.com"],
         linkTexts: ["TheBardsQuill.com"],
@@ -83,6 +72,17 @@ export const enterpriseProjectData: Project[] = [
         languages: ["Javascript", "Vue"],
         thumb: "images/thebardsquill_cropped_thumb.png",
         tech: ["WebRTC", "Konva.js", "IndexedDB"],
+    },
+    {
+        name: "SMART Studio",
+        links: [],
+        linkTexts: [],
+        desc:
+            "Designed for medical companies to generate informative videos for their workers and patients. Utilizes Deepfake technology in order to quickly mass-produce video content of doctors speaking to patients in any language. AI support bots currently in development in order to generate deepfake videos in response to textual input.",
+        video: "videos/smart-studio-ready.mp4",
+        languages: ["Javascript", "React Native"],
+        thumb: "images/smart-studio-ready_thumb.png",
+        tech: ["GraphQL", "AWS", "Expo"],
     },
     {
         name: "Luye",
