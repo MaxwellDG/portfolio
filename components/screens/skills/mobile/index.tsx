@@ -39,7 +39,7 @@ export default function SkillsMobile({ focusedIndex, setFocusedIndex }: Props) {
                 ))}
             </Carousel>
             <div
-                className="flex h-24 mb-[2px]"
+                className="flex h-24"
                 style={{
                     border: '2px outset #AEAAAC',
                     background: 'linear-gradient(135deg, #AEAAAC, #8C8681)',
