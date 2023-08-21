@@ -29,7 +29,7 @@ export default function Project({ project, isMobile }: Props) {
             <div className="lg:hidden flex flex-col justify-center">
                 {links.map((link: string, i: number) => (
                     <div
-                        className={`shaded-button shaded-hover mx-2 my-1 text-white rounded-sm border-black border`}
+                        className={`shaded-button shaded-hover mx-2 px-1 my-1 text-white rounded-sm border-black border`}
                     >
                         <a
                             key={i}
