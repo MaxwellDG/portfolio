@@ -1,4 +1,3 @@
-import CVButton from '../buttonsContainer/cvButton';
 import DownloadIcon from '../buttonsContainer/download';
 import FullscreenIcon from '../buttonsContainer/fullscreen';
 import Self from '../self';
