@@ -1,13 +1,13 @@
 'use client';
 
 import React from 'react';
-import { Project } from '../../data/projectData';
+import { Project as ProjectData } from '../../data/projectData';
 import Multimedia from '../media';
 import { PopupModal } from '../modals/skillsInfo';
 import MediaContent from '../media/mediaContent';
 
 interface Props {
-    project: Project;
+    project: ProjectData;
     isMobile: boolean;
 }
 

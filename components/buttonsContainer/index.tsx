@@ -2,7 +2,6 @@ import './styles.scss';
 import CVButton from './cvButton';
 import { RouteButton } from './routeButton';
 import { SCREEN_TYPE } from '../../contexts/screenContext/types';
-import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 export default function ButtonsContainer() {
     return (

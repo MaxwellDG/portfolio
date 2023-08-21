@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { ScreenUpdateContext } from '../../../contexts/screenContext';
-import { Theme, useThemeContext } from '../../../contexts/themeContext';
+// import { Theme, useThemeContext } from '../../../contexts/themeContext';
 import { SCREEN_TYPE } from '../../../contexts/screenContext/types';
 import { useContext } from 'react';
 
@@ -50,7 +50,7 @@ export function MobileRouteButton({
     shouldNav,
     isActive,
 }: MobileButtonProps) {
-    const theme: Theme = useThemeContext();
+    // const theme: Theme = useThemeContext();
     const updateScreen = useContext(ScreenUpdateContext);
     const router = useRouter();
 

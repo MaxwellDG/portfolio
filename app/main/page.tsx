@@ -18,7 +18,6 @@ import {
     hobbyProjectData,
 } from '../../data/projectData';
 import skillsData from '../../data/skillsData';
-import useWindowDimensions from '../../hooks/useWindowDimensions';
 import LeftArrow from '../../public/icons/left-arrow.svg';
 import './styles.scss';
 
