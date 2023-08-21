@@ -3,6 +3,7 @@
 import { Theme, useThemeContext } from '../../contexts/themeContext';
 import './styles.scss';
 import Download from '../../public/icons/download.svg';
+import { motion } from 'framer-motion';
 import React from 'react';
 import { COLORS } from '../../theme';
 
@@ -16,22 +17,28 @@ export default function DownloadIcon({ size }: Props) {
     const [isHovering, toggleHover] = React.useState(false);
 
     return (
-        <div
-            onMouseOver={() => toggleHover(true)}
-            onMouseOut={() => toggleHover(false)}
+        <motion.div
+            whileHover={{ scale: 1.2 }}
+            onHoverStart={(e) => {}}
+            onHoverEnd={(e) => {}}
         >
-            <a
-                className="items-center justify-center flex flex-row"
-                href={'/images/Maxwell_2023.pdf'}
-                download
+            <div
+                onMouseOver={() => toggleHover(true)}
+                onMouseOut={() => toggleHover(false)}
             >
-                <Download
-                    height={size}
-                    width={size}
-                    stroke={isHovering ? COLORS[theme].primary : 'white'}
-                    strokeWidth={1}
-                />
-            </a>
-        </div>
+                <a
+                    className="items-center justify-center flex flex-row"
+                    href={'/images/Maxwell_2023.pdf'}
+                    download
+                >
+                    <Download
+                        height={size}
+                        width={size}
+                        stroke={isHovering ? COLORS[theme].primary : 'white'}
+                        strokeWidth={1}
+                    />
+                </a>
+            </div>
+        </motion.div>
     );
 }
