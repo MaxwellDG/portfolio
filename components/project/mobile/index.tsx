@@ -31,9 +31,7 @@ export default function ProjectMobile({
             <div
                 className="flex h-24"
                 style={{
-                    borderTop: '2px outset #AEAAAC',
-                    borderRight: '2px outset #AEAAAC',
-                    borderLeft: '2px outset #AEAAAC',
+                    border: '2px outset #AEAAAC',
                     background: 'linear-gradient(135deg, #AEAAAC, #8C8681)',
                 }}
             >
