@@ -22,7 +22,7 @@ export default function DownloadIcon({ size }: Props) {
         >
             <a
                 className="items-center justify-center flex flex-row"
-                href={'/images/Maxwell2023.pdf'}
+                href={'/images/Maxwell_2023.pdf'}
                 download
             >
                 <Download
