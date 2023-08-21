@@ -13,12 +13,12 @@ export default function ImageLinksContainer() {
                 }}
                 className="flex lg:h-full items-center p-2 bg-transparentContainer flex-row list-none gap-x-3"
             >
-                <ImageLink
+                {/* <ImageLink
                     id="largeGithub"
                     altText="leetcode"
                     image="images/leetcode.png"
                     link="https://leetcode.com/maxwellmdg/"
-                ></ImageLink>
+                ></ImageLink> */}
                 <ImageLink
                     id="largeLinkedIn"
                     altText="Img_LinkedIn"
