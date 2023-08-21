@@ -16,12 +16,12 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <html lang="en" className="h-screen">
-            <body className="h-full flex relative">
+        <html lang="en" className="flex h-full">
+            <body className="flex flex-1 relative">
                 <ThemeProvider>
                     <ScreenProvider>
                         {children}
-                        {/* <MobileNav /> */}
+                        <MobileNav />
                     </ScreenProvider>
                 </ThemeProvider>
             </body>
