@@ -21,7 +21,7 @@ export default function RootLayout({
                 <ThemeProvider>
                     <ScreenProvider>
                         {children}
-                        <MobileNav />
+                        {/* <MobileNav /> */}
                     </ScreenProvider>
                 </ThemeProvider>
             </body>
