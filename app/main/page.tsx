@@ -13,6 +13,7 @@ import SkillsSide from '../../components/screens/skills/side';
 import { TopSection } from '../../components/topSection';
 import { ScreenContext } from '../../contexts/screenContext';
 import { SCREEN_TYPE } from '../../contexts/screenContext/types';
+import { AnimatePresence, motion } from 'framer-motion';
 import {
     enterpriseProjectData,
     hobbyProjectData,
@@ -25,6 +26,7 @@ export default function Page() {
     const screen = useContext(ScreenContext);
 
     const [focusedIndex, setFocusedIndex] = React.useState(0);
+    const [realScreen, setRealScreen] = React.useState(screen);
 
     const maxIndex = React.useMemo(() => {
         switch (screen) {
@@ -165,7 +167,24 @@ export default function Page() {
                             />
                         </div>
                         <div className="hidden lg:flex flex-1">
-                            {getMainComponent()}
+                            {/* <AnimatePresence>
+                                <motion.div
+                                    key={screen}
+                                    exit={{
+                                        opacity: 0,
+                                        transition: { duration: 1 },
+                                    }}
+                                    initial={{ opacity: 0 }}
+                                    animate={{
+                                        opacity: 1,
+                                        transition: { duration: 1 },
+                                    }}
+                                    onAnimationComplete={() => setRealScreen(screen)}
+                                    className="flex flex-1 z-50"
+                                > */}
+                                    {getMainComponent()}
+                                {/* </motion.div>
+                            </AnimatePresence> */}
                         </div>
                         <div className="flex flex-1 lg:hidden">
                             {getMainMobileComponent()}

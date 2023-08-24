@@ -2,6 +2,7 @@ import ButtonsContainer from '../components/buttonsContainer';
 import Self from '../components/self';
 import Expertise from '../components/expertise';
 
+
 export default function Page() {
     return (
         <div className="flex flex-1 justify-center lg:items-center">
@@ -32,7 +33,7 @@ export default function Page() {
                                 I used to work in the hospitality industry,
                                 while spending my free-time coding as a hobby.
                                 Overtime I was able to aquire some contract and
-                                part-time work, which overtime developed into a
+                                part-time work, which then developed into a
                                 full-time career.
                             </span>
                             <br />
