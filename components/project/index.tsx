@@ -17,16 +17,16 @@ export default function Project({ project, isMobile }: Props) {
     const { name, desc, video, image, thumb, links, linkTexts } = project;
 
     return (
-        <div
-            className="flex flex-col lg:flex-row bg-transparentContainer m-12 max-w-2xl xs:p-2 relative overflow-y-auto"
-            style={{ border: '2px outset rgba(0,0,0,0.3)' }}
-        >
+        <div className="flex flex-col lg:flex-row m-12 max-w-2xl relative overflow-y-auto">
             <Multimedia
                 hasVideo={!!video}
                 thumb={thumb}
                 expandMedia={() => toggleMediaModal(!isShowingMediaModal)}
             />
-            <div className="lg:hidden flex flex-col justify-center">
+            <div
+                className="lg:hidden flex flex-col justify-center"
+                style={{ marginBottom: links.length ? '4px' : 0 }}
+            >
                 {links.map((link: string, i: number) => (
                     <div
                         className={`shaded-button shaded-hover mx-2 px-1 my-1 text-white rounded-sm border-black border`}
@@ -44,9 +44,18 @@ export default function Project({ project, isMobile }: Props) {
                     </div>
                 ))}
             </div>
-            <div className="mx-2">
-                <h3 className="projectHeader mb-2">{name}</h3>
-                <p className="text-white font-extralight" id="desc">
+            <div className="mx-2 flex flex-col">
+                <h3
+                    style={{ border: '2px outset rgba(0,0,0,0.3)' }}
+                    className="projectHeader mb-2 p-2 bg-transparentContainer self-center lg:self-start"
+                >
+                    {name}
+                </h3>
+                <p
+                    style={{ border: '2px outset rgba(0,0,0,0.3)' }}
+                    className="text-white font-extralight p-2 bg-transparentContainer"
+                    id="desc"
+                >
                     {desc}
                 </p>
             </div>

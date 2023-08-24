@@ -52,17 +52,6 @@ export const hobbyProjectData: Project[] = [
 
 export const enterpriseProjectData: Project[] = [
     {
-        name: "Stache",
-        links: ["https://app.stache.io/bazaar", "https://www.stache.io", "https://www.xnft.gg/app/DNUrvMF9ytAYNS66pbfcM9FrHHmJqghVeQKgbo9WU1KM"],
-        linkTexts: ["Stache App", "Stache Intro", "Stache as xNFT"],
-        desc:
-            "A Solana blockchain infrastructure and application project. First we brought 'Smart Wallet' technology to Solana. Then we created the 'Stache' application to build on that. The current main attraction is the ability for users to make their own shops, thus decentralizing the currently centralized marketplace model.",
-        image: "images/StacheApp.png",
-        thumb: "images/StacheApp_thumb.png",
-        languages: ["Typescript", "React Native Web", "Node.js"],
-        tech: ["Solana", "Nest", "Postgres", "Recoil"],
-    },
-    {
         name: "The Bard's Quill",
         links: ["https://thebardsquill.com"],
         linkTexts: ["TheBardsQuill.com"],
@@ -72,6 +61,17 @@ export const enterpriseProjectData: Project[] = [
         languages: ["Javascript", "Vue"],
         thumb: "images/thebardsquill_cropped_thumb.png",
         tech: ["WebRTC", "Konva.js", "IndexedDB"],
+    },
+    {
+        name: "Stache",
+        links: ["https://app.stache.io/bazaar", "https://www.stache.io", "https://www.xnft.gg/app/DNUrvMF9ytAYNS66pbfcM9FrHHmJqghVeQKgbo9WU1KM"],
+        linkTexts: ["Stache App", "Stache Intro", "Stache as xNFT"],
+        desc:
+            "A Solana blockchain infrastructure and application project. First we brought 'Smart Wallet' technology to Solana. Then we created the 'Stache' application to build on that. The current main attraction is the ability for users to make their own shops, thus decentralizing the currently centralized marketplace model.",
+        image: "images/StacheApp.png",
+        thumb: "images/StacheApp_thumb.png",
+        languages: ["Typescript", "React Native Web", "Node.js"],
+        tech: ["Solana", "Nest", "Postgres", "Recoil"],
     },
     {
         name: "SMART Studio",
