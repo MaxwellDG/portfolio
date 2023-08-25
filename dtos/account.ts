@@ -1,11 +1,11 @@
-import Account from "../entities/account";
+import Account from '../db/entities/account';
 
 export type AccountDto = {
-    address: string
-}
+    address: string;
+};
 
-export function AccountDto(account: Account){
+export function AccountDto(account: Account) {
     return {
-        address: account.address
-    }
+        address: account.address,
+    };
 }

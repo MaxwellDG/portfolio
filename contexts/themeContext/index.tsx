@@ -74,6 +74,20 @@ export default function ThemeProvider({
 }) {
     const [theme, setTheme] = useState(Theme.AUTUMN);
 
+    React.useEffect(() => {
+        testApi();
+    }, [])
+
+    async function testApi() {
+        console.log("Test api...");
+        try{
+            const res = await fetch('/api')
+            console.log("Res???", res.json());
+        } catch(e) {
+            console.log("error fetching");
+        }
+    }
+
     return (
         <ThemeContext.Provider value={theme}>
             <ThemeBackground currentTheme={theme} setTheme={setTheme}>
