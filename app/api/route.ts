@@ -9,14 +9,12 @@ export async function GET(
     request: NextRequest,
     // context: { params: { address: string } }
     ): Promise<NextResponse> {
-    console.log("HIt it?")
     await connectToDb();
     
     // const address = context.params.address;
     // console.log("Address paam??", address);
     
     const numAccessedCookie = request.cookies.get('numAccessed');
-    console.log('Num accessed cookie: ', numAccessedCookie);
     
     let account: Account;
     
@@ -33,10 +31,10 @@ export async function HEAD(request: Request) {}
 export async function POST(request: Request) {
     const body = await request.json();
 
-    if(db){
-        const account = new Account(body.address);
-        // todo insert into DB with (SQL statement ideally)
-    }
+    // if(db){
+    //     const account = new Account(body.address);
+    //     // todo insert into DB with (SQL statement ideally)
+    // }
 
     return new Response(
         JSON.stringify({
