@@ -15,7 +15,7 @@ export const TopSection = ({ routes, sectionName }: Props) => {
             <div className="flex w-full justify-between p-0">
                 <div className="flex flex-col justify-between">
                     <ReturnButton />
-                    <h1 className="text-2xl">{sectionName}</h1>
+                    <h1 className="text-3xl">{sectionName}</h1>
                 </div>
                 <div className="flex flex-col w-[163px]">
                     <RouteButton

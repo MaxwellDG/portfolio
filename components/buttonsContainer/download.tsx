@@ -1,6 +1,5 @@
 'use client';
 
-import { Theme, useThemeContext } from '../../contexts/themeContext';
 import './styles.scss';
 import Download from '../../public/icons/download.svg';
 import { motion } from 'framer-motion';
@@ -12,7 +11,6 @@ type Props = {
 };
 
 export default function DownloadIcon({ size }: Props) {
-    const theme: Theme = useThemeContext();
 
     const [isHovering, toggleHover] = React.useState(false);
 
@@ -34,7 +32,7 @@ export default function DownloadIcon({ size }: Props) {
                     <Download
                         height={size}
                         width={size}
-                        stroke={isHovering ? COLORS[theme].primary : 'white'}
+                        stroke={isHovering ? COLORS.Autumn.primary : 'white'}
                         strokeWidth={1}
                     />
                 </a>
