@@ -44,13 +44,13 @@ function ThemeBackground({
 }: ThemeBackgroundProps) {
     return (
         <div className="flex flex-1 pb-[43px] lg:mb-0 relative">
-            <div
+            {/* <div
                 className="absolute top-0 left-0 h-full w-full"
                 style={{
                     backgroundImage: `url('${BACKGROUND_IMGS[currentTheme]}'), url('/images/fallpaper_30.jpeg')`,
                     zIndex: -1,
                 }}
-            />
+            /> */}
             {/* <div className="flex absolute top-2 right-2 flex-row gap-x-2 mt-3 mr-3">
                 {[Theme.AUTUMN, Theme.JUNGLE, Theme.MOUNTAINS].map((theme, i) => 
                     <ButtonTheme 
@@ -73,6 +73,20 @@ export default function ThemeProvider({
     children: React.ReactNode;
 }) {
     const [theme, setTheme] = useState(Theme.AUTUMN);
+
+    React.useEffect(() => {
+        testApi();
+    }, []);
+
+    async function testApi() {
+        console.log('Test api...');
+        try {
+            const res = await fetch('/api');
+            console.log('Res???', res.json());
+        } catch (e) {
+            console.log('error fetching');
+        }
+    }
 
     return (
         <ThemeContext.Provider value={theme}>

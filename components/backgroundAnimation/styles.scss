@@ -1,0 +1,106 @@
+@keyframes animate{
+    0%{
+        opacity: 1;
+        border-radius: 0;
+        transform: translateY(0) rotate(0deg);
+    }
+    100%{
+        opacity: 0.25;
+        border-radius: 20%;
+        transform: translateY(-1000px) rotate(720deg);
+    }
+}
+
+.shapes div{
+    position: absolute;
+    display: block;
+    background: rgba(255,255,255,0.2);
+    bottom: -100px;
+    animation: animate 25s linear infinite;
+}
+
+.shapes div:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+.shapes div:nth-child(2) {
+    left: 75%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 0.5s;
+}
+.shapes div:nth-child(3) {
+    left: -1%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 5s;
+}
+.shapes div:nth-child(4) {
+    left: 22%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+}
+.shapes div:nth-child(5) {
+    left: 85%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 2.2s;
+}
+.shapes div:nth-child(6) {
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 2.5s;
+}
+.shapes div:nth-child(7) {
+    left: 70%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 9s;
+}
+.shapes div:nth-child(8) {
+    left: 65%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 3s;
+}
+.shapes div:nth-child(9) {
+    left: 45%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 8s;
+}
+.shapes div:nth-child(10) {
+    left: 15%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 15s;
+}
+
+.shapes div:nth-child(10) {
+    left: 95%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 13s;
+}
+.shapes div:nth-child(10) {
+    left: 45%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 15s;
+}
+.shapes div:nth-child(11) {
+    left: 35%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 10s;
+}
+.shapes div:nth-child(12) {
+    left: 15%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 19s;
+}
