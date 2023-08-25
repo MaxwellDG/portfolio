@@ -1,6 +1,7 @@
 export interface SkillSet {
     name: string;
     skills: string[];
+    icon: React.ReactNode
 }
 
 export default [
