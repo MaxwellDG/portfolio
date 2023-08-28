@@ -17,7 +17,7 @@ export default function Project({ project, isMobile }: Props) {
     const { name, desc, video, image, thumb, links, linkTexts } = project;
 
     return (
-        <div className="flex flex-col lg:flex-row m-12 max-w-2xl relative overflow-y-auto">
+        <div className="flex flex-col lg:flex-row max-w-2xl relative overflow-y-auto">
             <Multimedia
                 hasVideo={!!video}
                 thumb={thumb}

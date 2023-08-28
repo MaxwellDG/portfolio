@@ -163,7 +163,6 @@ export default function Page() {
                                 className="box-side"
                             />
                             <div className="flex flex-1 box-center-repeat" />
-                            {/* <img src="/images/box-center.jpeg" /> */}
                             <img
                                 src="/images/box-right.jpeg"
                                 className="box-side"

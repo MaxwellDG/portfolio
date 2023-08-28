@@ -16,7 +16,7 @@ export default ({ thumb, hasVideo, expandMedia }: Props) => {
         >
             <button
                 onClick={expandMedia}
-                className="flex justify-center items-center relative rounded lg:p-2 my-1 bg-transparent max-h-[200px] w-[200px] xxs:max-h-[250px] xxs:max-w-[250px]"
+                className="flex justify-center items-center relative rounded lg:p-2 my-1 bg-transparent max-h-[200px] w-[200px] xxs:max-h-[250px] xxs:max-w-[250px] lg:w-[400px]"
             >
                 {hasVideo && (
                     <>
