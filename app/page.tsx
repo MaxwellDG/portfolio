@@ -5,16 +5,16 @@ import Expertise from '../components/expertise';
 
 export default function Page() {
     return (
-        <div className="flex flex-1 justify-center lg:items-center">
-            <div className="flex mx-2 pt-2 lg:max-w-6xl max-w-2xl pb-[8px] flex-col justify-center lg:flex-row">
+        <div className="flex flex-1 justify-center overflow-y-auto">
+            <div className="flex mx-2 pt-2 lg:max-w-6xl max-w-2xl pb-[8px] flex-col justify-center lg:flex-row m-auto">
                 <div
-                    className="relative justify-around items-center flex text-center overflow-y-auto "
+                    className="relative justify-around flex text-center "
                     style={{}}
                 >
                     <div className="hidden lg:flex">
                         <Self />
                     </div>
-                    <div className="flex gap-y-2 flex-1 h-full flex-col items-start lg:pl-2 relative">
+                    <div className="flex gap-y-2 flex-1 flex-col items-start lg:pl-2 relative">
                         <div className="w-full flex justify-center xs:justify-start">
                             <p
                                 style={{ border: '3px outset rgba(0,0,0,0.3)' }}

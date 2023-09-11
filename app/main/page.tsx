@@ -149,8 +149,8 @@ export default function Page() {
     };
 
     return (
-        <div className="flex flex-1 justify-center lg:items-center">
-            <div className="flex flex-1 lg:flex-initial w-full lg:h-5/6 lg:w-5/6 flex-col m-2 lg:max-w-6xl">
+        <div className="flex flex-1 justify-center">
+            <div className="flex flex-1 lg:flex-initial w-full lg:h-5/6 lg:w-5/6 flex-col lg:max-w-6xl m-auto">
                 <TopSection sectionName={screen} routes={screenRoutes} />
                 <div
                     className="flex flex-1 flex-col lg:flex-row min-h-[475px]"
