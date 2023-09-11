@@ -28,8 +28,8 @@ export default function Project({ project, isMobile }: Props) {
                 style={{ marginBottom: links.length ? '4px' : 0 }}
             >
                 {links.map((link: string, i: number) => (
-                    <div
-                        className={`shaded-button shaded-hover mx-2 px-1 my-1 text-white rounded-sm border-black border`}
+                    <span
+                        className={`self-center lg:self-auto shaded-button shaded-hover mx-2 px-2 my-1 text-white rounded-sm border-black border`}
                     >
                         <a
                             key={i}
@@ -41,7 +41,7 @@ export default function Project({ project, isMobile }: Props) {
                                 {linkTexts[i]}
                             </p>
                         </a>
-                    </div>
+                    </span>
                 ))}
             </div>
             <div className="mx-2 flex flex-col">

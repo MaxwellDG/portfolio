@@ -1,5 +1,4 @@
 .box-center-repeat {
-    // background-image: ;
     background-image: url('../../public/images/box-center.jpeg');
     background-position: left;
     background-repeat: repeat;
@@ -7,7 +6,13 @@
 }
 
 .box-side {
-    object-fit: contain;
+    width: 188px;
+    height: 100%;
+}
+
+.box-center {
+    height: 100%;
+    width: 100%;
 }
 
 .keyboard-button {

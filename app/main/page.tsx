@@ -162,7 +162,10 @@ export default function Page() {
                                 src="/images/box-left.jpeg"
                                 className="box-side"
                             />
-                            <div className="flex flex-1 box-center-repeat" />
+                            <img
+                                src="/images/box-center.jpeg"
+                                className="box-center"
+                            />
                             <img
                                 src="/images/box-right.jpeg"
                                 className="box-side"
