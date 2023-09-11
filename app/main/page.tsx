@@ -149,11 +149,11 @@ export default function Page() {
     };
 
     return (
-        <div className="flex flex-1 justify-center">
-            <div className="flex flex-1 lg:flex-initial w-full lg:h-5/6 lg:w-5/6 flex-col lg:max-w-6xl m-auto">
+        <div className="flex flex-1 lg:h-full lg:w-full justify-center">
+            <div className="flex flex-1 m-2 lg:flex-initial w-full flex-col lg:full lg:max-w-6xl lg:m-auto lg:p-2">
                 <TopSection sectionName={screen} routes={screenRoutes} />
                 <div
-                    className="flex flex-1 flex-col lg:flex-row min-h-[475px]"
+                    className="flex flex-1 lg:flex-auto lg:h-[600px] flex-col lg:flex-row"
                     style={{ boxShadow: '3px 10px 10px rgba(0,0,0,0.3)' }}
                 >
                     <div className="flex flex-1 w-full relative overflow-y-auto lg:overflow-y-visible">
@@ -197,7 +197,7 @@ export default function Page() {
                     </div>
 
                     <div
-                        className="hidden lg:flex h-full flex-col w-[200px]"
+                        className="hidden lg:flex flex-col w-[200px]"
                         style={{
                             borderTop: '2px outset #AEAAAC',
                             borderRight: '2px outset #AEAAAC',

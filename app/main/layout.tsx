@@ -1,3 +1,4 @@
+import BackgroundAnimation from '../../components/backgroundAnimation';
 import FloatingTop from '../../components/buttonsContainer/floatingCV';
 
 export default function Layout({
@@ -6,7 +7,8 @@ export default function Layout({
     children: React.ReactNode;
 }) {
     return (
-        <section className="relative flex flex-1">
+        <section className="relative flex flex-1 lg:flex-auto lg:h-full lg:w-full overflow-y-auto">
+            {/* <BackgroundAnimation /> */}
             {children}
             <FloatingTop />
         </section>
