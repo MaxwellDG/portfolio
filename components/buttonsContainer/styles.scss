@@ -177,6 +177,10 @@ $timing-function: ease-out;
             lighten($color, $lighten-on-hover) 100%
         );
     }
+
+    &::before{
+        width: 0;
+    }
 }
 
 .active-nav-button {
@@ -190,6 +194,10 @@ $timing-function: ease-out;
     height: $height - 2 + px;
     margin-top: 2px;
     padding: 0 (($height/2) + px);
+
+    &::before{
+        width: 0;
+    }
 }
 
 .dark-border-left {

@@ -22,7 +22,7 @@ export default function RootLayout({
 
     return (
         <html lang="en" className="flex h-full">
-            <body className="flex flex-1 relative pb-[43px]">
+            <body className="flex flex-1 relative pb-[43px] lg:pb-0">
                 <BackgroundAnimation />
                 {/* <ThemeProvider> */}
                 <ScreenProvider>

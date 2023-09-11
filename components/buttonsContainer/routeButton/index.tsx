@@ -50,11 +50,9 @@ export function RouteButton({ route, isBig, shouldNav }: ButtonProps) {
 
 export function MobileRouteButton({
     route,
-    isBig,
     shouldNav,
     isActive,
 }: MobileButtonProps) {
-    // const theme: Theme = useThemeContext();
     const updateScreen = useContext(ScreenUpdateContext);
     const router = useRouter();
 
