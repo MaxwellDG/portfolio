@@ -32,7 +32,7 @@ export default function Page() {
                             <span>
                                 I used to work in the hospitality industry,
                                 while spending my free-time coding as a hobby.
-                                Overtime I was able to aquire some contract and
+                                Overtime I was able to acquire some contract and
                                 part-time work, which then developed into a
                                 full-time career.
                             </span>
