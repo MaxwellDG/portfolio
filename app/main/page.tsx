@@ -172,30 +172,12 @@ export default function Page() {
                             />
                         </div>
                         <div className="hidden lg:flex flex-1">
-                            {/* <AnimatePresence>
-                                <motion.div
-                                    key={screen}
-                                    exit={{
-                                        opacity: 0,
-                                        transition: { duration: 1 },
-                                    }}
-                                    initial={{ opacity: 0 }}
-                                    animate={{
-                                        opacity: 1,
-                                        transition: { duration: 1 },
-                                    }}
-                                    onAnimationComplete={() => setRealScreen(screen)}
-                                    className="flex flex-1 z-50"
-                                > */}
                             {getMainComponent()}
-                            {/* </motion.div>
-                            </AnimatePresence> */}
                         </div>
                         <div className="flex flex-1 lg:hidden">
                             {getMainMobileComponent()}
                         </div>
                     </div>
-
                     <div
                         className="hidden lg:flex flex-col w-[200px]"
                         style={{

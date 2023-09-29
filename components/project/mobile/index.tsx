@@ -29,7 +29,7 @@ export default function ProjectMobile({
                 ))}
             </Carousel>
             <div
-                className="flex h-24"
+                className="flex h-24 pr-[0.2rem]"
                 style={{
                     border: '2px outset #AEAAAC',
                     background: 'linear-gradient(135deg, #AEAAAC, #8C8681)',
