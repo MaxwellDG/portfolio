@@ -23,23 +23,6 @@ export default function ProjectBottom({ project }: Props) {
                     </div>
                 ))}
             </div>
-            {github ? (
-                <div className="absolute top-0 right-0 z-20">
-                    <a
-                        href={github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="sourceCode"
-                    >
-                        <img
-                            alt="github_link"
-                            src="images/github_icon_white.png"
-                            width="40px"
-                            height="40px"
-                        />
-                    </a>
-                </div>
-            ) : null}
         </div>
     );
 }

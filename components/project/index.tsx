@@ -14,7 +14,8 @@ interface Props {
 export default function Project({ project, isMobile }: Props) {
     const [isShowingMediaModal, toggleMediaModal] = React.useState(false);
 
-    const { name, desc, video, image, thumb, links, linkTexts } = project;
+    const { name, desc, video, image, thumb, links, linkTexts, github } =
+        project;
 
     return (
         <div className="flex flex-col lg:flex-row max-w-2xl relative overflow-y-auto">
@@ -51,13 +52,27 @@ export default function Project({ project, isMobile }: Props) {
                 >
                     {name}
                 </h3>
-                <p
-                    style={{ border: '2px outset rgba(0,0,0,0.3)' }}
+                <div
                     className="text-white font-extralight p-2 bg-transparentContainer"
-                    id="desc"
+                    style={{ border: '2px outset rgba(0,0,0,0.3)' }}
                 >
-                    {desc}
-                </p>
+                    {isMobile && github ? (
+                        <div className="h-12 w-12 float-right ml-2">
+                            <a
+                                href={github}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="sourceCode"
+                            >
+                                <img
+                                    alt="github_link"
+                                    src="images/github_icon_white.png"
+                                />
+                            </a>
+                        </div>
+                    ) : null}
+                    <p id="desc">{desc}</p>
+                </div>
             </div>
             <PopupModal
                 closeModal={() => toggleMediaModal(!isShowingMediaModal)}

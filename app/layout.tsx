@@ -1,10 +1,8 @@
 import React from 'react';
 import MobileNav from '../components/mobileNav';
 import ScreenProvider from '../contexts/screenContext';
-// import ThemeProvider from '../contexts/themeContext';
 import '../theme/globals.css';
 import '../theme/app.scss';
-// import '../db/index';
 import '../theme/app.scss';
 import BackgroundAnimation from '../components/backgroundAnimation';
 
