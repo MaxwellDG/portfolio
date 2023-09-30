@@ -7,7 +7,7 @@ import ProjectSide from '../../components/project/side';
 import EnterpriseProjects from '../../components/screens/enterprise';
 import HobbyProjects from '../../components/screens/hobby';
 import Skills from '../../components/screens/skills';
-import SkillsBottom from '../../components/screens/skills/bottom';
+import SkillsBottom from '../../components/skillsScroller';
 import SkillsMobile from '../../components/screens/skills/mobile';
 import SkillsSide from '../../components/screens/skills/side';
 import { TopSection } from '../../components/topSection';
@@ -150,7 +150,7 @@ export default function Page() {
 
     return (
         <div className="flex flex-1 lg:h-full lg:w-full justify-center">
-            <div className="flex flex-1 m-2 lg:flex-initial w-full flex-col lg:full lg:max-w-6xl lg:m-auto lg:p-2">
+            <div className="flex flex-1 lg:flex-initial w-full flex-col lg:full lg:max-w-6xl lg:m-auto lg:p-2">
                 <TopSection sectionName={screen} routes={screenRoutes} />
                 <div
                     className="flex flex-1 lg:flex-auto lg:h-[600px] flex-col lg:flex-row"

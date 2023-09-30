@@ -53,7 +53,7 @@ export default function Project({ project, isMobile }: Props) {
                     {name}
                 </h3>
                 <div
-                    className="text-white font-extralight p-2 bg-transparentContainer"
+                    className="text-white font-extralight p-2 bg-transparentContainer mx-2"
                     style={{ border: '2px outset rgba(0,0,0,0.3)' }}
                 >
                     {isMobile && github ? (

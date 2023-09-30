@@ -7,7 +7,7 @@ import ReturnButton from '../../topSection/returnButton';
 export default function FloatingTop() {
     return (
         <div className="lg:hidden flex absolute top-4 left-0 right-0 w-full justify-between items-center z-50">
-            <div className="mx-4">
+            <div className="h-10 mx-4">
                 <ReturnButton />
             </div>
             <button type="button" className="mx-4 flex h-10 cursor-default">

@@ -67,7 +67,7 @@ export const Carousel = ({
 
     return (
         <div className="flex flex-1 w-full relative">
-            <div className="lg:hidden absolute top-0 left-0 pb-2 mb-2 lg:pb-0 h-full w-full flex flex-1 z-0 justify-center">
+            <div className="lg:hidden absolute top-2 left-2 right-2 bottom-2 lg:pb-0 flex flex-1 z-0 justify-center">
                 <img src="/images/black-box.jpg" />
             </div>
             <div

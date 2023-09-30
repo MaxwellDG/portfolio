@@ -1,6 +1,5 @@
 import skillsData, { SkillSet } from '../../../../data/skillsData';
 import { Carousel } from '../../../carousel';
-import SkillsBottom from '../bottom';
 import '../styles.scss';
 import Frontend from '../../../../public/icons/frontend.svg';
 import Backend from '../../../../public/icons/backend.svg';
@@ -8,6 +7,7 @@ import Web3 from '../../../../public/icons/web3.svg';
 import Management from '../../../../public/icons/management.svg';
 import Graphic from '../../../../public/icons/graphic.svg';
 import React from 'react';
+import SkillsScroller from '../../../skillsScroller';
 
 type Props = {
     focusedIndex: number;
@@ -21,45 +21,17 @@ export default function SkillsMobile({ focusedIndex, setFocusedIndex }: Props) {
         (i: number) => {
             switch (i) {
                 case 1:
-                    return (
-                        <Frontend
-                            height={75}
-                            width={75}
-                            fill={'#536976'}
-                        />
-                    );
+                    return <Frontend height={75} width={75} fill={'#536976'} />;
                 case 2:
-                    return (
-                        <Backend
-                            height={75}
-                            width={75}
-                            fill={'#536976'}
-                        />
-                    );
+                    return <Backend height={75} width={75} fill={'#536976'} />;
                 case 3:
-                    return (
-                        <Web3
-                            height={75}
-                            width={75}
-                            fill={'#536976'}
-                        />
-                    );
+                    return <Web3 height={75} width={75} fill={'#536976'} />;
                 case 4:
                     return (
-                        <Management
-                            height={75}
-                            width={75}
-                            stroke={'#536976'}
-                        />
+                        <Management height={75} width={75} stroke={'#536976'} />
                     );
                 case 0:
-                    return (
-                        <Graphic
-                            height={75}
-                            width={75}
-                            fill={'#536976'}
-                        />
-                    );
+                    return <Graphic height={75} width={75} fill={'#536976'} />;
             }
         },
         [focusedIndex]
@@ -96,14 +68,11 @@ export default function SkillsMobile({ focusedIndex, setFocusedIndex }: Props) {
                 ))}
             </Carousel>
             <div
-                className="flex h-24 pr-[0.2rem]"
-                style={{
-                    border: '2px outset #AEAAAC',
-                    background: 'linear-gradient(135deg, #AEAAAC, #8C8681)',
-                }}
+                key={focusedIndex}
+                className="flex pb-[0.1rem] px-[0.2rem] mb-2"
             >
                 {skillsData[focusedIndex] && (
-                    <SkillsBottom focusedIndex={focusedIndex} />
+                    <SkillsScroller skills={skillsData[focusedIndex].skills} />
                 )}
             </div>
         </div>

@@ -2,6 +2,7 @@ import { Project as ProjectType } from '../../../data/projectData';
 import Project from '../index';
 import { Carousel } from '../../carousel';
 import ProjectBottom from '../bottom';
+import SkillsScroller from '../../skillsScroller';
 
 // ** The array has its order manipulated here in order to get the css transition animation offset correctly ** //
 
@@ -29,14 +30,16 @@ export default function ProjectMobile({
                 ))}
             </Carousel>
             <div
-                className="flex h-24 pr-[0.2rem]"
-                style={{
-                    border: '2px outset #AEAAAC',
-                    background: 'linear-gradient(135deg, #AEAAAC, #8C8681)',
-                }}
+                key={focusedIndex}
+                className="flex pb-[0.1rem] px-[0.2rem] mb-2"
             >
                 {array[focusedIndex] && (
-                    <ProjectBottom project={array[focusedIndex]} />
+                    <SkillsScroller
+                        skills={[
+                            ...array[focusedIndex].languages,
+                            ...array[focusedIndex].tech,
+                        ]}
+                    />
                 )}
             </div>
         </div>
