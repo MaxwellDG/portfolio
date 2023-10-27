@@ -34,7 +34,7 @@ export default function ProjectSide({ project }: Props) {
                                     className="flex items-center flex-start"
                                 >
                                     {link.toLowerCase().includes('twitter') ? (
-                                        <Twitter height={15} width={15} />
+                                        <Twitter height={20} width={20} />
                                     ) : (
                                         <Link height={20} width={20} />
                                     )}

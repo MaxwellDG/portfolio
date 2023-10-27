@@ -1,7 +1,6 @@
 import { Project as ProjectType } from '../../../data/projectData';
 import Project from '../index';
 import { Carousel } from '../../carousel';
-import ProjectBottom from '../bottom';
 import SkillsScroller from '../../skillsScroller';
 
 // ** The array has its order manipulated here in order to get the css transition animation offset correctly ** //

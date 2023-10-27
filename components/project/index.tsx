@@ -6,6 +6,8 @@ import Multimedia from '../media';
 import { PopupModal } from '../modals/skillsInfo';
 import MediaContent from '../media/mediaContent';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
+import Twitter from '../../public/icons/twitter.svg';
+import Link from '../../public/icons/link.svg';
 
 interface Props {
     project: ProjectData;
@@ -43,16 +45,24 @@ export default function Project({ project, isMobile }: Props) {
                     <span
                         className={`self-center lg:self-auto shaded-button shaded-hover mx-2 px-2 my-1 text-white rounded-sm border-black border`}
                     >
-                        <a
-                            key={i}
-                            href={link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <p className="font-extralight text-center">
-                                {linkTexts[i]}
-                            </p>
-                        </a>
+                               <a
+                                    key={i}
+                                    href={link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center flex-start"
+                                >
+                                    {link.toLowerCase().includes('twitter') ? (
+                                        <Twitter height={20} width={20} />
+                                    ) : (
+                                        <Link height={20} width={20} />
+                                    )}
+                                    <div className="flex flex-1 justify-center">
+                                        <p className="font-extralight text-center mx-2 ">
+                                            {linkTexts[i]}
+                                        </p>
+                                    </div>
+                                </a>
                     </span>
                 ))}
             </div>
