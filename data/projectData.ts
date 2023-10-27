@@ -63,6 +63,31 @@ export const hobbyProjectData: Project[] = [
 
 export const enterpriseProjectData: Project[] = [
     {
+        name: 'Stache',
+        links: [
+            'https://www.stache.io',
+            'https://app.stache.io/bazaar',
+            'https://www.xnft.gg/app/DNUrvMF9ytAYNS66pbfcM9FrHHmJqghVeQKgbo9WU1KM',
+            'https://twitter.com/SmartStache'
+        ],
+        linkTexts: ['Stache Intro', 'app.stache.io',  'Stache as xNFT', '@SmartStache'],
+        desc: "A Solana blockchain infrastructure and application project. First we brought 'Smart Wallet' technology to Solana. Then we created the 'Stache' application to build on that. The current main attraction is the ability for users to make their own shops, thus decentralizing the currently centralized marketplace model.",
+        video: 'videos/stache.mp4',
+        thumb: 'images/Stache_Logo_Color_Medium.png',
+        languages: ['Typescript', 'Node.js'],
+        tech: ['React Native Web', 'Solana', 'Nest', 'Postgres', 'Recoil', 'Tailwind'],
+    },
+    {
+        name: 'Domination',
+        links: ['https://domination.gg', 'https://twitter.com/DominationGG_'],
+        linkTexts: ['Domination.gg', '@DominationGG_'],
+        desc: 'A Solana blockchain video-game in the browser. Players choose to join 1 of 3 factions and compete in bi-weekly matches. Users can purchase NFTs to participate in campaigns, and are rewarded for their efforts. In proper Blockchain fashion, all game activity is done decentralized and all players interact on the same gameboard.',
+        video: 'videos/domination.mp4',
+        thumb: 'images/domination_thumb.gif',
+        languages: ['Typescript', 'Node.js'],
+        tech: ['Solana', 'Postgres', 'Recoil', 'Web3.js', 'Tailwind']
+    },
+    {
         name: "The Bard's Quill",
         links: ['https://thebardsquill.com'],
         linkTexts: ['TheBardsQuill.com'],
@@ -71,30 +96,6 @@ export const enterpriseProjectData: Project[] = [
         languages: ['Javascript', 'Vue'],
         thumb: 'images/thebardsquill_cropped_thumb.png',
         tech: ['WebRTC', 'Konva.js', 'IndexedDB'],
-    },
-    {
-        name: 'Domination',
-        links: ['https://domination.gg'],
-        linkTexts: ['Domination.gg'],
-        desc: 'A Solana blockchain video-game in the browser. Players choose to join 1 of 3 factions and compete in bi-weekly matches. Users can purchase NFTs to participate in campaigns, and are rewarded for their efforts. In proper Blockchain fashion, all game activity is done decentralized and all players interact on the same gameboard.',
-        video: 'videos/domination.mp4',
-        thumb: 'images/domination_thumb.png',
-        languages: ['Typescript, Node.js'],
-        tech: ['Solana', 'Postgres', 'Recoil', 'Web3.js', 'Tailwind']
-    },
-    {
-        name: 'Stache',
-        links: [
-            'https://app.stache.io/bazaar',
-            'https://www.stache.io',
-            'https://www.xnft.gg/app/DNUrvMF9ytAYNS66pbfcM9FrHHmJqghVeQKgbo9WU1KM',
-        ],
-        linkTexts: ['Stache App', 'Stache Intro', 'Stache as xNFT'],
-        desc: "A Solana blockchain infrastructure and application project. First we brought 'Smart Wallet' technology to Solana. Then we created the 'Stache' application to build on that. The current main attraction is the ability for users to make their own shops, thus decentralizing the currently centralized marketplace model.",
-        video: 'videos/stache.mp4',
-        thumb: 'images/Stache_Logo_Color_Medium.png',
-        languages: ['Typescript', 'React Native Web', 'Node.js'],
-        tech: ['Solana', 'Nest', 'Postgres', 'Recoil', 'Tailwind'],
     },
     {
         name: 'SMART Studio',
@@ -118,8 +119,8 @@ export const enterpriseProjectData: Project[] = [
     },
     {
         name: 'The Diabetes App',
-        links: ['https://apps.apple.com/us/app/the-diabetes-app/id1522262547'],
-        linkTexts: ['The Diabetes App on The App Store'],
+        links: ['https://corporate.thediabetesapp.com'],
+        linkTexts: ['The Diabetes App'],
         desc: "A social media app focused around people with diabetes. Users can make profiles, message each other, scroll the homefeed, there's app-wide video streaming events, and much more.",
         image: 'images/tda.jpeg',
         thumb: 'images/tda_thumb.jpeg',

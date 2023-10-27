@@ -52,7 +52,6 @@ export default function SkillsScroller({ skills }: Props) {
             const x = e.pageX - sliderRef.current.offsetLeft;
             const walk = (x - startX) * 1; //scroll-fast
             sliderRef.current.scrollLeft = scrollLeft - walk;
-            console.log(walk);
         }
     }
 

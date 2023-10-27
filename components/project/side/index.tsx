@@ -1,5 +1,7 @@
 import iconsHashmap from '../../../data/iconsHashmap';
 import { Project } from '../../../data/projectData';
+import Twitter from '../../../public/icons/twitter.svg';
+import Link from '../../../public/icons/link.svg';
 
 interface Props {
     project: Project;
@@ -18,17 +20,29 @@ export default function ProjectSide({ project }: Props) {
                             <div
                                 className={`shaded-button shaded-hover px-1 ${
                                     i !== links.length - 1 ? 'mb-2' : ''
-                                } text-white rounded-sm border-black border lg:mt-5`}
+                                } text-white rounded-sm border-black border ${
+                                    link === 'https://piecework-btc.com'
+                                        ? 'mt-5'
+                                        : ''
+                                }`}
                             >
                                 <a
                                     key={i}
                                     href={link}
                                     target="_blank"
                                     rel="noopener noreferrer"
+                                    className="flex items-center flex-start"
                                 >
-                                    <p className="font-extralight text-center">
-                                        {linkTexts[i]}
-                                    </p>
+                                    {link.toLowerCase().includes('twitter') ? (
+                                        <Twitter height={15} width={15} />
+                                    ) : (
+                                        <Link height={20} width={20} />
+                                    )}
+                                    <div className="flex flex-1 justify-center">
+                                        <p className="font-extralight text-center mx-2 ">
+                                            {linkTexts[i]}
+                                        </p>
+                                    </div>
                                 </a>
                             </div>
                         ))}
@@ -56,7 +70,7 @@ export default function ProjectSide({ project }: Props) {
                     {tech.map((tech) => (
                         <div
                             key={tech}
-                            className="flex items-center gap-x-2 mb-2"
+                            className="flex items-center gap-x-2 mb-2 whitespace-nowrap"
                         >
                             <img
                                 src={`/images/${
@@ -64,7 +78,9 @@ export default function ProjectSide({ project }: Props) {
                                 }`}
                                 className="h-6 w-6"
                             />
-                            <p className="font-extralight">{tech}</p>
+                            <p className="font-extralight whitespace-nowrap">
+                                {tech}
+                            </p>
                         </div>
                     ))}
                 </div>
