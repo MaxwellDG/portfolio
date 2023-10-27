@@ -29,6 +29,8 @@ export default [
             'Postgres',
             'SQL',
             'GraphQL',
+            'Google Cloud',
+            'AWS',
             'Heroku',
         ],
     },

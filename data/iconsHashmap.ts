@@ -13,6 +13,7 @@ export default {
     "Node.js": 'nodejs.png',
     Nest: 'nestjs.png',
     Next: 'nextjs.png',
+    GoogleCloud: 'google-cloud.png',
     Postgres: 'postgres.png',
     SQL: 'sql.png',
     GraphQL: 'graphql.png',

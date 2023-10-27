@@ -57,7 +57,7 @@ export default function SkillsScroller({ skills }: Props) {
     }
 
     return (
-        <div className="flex flex-1 overflow-hidden">
+        <div className="flex flex-1 overflow-hidden bg-[rgba(0,0,0,0.2)] border-t border-b border-t-[#8C8681] border-b-[#8C8681] justify-center">
             <div
                 ref={sliderRef as LegacyRef<HTMLDivElement>}
                 onMouseDown={sliderMouseDown}
@@ -66,11 +66,12 @@ export default function SkillsScroller({ skills }: Props) {
                 onMouseMove={sliderMouseMove}
                 className={`${
                     isDown ? 'cursor-grabbing' : 'cursor-pointer'
-                } overflow-x-auto skills-scroll`}
+                } overflow-x-auto skills-scroll py-2 mx-2`}
             >
                 <div
-                    ref={animationRef as LegacyRef<HTMLDivElement>}
-                    className={`flex flex-nowrap flex-1 p-2 skills-marquee pl-[100%]`}
+                    // ref={animationRef as LegacyRef<HTMLDivElement>}
+                    // className={`flex flex-nowrap flex-1 p-2 skills-marquee pl-[100%]`}
+                    className={`flex flex-nowrap flex-1`}
                 >
                     {skills.map((skill) => (
                         <div

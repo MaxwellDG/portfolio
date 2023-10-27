@@ -31,7 +31,7 @@ export default function ProjectMobile({
             </Carousel>
             <div
                 key={focusedIndex}
-                className="flex pb-[0.1rem] px-[0.2rem] mb-2"
+                className="flex pb-[0.1rem] mb-2"
             >
                 {array[focusedIndex] && (
                     <SkillsScroller

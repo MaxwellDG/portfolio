@@ -69,7 +69,7 @@ export default function SkillsMobile({ focusedIndex, setFocusedIndex }: Props) {
             </Carousel>
             <div
                 key={focusedIndex}
-                className="flex pb-[0.1rem] px-[0.2rem] mb-2"
+                className="flex pb-[0.1rem] mb-2"
             >
                 {skillsData[focusedIndex] && (
                     <SkillsScroller skills={skillsData[focusedIndex].skills} />

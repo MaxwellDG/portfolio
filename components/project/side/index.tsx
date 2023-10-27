@@ -18,7 +18,7 @@ export default function ProjectSide({ project }: Props) {
                             <div
                                 className={`shaded-button shaded-hover px-1 ${
                                     i !== links.length - 1 ? 'mb-2' : ''
-                                } text-white rounded-sm border-black border`}
+                                } text-white rounded-sm border-black border lg:mt-5`}
                             >
                                 <a
                                     key={i}

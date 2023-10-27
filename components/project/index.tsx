@@ -5,6 +5,7 @@ import { Project as ProjectData } from '../../data/projectData';
 import Multimedia from '../media';
 import { PopupModal } from '../modals/skillsInfo';
 import MediaContent from '../media/mediaContent';
+import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 interface Props {
     project: ProjectData;
@@ -12,10 +13,20 @@ interface Props {
 }
 
 export default function Project({ project, isMobile }: Props) {
+    const { width } = useWindowDimensions();
     const [isShowingMediaModal, toggleMediaModal] = React.useState(false);
 
-    const { name, desc, video, image, thumb, links, linkTexts, github } =
-        project;
+    const {
+        name,
+        desc,
+        video,
+        image,
+        mobileImage,
+        thumb,
+        links,
+        linkTexts,
+        github,
+    } = project;
 
     return (
         <div className="flex flex-col lg:flex-row max-w-2xl relative overflow-y-auto">
@@ -53,7 +64,7 @@ export default function Project({ project, isMobile }: Props) {
                     {name}
                 </h3>
                 <div
-                    className="text-white font-extralight p-2 bg-transparentContainer mx-2"
+                    className="text-white font-extralight p-2 bg-transparentContainer mx-2 lg:mx-0"
                     style={{ border: '2px outset rgba(0,0,0,0.3)' }}
                 >
                     {isMobile && github ? (
@@ -79,7 +90,10 @@ export default function Project({ project, isMobile }: Props) {
                 isShowing={isShowingMediaModal}
                 isMobile={isMobile}
             >
-                <MediaContent image={image} video={video} />
+                <MediaContent
+                    image={width < 1024 && !!mobileImage ? mobileImage : image}
+                    video={video}
+                />
             </PopupModal>
         </div>
     );

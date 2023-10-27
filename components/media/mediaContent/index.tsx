@@ -3,6 +3,7 @@ import React from 'react';
 interface Props {
     image?: string;
     video?: string;
+    mobileImage?: string;
 }
 
 export default function MediaContent({ image, video }: Props) {
@@ -17,6 +18,7 @@ export default function MediaContent({ image, video }: Props) {
             <source src={video} />
         </video>
     ) : (
+        
         <img
             key={image}
             src={image}
