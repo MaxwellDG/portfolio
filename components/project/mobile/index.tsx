@@ -11,7 +11,7 @@ export default function ProjectMobile({
     array,
 }) {
     return (
-        <div className="absolute top-0 left-0 bottom-0 right-0 z-50 flex flex-col w-full">
+        <div className="absolute top-16 left-0 bottom-0 right-0 z-50 flex flex-col w-full">
             <Carousel
                 focusedIndex={focusedIndex}
                 setFocusedIndex={setFocusedIndex}
@@ -30,7 +30,7 @@ export default function ProjectMobile({
             </Carousel>
             <div
                 key={focusedIndex}
-                className="flex pb-[0.1rem] mb-2"
+                className="flex pb-[0.1rem] my-2"
             >
                 {array[focusedIndex] && (
                     <SkillsScroller

@@ -179,7 +179,7 @@ export default function Page() {
                         </div>
                     </div>
                     <div
-                        className="hidden lg:flex flex-col w-[200px]"
+                        className="hidden lg:flex flex-col w-[215px]"
                         style={{
                             borderTop: '2px outset #AEAAAC',
                             borderRight: '2px outset #AEAAAC',

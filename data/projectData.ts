@@ -75,7 +75,7 @@ export const enterpriseProjectData: Project[] = [
         video: 'videos/stache.mp4',
         thumb: 'images/Stache_Logo_Color_Medium.png',
         languages: ['Typescript', 'Node.js'],
-        tech: ['React Native Web', 'Solana', 'Nest', 'Postgres', 'Recoil', 'Tailwind'],
+        tech: ['React Native', 'Solana', 'Nest', 'Postgres', 'Recoil', 'Tailwind'],
     },
     {
         name: 'Domination',
@@ -114,7 +114,7 @@ export const enterpriseProjectData: Project[] = [
         desc: 'An offline-first Progressive Web App used by pharmaceutical sales reps during their meetings with health-care professionals. Utilizes ServiceWorkers and IndexedDB in order to persist data in offline-mode and sync it with the server when an internet connection is later established.',
         image: 'images/Luye.png',
         thumb: 'images/Luye_thumb.png',
-        languages: ['Typescript', 'React Native Web'],
+        languages: ['Typescript', 'React Native'],
         tech: ['PWA', 'IndexedDB'],
     },
     {
