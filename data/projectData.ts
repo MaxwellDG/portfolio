@@ -70,7 +70,7 @@ export const enterpriseProjectData: Project[] = [
             'https://www.xnft.gg/app/DNUrvMF9ytAYNS66pbfcM9FrHHmJqghVeQKgbo9WU1KM',
             'https://twitter.com/SmartStache'
         ],
-        linkTexts: ['Stache Intro', 'app.stache.io',  'Stache as xNFT', '@SmartStache'],
+        linkTexts: ['Stache Intro', 'Stache App',  'Stache as xNFT', '@SmartStache'],
         desc: "A Solana blockchain infrastructure and application project. First we brought 'Smart Wallet' technology to Solana. Then we created the 'Stache' application to build on that. The current main attraction is the ability for users to make their own shops, thus decentralizing the currently centralized marketplace model.",
         video: 'videos/stache.mp4',
         thumb: 'images/Stache_Logo_Color_Medium.png',
