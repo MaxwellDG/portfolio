@@ -43,7 +43,7 @@ export default {
     Java: 'java.png',
     PyGame: 'pygame.png',
     AndroidSDK: 'android.png',
-    XCode: 'Xcode.png',
+    XCode: 'XCode.png',
     Bluetooth: 'bluetooth.png',
     GoogleMaps: 'googlemaps.png',
     AWS: 'aws.png',
