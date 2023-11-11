@@ -23,7 +23,7 @@ export default function Expertise() {
                             {'{ '}
                         </p>
                         <p className="text-center flex">
-                            &nbsp;Javascript Software Developer&nbsp;
+                            &nbsp;Applications Developer&nbsp;
                         </p>
                         <p
                             className="flex flex-col justify-center absolute top-0 bottom-0 right-2"

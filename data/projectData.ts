@@ -22,8 +22,8 @@ export const hobbyProjectData: Project[] = [
         image: 'images/piecework-btc.png',
         mobileImage: 'images/piecework-btc-mobile.png',
         thumb: 'images/piecework-btc.png',
-        languages: ['Typescript', 'Node.js'],
-        tech: ['Next', 'React', 'Google Cloud', 'Tailwind'],
+        languages: ['Typescript'],
+        tech: ['Node.js', 'React', 'Next', 'Mongo' , 'Google Cloud', 'Tailwind'],
     },
     // {
     //     name: "Duel Arena",
@@ -56,12 +56,32 @@ export const hobbyProjectData: Project[] = [
         desc: '"Hey where do you want to go tonight?" "I\'m fine with whatever." An app designed to aid groups in decision-making. Utilizes Google Maps and Google Places APIs for extra suggestions.',
         video: 'videos/video_ww_right_final.mp4',
         thumb: 'images/video_ww_right_final_thumb.png',
-        languages: ['Java', 'Android SDK'],
-        tech: ['Bluetooth', 'Google Maps', 'SQL'],
+        languages: ['Java'],
+        tech: ['Android SDK', 'Bluetooth', 'Google Maps', 'SQL'],
     },
 ];
 
 export const enterpriseProjectData: Project[] = [
+    {
+        name: "The Bard's Quill",
+        links: ['https://thebardsquill.com'],
+        linkTexts: ['TheBardsQuill.com'],
+        desc: "A virtual tabletop and campaign-management system for the 'Storytelling Role-Playing Game' genre. The Bard's Quill works as an aide for popular titles such as: 'Dungeons & Dragons' and 'Pathfinder'.",
+        video: 'videos/thebardsquill_cropped.mp4',
+        languages: ['Javascript'],
+        thumb: 'images/thebardsquill_cropped_thumb.png',
+        tech: ['Vue', 'WebRTC', 'Konva.js', 'IndexedDB'],
+    },
+    {
+        name: 'Domination',
+        links: ['https://domination.gg', 'https://twitter.com/DominationGG_'],
+        linkTexts: ['Domination.gg', '@DominationGG_'],
+        desc: 'A Solana blockchain video-game in the browser. Players choose to join 1 of 3 factions and compete in bi-weekly matches. Users can purchase NFTs to participate in campaigns, and are rewarded for their efforts. In proper Blockchain fashion, all game activity is done decentralized and all players interact on the same gameboard.',
+        video: 'videos/domination.mp4',
+        thumb: 'images/domination_thumb.gif',
+        languages: ['Typescript'],
+        tech: ['Node.js', 'React', 'Solana', 'Postgres', 'Recoil', 'Web3.js', 'Tailwind']
+    },
     {
         name: 'Stache',
         links: [
@@ -74,28 +94,8 @@ export const enterpriseProjectData: Project[] = [
         desc: "A Solana blockchain infrastructure and application project. First we brought 'Smart Wallet' technology to Solana. Then we created the 'Stache' application to build on that. The current main attraction is the ability for users to make their own shops, thus decentralizing the currently centralized marketplace model.",
         video: 'videos/stache.mp4',
         thumb: 'images/Stache_Logo_Color_Medium.png',
-        languages: ['Typescript', 'Node.js'],
-        tech: ['React Native', 'Solana', 'Nest', 'Postgres', 'Recoil', 'Tailwind'],
-    },
-    {
-        name: 'Domination',
-        links: ['https://domination.gg', 'https://twitter.com/DominationGG_'],
-        linkTexts: ['Domination.gg', '@DominationGG_'],
-        desc: 'A Solana blockchain video-game in the browser. Players choose to join 1 of 3 factions and compete in bi-weekly matches. Users can purchase NFTs to participate in campaigns, and are rewarded for their efforts. In proper Blockchain fashion, all game activity is done decentralized and all players interact on the same gameboard.',
-        video: 'videos/domination.mp4',
-        thumb: 'images/domination_thumb.gif',
-        languages: ['Typescript', 'Node.js'],
-        tech: ['Solana', 'Postgres', 'Recoil', 'Web3.js', 'Tailwind']
-    },
-    {
-        name: "The Bard's Quill",
-        links: ['https://thebardsquill.com'],
-        linkTexts: ['TheBardsQuill.com'],
-        desc: "A virtual tabletop and campaign-management system for the 'Storytelling Role-Playing Game' genre. The Bard's Quill works as an aide for popular titles such as: 'Dungeons & Dragons' and 'Pathfinder'.",
-        video: 'videos/thebardsquill_cropped.mp4',
-        languages: ['Javascript', 'Vue'],
-        thumb: 'images/thebardsquill_cropped_thumb.png',
-        tech: ['WebRTC', 'Konva.js', 'IndexedDB'],
+        languages: ['Typescript'],
+        tech: ['Node.js', 'React Native', 'Solana', 'Nest', 'Postgres', 'Recoil', 'Tailwind'],
     },
     {
         name: 'SMART Studio',
@@ -103,9 +103,9 @@ export const enterpriseProjectData: Project[] = [
         linkTexts: [],
         desc: 'Designed for medical companies to generate informative videos for their workers and patients. Utilizes Deepfake technology in order to quickly mass-produce video content of doctors speaking to patients in any language. AI support bots currently in development in order to generate deepfake videos in response to textual input.',
         video: 'videos/smart-studio-ready.mp4',
-        languages: ['Javascript', 'React Native'],
+        languages: ['Javascript'],
         thumb: 'images/smart-studio-ready_thumb.png',
-        tech: ['GraphQL', 'AWS', 'Expo'],
+        tech: ['React Native', 'GraphQL', 'AWS', 'Expo'],
     },
     {
         name: 'Luye',
@@ -114,8 +114,8 @@ export const enterpriseProjectData: Project[] = [
         desc: 'An offline-first Progressive Web App used by pharmaceutical sales reps during their meetings with health-care professionals. Utilizes ServiceWorkers and IndexedDB in order to persist data in offline-mode and sync it with the server when an internet connection is later established.',
         image: 'images/Luye.png',
         thumb: 'images/Luye_thumb.png',
-        languages: ['Typescript', 'React Native'],
-        tech: ['PWA', 'IndexedDB'],
+        languages: ['Typescript'],
+        tech: ['React Native', 'PWA', 'IndexedDB'],
     },
     {
         name: 'The Diabetes App',
@@ -124,8 +124,8 @@ export const enterpriseProjectData: Project[] = [
         desc: "A social media app focused around people with diabetes. Users can make profiles, message each other, scroll the homefeed, there's app-wide video streaming events, and much more.",
         image: 'images/tda.jpeg',
         thumb: 'images/tda_thumb.jpeg',
-        languages: ['Javascript', 'React Native'],
-        tech: ['OAuth2', 'Pusher', 'Kevel'],
+        languages: ['Javascript'],
+        tech: ['React Native', 'XCode', 'Android SDK', 'OAuth2', 'Pusher', 'Kevel'],
     },
     
     // {
