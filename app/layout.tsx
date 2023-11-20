@@ -29,7 +29,7 @@ export default function RootLayout({
                         <MobileNav />
                     </ScreenProvider>
                     {/* </ThemeProvider> */}
-                <Analytics />
+                    <Analytics />
             </body>
         </html>
     );
