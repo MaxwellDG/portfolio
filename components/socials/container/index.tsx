@@ -11,7 +11,7 @@ export default function ImageLinksContainer() {
                     borderLeftStyle: 'none',
                     borderLeftWidth: 0,
                 }}
-                className="flex lg:h-full items-center p-2 bg-transparentContainer flex-row list-none gap-x-3"
+                className="flex lg:h-full items-center p-2 px-3 bg-transparentContainer flex-row list-none gap-x-3"
             >
                 {/* <ImageLink
                     id="largeGithub"

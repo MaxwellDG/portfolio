@@ -43,26 +43,26 @@ export default function Project({ project, isMobile }: Props) {
             >
                 {links.map((link: string, i: number) => (
                     <span
+                        key={i}
                         className={`self-center lg:self-auto shaded-button shaded-hover mx-2 px-2 my-1 text-white rounded-sm border-black border`}
                     >
-                               <a
-                                    key={i}
-                                    href={link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center flex-start"
-                                >
-                                    {link.toLowerCase().includes('twitter') ? (
-                                        <Twitter height={20} width={20} />
-                                    ) : (
-                                        <Link height={20} width={20} />
-                                    )}
-                                    <div className="flex flex-1 justify-center">
-                                        <p className="font-extralight text-center mx-2 ">
-                                            {linkTexts[i]}
-                                        </p>
-                                    </div>
-                                </a>
+                        <a
+                            href={link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center flex-start"
+                        >
+                            {link.toLowerCase().includes('twitter') ? (
+                                <Twitter height={20} width={20} />
+                            ) : (
+                                <Link height={20} width={20} />
+                            )}
+                            <div className="flex flex-1 justify-center">
+                                <p className="font-extralight text-center mx-2 ">
+                                    {linkTexts[i]}
+                                </p>
+                            </div>
+                        </a>
                     </span>
                 ))}
             </div>

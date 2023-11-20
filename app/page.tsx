@@ -1,7 +1,7 @@
 import ButtonsContainer from '../components/buttonsContainer';
 import Self from '../components/self';
 import Expertise from '../components/expertise';
-
+import ImageLink from '../components/socials/imageLink';
 
 export default function Page() {
     return (
@@ -34,35 +34,100 @@ export default function Page() {
                                 while spending my free-time coding as a hobby.
                                 Overtime I was able to acquire some contract and
                                 part-time work, which then developed into a
-                                full-time career.
+                                full-time career developing applications. I'm
+                                very happy with where I'm at now, and wish to
+                                continue doing much of the same.
                             </span>
                             <br />
                             <br />
                             <p>
-                                If you are doing anything
+                                I've spent the past several years creating
+                                professional applications for web, mobile, and
+                                desktop. This has ranged a wide variety of
+                                industries including: gaming, health-care,
+                                social media, blockchain, and administration.
+                                During this time, the vast majority of my
+                                work was done in
                                 <span style={{ color: '#c98659' }}>
-                                    &nbsp;Web3
+                                    &nbsp;Typescript
+                                    <span style={{ color: 'white' }}>,</span>
+                                    &nbsp;
                                 </span>
-                                &nbsp; and/or
-                                <span style={{ color: '#c98659' }}>
-                                    &nbsp;Fullstack Javascript&nbsp;
-                                </span>
-                                related, i'm interested. I've spent the past
-                                several years creating applications for web,
-                                mobile, and desktop. And as for Web3, I've
-                                worked on
-                                <span style={{ color: '#c98659' }}>
-                                    &nbsp;Ethereum
-                                </span>
-                                &nbsp; and&nbsp;
                                 <span style={{ color: '#c98659' }}>
                                     &nbsp;Solana
+                                    <span style={{ color: 'white' }}>,</span>
+                                </span>{' '}
+                                and/or
+                                <span style={{ color: '#c98659' }}>
+                                    &nbsp;React (Native)
+                                </span>{' '}
+                                environments.
+                            </p>
+                            <br />
+                            <p>
+                                <span>
+                                    In my spare time i'm currently advancing in
+                                    <span style={{ color: '#c98659' }}>
+                                        &nbsp;Rust
+                                    </span>{' '}
+                                    and{' '}
+                                    <span style={{ color: '#c98659' }}>
+                                        Linux
+                                    </span>
+                                    . For the former, I've seen its growing
+                                    capabilities in web application development
+                                    - specifically in high performance. And
+                                    per the latter, I've begun experimenting
+                                    with programming{' '}
+                                    <span style={{ color: '#c98659' }}>
+                                        Raspberry-Pis
+                                    </span>{' '}
+                                    and creating small home improvement
+                                    projects.
                                 </span>
-                                &nbsp; chains. I've had a great time doing so,
-                                and couldn't be happier to continue doing much
-                                of the same.
                             </p>
                         </span>
+                        <div className="flex flex-col sm:flex-row gap-x-2 items-center w-full sm:items-start">
+                            <span
+                                style={{ border: '3px outset rgba(0,0,0,0.3)' }}
+                                className="text-white text-start font-extralight bg-transparentContainer p-2 mb-2 sm:mb-0 " 
+                            >
+                                What I care about:{' '}
+                            </span>
+                            <div
+                                style={{ border: '3px outset rgba(0,0,0,0.3)' }}
+                                className="bg-transparentContainer p-2 flex items-center gap-x-3"
+                            >
+                                <ImageLink
+                                    altText="linux_img"
+                                    image="/images/linux-logo.png"
+                                    id="linux_img"
+                                    link="https://en.wikipedia.org/wiki/Linux"
+                                />
+                                <div className="flex text-white items-center">
+                                    (&nbsp;
+                                    <ImageLink
+                                        altText="debian_img"
+                                        image="/images/debian-logo.png"
+                                        id="debian_img"
+                                        link="https://en.wikipedia.org/wiki/Debian"
+                                    />
+                                    &nbsp;)
+                                </div>
+                                <ImageLink
+                                    altText="btc_img"
+                                    image="/images/btc-logo.png"
+                                    id="btc_img"
+                                    link="https://bitcoin.org/en/"
+                                />
+                                <ImageLink
+                                    altText="gadsden_img"
+                                    image="/images/gadsden.png"
+                                    id="gadsden_img"
+                                    link="https://www.libertarianism.org/"
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <ButtonsContainer />

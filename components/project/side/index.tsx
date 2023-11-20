@@ -18,6 +18,7 @@ export default function ProjectSide({ project }: Props) {
                     <div className="flex flex-col mb-2">
                         {links.map((link: string, i: number) => (
                             <div
+                                key={i}
                                 className={`shaded-button shaded-hover px-1 ${
                                     i !== links.length - 1 ? 'mb-2' : ''
                                 } text-white rounded-sm border-black border ${
