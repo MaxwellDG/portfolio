@@ -7,6 +7,7 @@ export default {
     HTML5: 'HTML5.png',
     CSS3: 'CSS3.png',
     Tailwind: 'tailwind.png',
+    Storybook: 'storybook.png',
     Redux: 'redux.png',
     Recoil: 'recoil.png',
     Webpack: 'webpack.png',

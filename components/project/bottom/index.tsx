@@ -1,8 +1,8 @@
 import iconsHashmap from '../../../data/iconsHashmap';
-import { Project } from '../../../data/projectData';
+import { IProject } from '../../../data/projectData';
 
 interface Props {
-    project: Project;
+    project: IProject;
 }
 
 export default function ProjectBottom({ project }: Props) {
@@ -10,7 +10,11 @@ export default function ProjectBottom({ project }: Props) {
 
     return (
         <div className="flex flex-1 flex-col relative">
-            <div className={`flex flex-wrap flex-1 overflow-auto p-2 ${github ? 'pr-12' : ''}`}>
+            <div
+                className={`flex flex-wrap flex-1 overflow-auto p-2 ${
+                    github ? 'pr-12' : ''
+                }`}
+            >
                 {[...languages, ...tech].map((item) => (
                     <div key={item} className="flex gap-x-1 mr-4 my-2">
                         <img

@@ -9,6 +9,8 @@ module.exports = {
     extend: {
       colors: {
         transparentContainer: "rgba(0, 0, 0, 0.65)",
+        link: "#007ec9",
+        linkHover: "#2a749f"
       },
       width: {
         infoBox: "400px"

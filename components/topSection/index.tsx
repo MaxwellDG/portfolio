@@ -28,6 +28,11 @@ export const TopSection = ({ routes, sectionName }: Props) => {
                         isBig={false}
                         shouldNav={false}
                     />
+                    <RouteButton
+                        route={routes[2]}
+                        isBig={false}
+                        shouldNav={false}
+                    />
                     <CVButton isBig={false} />
                 </div>
             </div>

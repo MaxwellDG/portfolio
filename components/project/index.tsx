@@ -1,13 +1,14 @@
 'use client';
 
 import React from 'react';
-import { Project as ProjectData } from '../../data/projectData';
+import { IProject as ProjectData } from '../../data/projectData';
 import Multimedia from '../media';
 import { PopupModal } from '../modals/skillsInfo';
 import MediaContent from '../media/mediaContent';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 import Twitter from '../../public/icons/twitter.svg';
 import Link from '../../public/icons/link.svg';
+import ImageLink from '../socials/imageLink';
 
 interface Props {
     project: ProjectData;
@@ -28,12 +29,14 @@ export default function Project({ project, isMobile }: Props) {
         links,
         linkTexts,
         github,
+        contributions,
     } = project;
 
     return (
         <div className="flex flex-col lg:flex-row max-w-2xl relative overflow-y-auto">
             <Multimedia
                 hasVideo={!!video}
+                hasExtraContent={!!video || !!image}
                 thumb={thumb}
                 expandMedia={() => toggleMediaModal(!isShowingMediaModal)}
             />
@@ -94,6 +97,33 @@ export default function Project({ project, isMobile }: Props) {
                     ) : null}
                     <p id="desc">{desc}</p>
                 </div>
+                {!!contributions && (
+                    <div
+                        className="text-white font-extralight p-2 bg-transparentContainer mx-2 mt-2 lg:mx-0"
+                        style={{ border: '2px outset rgba(0,0,0,0.3)' }}
+                    >
+                        <h3 className="mb-2">My contributions:</h3>
+                        {contributions.map((contribution) => (
+                            <div className="flex gap-x-2 group items-center">
+                                <div className="h-6 w-6">
+                                    <a
+                                        href={contribution}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <img
+                                            alt="github_link"
+                                            src="images/github_icon_white.png"
+                                        />
+                                    </a>
+                                </div>
+                                <a href={contribution} target="_blank" className="text-link group-hover:text-linkHover break-all">
+                                    {contribution}
+                                </a>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </div>
             <PopupModal
                 closeModal={() => toggleMediaModal(!isShowingMediaModal)}

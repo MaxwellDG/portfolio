@@ -17,6 +17,7 @@ export default function MobileNav() {
                     SCREEN_TYPE.SKILLS,
                     SCREEN_TYPE.HOBBY,
                     SCREEN_TYPE.ENTERPRISE,
+                    SCREEN_TYPE.OPENSOURCE
                 ].map((item) => (
                     <MobileRouteButton
                         key={item}

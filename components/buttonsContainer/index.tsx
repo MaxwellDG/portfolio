@@ -12,6 +12,7 @@ export default function ButtonsContainer() {
                         SCREEN_TYPE.SKILLS,
                         SCREEN_TYPE.HOBBY,
                         SCREEN_TYPE.ENTERPRISE,
+                        SCREEN_TYPE.OPENSOURCE
                     ].map((item) => (
                         <RouteButton
                             key={item}

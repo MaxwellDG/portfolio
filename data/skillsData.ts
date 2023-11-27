@@ -19,6 +19,7 @@ export default [
             'Tailwind',
             'Redux',
             'Recoil',
+            'Storybook',
             'Webpack',
         ],
     },

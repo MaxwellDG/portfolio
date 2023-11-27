@@ -159,7 +159,7 @@ $timing-function: ease-out;
         color: $text-color;
     }
     height: $height + px;
-    padding: 0 (($height/2) + px);
+    padding: 0 (($height/4) + px);
     background: linear-gradient(
         to bottom,
         saturate(lighten($color, 15%), 35%) 0%,
@@ -193,7 +193,7 @@ $timing-function: ease-out;
     }
     height: $height - 2 + px;
     margin-top: 2px;
-    padding: 0 (($height/2) + px);
+    padding: 0 (($height/4) + px);
 
     &::before{
         width: 0;
@@ -235,9 +235,14 @@ $timing-function: ease-out;
 }
 
 .right-nav{
-  border-left: 1px solid darken($color, 20%);
+  border-left: 0.1em solid darken($color, 20%);
 }
 
 .left-nav{
-  border-right: 1px solid darken($color, 20%);
+  border-right: 0.1em solid darken($color, 20%);
+}
+
+.mid-nav{
+    border-right: 0.1em solid darken($color, 20%);
+    border-left: 0.1em solid darken($color, 20%);
 }

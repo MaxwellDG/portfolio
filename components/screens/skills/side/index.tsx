@@ -8,7 +8,7 @@ type Props = {
 export default function SkillsSide({ focusedIndex }: Props) {
     return (
         <>
-            <h1 className="mb-2 ml-2 mt-2 text-xl underline">
+            <h1 className="mb-2 ml-2 mt-1 text-xl underline">
                 {skillsData[focusedIndex].name}
             </h1>
             <div className="flex flex-col flex-1 overflow-auto p-2">

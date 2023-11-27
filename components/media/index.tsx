@@ -6,17 +6,24 @@ interface Props {
     expandMedia: () => void;
     thumb: string;
     hasVideo: boolean;
+    hasExtraContent: boolean;
 }
 
-export default ({ thumb, hasVideo, expandMedia }: Props) => {
+export default ({ thumb, hasVideo, expandMedia, hasExtraContent }: Props) => {
     return (
         <div
             style={{ border: '2px outset rgba(0,0,0,0.3)' }}
-            className="flex items-center self-center lg:self-auto p-2 bg-transparentContainer hover:bg-[rgba(174,170,172,0.1)] mb-1 rounded-sm flex-col justify-center z-50 pointer-events-auto cursor-pointer"
+            className={`flex items-center self-center lg:self-auto p-2 bg-transparentContainer ${
+                hasExtraContent
+                    ? 'cursor-pointer hover:bg-[rgba(174,170,172,0.1)]'
+                    : ''
+            } mb-1 lg:mb-0 rounded-sm flex-col justify-center z-50 pointer-events-auto`}
         >
             <button
-                onClick={expandMedia}
-                className="flex justify-center items-center relative rounded lg:p-2 my-1 bg-transparent max-h-[200px] w-[200px] xxs:max-h-[250px] xxs:max-w-[250px] lg:w-[400px]"
+                onClick={hasExtraContent ? expandMedia : undefined}
+                className={`flex justify-center items-center relative rounded lg:p-2 my-1 bg-transparent max-h-[200px] w-[200px] xxs:max-h-[250px] xxs:max-w-[250px] lg:w-[400px] ${
+                    !hasExtraContent ? 'cursor-default' : ''
+                }`}
             >
                 {hasVideo && (
                     <>
