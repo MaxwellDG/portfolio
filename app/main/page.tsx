@@ -8,7 +8,7 @@ import SkillsMobile from '../../components/screens/skills/mobile';
 import SkillsSide from '../../components/screens/skills/side';
 import { TopSection } from '../../components/topSection';
 import { ScreenContext } from '../../contexts/screenContext';
-import { SCREEN_TYPE } from '../../contexts/screenContext/types';
+import { PROJECT_DATASETS, SCREEN_TYPE } from '../../contexts/screenContext/types';
 import {
     enterpriseProjectData,
     hobbyProjectData,
@@ -18,13 +18,6 @@ import skillsData from '../../data/skillsData';
 import LeftArrow from '../../public/icons/left-arrow.svg';
 import './styles.scss';
 import Projects from '../../components/screens/projects';
-
-export const PROJECT_DATASETS = {
-    [SCREEN_TYPE.SKILLS]: skillsData,
-    [SCREEN_TYPE.HOBBY]: hobbyProjectData,
-    [SCREEN_TYPE.ENTERPRISE]: enterpriseProjectData,
-    [SCREEN_TYPE.OPENSOURCE]: opensourceData,
-};
 
 export default function Page() {
     const screen = useContext(ScreenContext);
