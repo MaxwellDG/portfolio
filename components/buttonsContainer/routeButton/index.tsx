@@ -74,17 +74,19 @@ export function MobileRouteButton({
                     : isActive && route === SCREEN_TYPE.HOBBY
                     ? 'mid-active-nav'
                     : isActive && route === SCREEN_TYPE.ENTERPRISE
+                    ? 'mid-active-nav'
+                    : isActive && route === SCREEN_TYPE.OPENSOURCE
                     ? 'right-active-nav'
                     : ''
             } ${
                 !isActive && route === SCREEN_TYPE.SKILLS
                     ? 'left-nav'
-                    : !isActive && route === SCREEN_TYPE.ENTERPRISE
+                    : !isActive && route === SCREEN_TYPE.OPENSOURCE
                     ? 'right-nav'
-                    : ''
+                    : 'mid-nav'
             }`}
         >
-            <p className="text-white font-extralight whitespace-nowrap">
+            <p className="text-white font-light whitespace-nowrap text-xs">
                 {route.split(' ')[0]}
             </p>
         </div>

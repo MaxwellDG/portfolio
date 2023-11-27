@@ -1,54 +1,48 @@
 'use client';
 
 import React, { useContext } from 'react';
-import ProjectBottom from '../../components/project/bottom';
 import ProjectMobile from '../../components/project/mobile';
 import ProjectSide from '../../components/project/side';
-import EnterpriseProjects from '../../components/screens/enterprise';
-import HobbyProjects from '../../components/screens/hobby';
 import Skills from '../../components/screens/skills';
-import SkillsBottom from '../../components/skillsScroller';
 import SkillsMobile from '../../components/screens/skills/mobile';
 import SkillsSide from '../../components/screens/skills/side';
 import { TopSection } from '../../components/topSection';
 import { ScreenContext } from '../../contexts/screenContext';
 import { SCREEN_TYPE } from '../../contexts/screenContext/types';
-import { AnimatePresence, motion } from 'framer-motion';
 import {
     enterpriseProjectData,
     hobbyProjectData,
+    opensourceData,
 } from '../../data/projectData';
 import skillsData from '../../data/skillsData';
 import LeftArrow from '../../public/icons/left-arrow.svg';
 import './styles.scss';
+import Projects from '../../components/screens/projects';
+
+export const PROJECT_DATASETS = {
+    [SCREEN_TYPE.SKILLS]: skillsData,
+    [SCREEN_TYPE.HOBBY]: hobbyProjectData,
+    [SCREEN_TYPE.ENTERPRISE]: enterpriseProjectData,
+    [SCREEN_TYPE.OPENSOURCE]: opensourceData,
+};
 
 export default function Page() {
     const screen = useContext(ScreenContext);
 
     const [focusedIndex, setFocusedIndex] = React.useState(0);
-    const [realScreen, setRealScreen] = React.useState(screen);
 
-    const maxIndex = React.useMemo(() => {
-        switch (screen) {
-            case SCREEN_TYPE.SKILLS:
-                return skillsData.length - 1;
-            case SCREEN_TYPE.HOBBY:
-                return hobbyProjectData.length - 1;
-            case SCREEN_TYPE.ENTERPRISE:
-                return enterpriseProjectData.length - 1;
-        }
-    }, [screen]);
+    const maxIndex = React.useMemo(
+        () => PROJECT_DATASETS[screen].length - 1,
+        [screen]
+    );
 
-    const screenRoutes = React.useMemo(() => {
-        switch (screen) {
-            case SCREEN_TYPE.SKILLS:
-                return [SCREEN_TYPE.HOBBY, SCREEN_TYPE.ENTERPRISE];
-            case SCREEN_TYPE.HOBBY:
-                return [SCREEN_TYPE.SKILLS, SCREEN_TYPE.ENTERPRISE];
-            case SCREEN_TYPE.ENTERPRISE:
-                return [SCREEN_TYPE.SKILLS, SCREEN_TYPE.HOBBY];
-        }
-    }, [screen, focusedIndex]);
+    const screenRoutes = React.useMemo(
+        () =>
+            Object.keys(PROJECT_DATASETS).filter(
+                (screenType) => screenType !== screen
+            ),
+        [screen, focusedIndex]
+    );
 
     const getMainComponent = React.useCallback(() => {
         switch (screen) {
@@ -59,10 +53,14 @@ export default function Page() {
                         setFocusedIndex={setFocusedIndex}
                     />
                 );
-            case SCREEN_TYPE.HOBBY:
-                return <HobbyProjects focusedIndex={focusedIndex} />;
-            case SCREEN_TYPE.ENTERPRISE:
-                return <EnterpriseProjects focusedIndex={focusedIndex} />;
+            // enterprise, hobby, or opensource projects
+            default:
+                return (
+                    <Projects
+                        focusedIndex={focusedIndex}
+                        data={PROJECT_DATASETS[screen]}
+                    />
+                );
         }
     }, [screen, focusedIndex]);
 
@@ -75,20 +73,14 @@ export default function Page() {
                         setFocusedIndex={setFocusedIndex}
                     />
                 );
-            case SCREEN_TYPE.HOBBY:
+            // enterprise, hobby, or opensource projects
+            default:
                 return (
                     <ProjectMobile
                         focusedIndex={focusedIndex}
                         setFocusedIndex={setFocusedIndex}
-                        array={hobbyProjectData}
-                    />
-                );
-            case SCREEN_TYPE.ENTERPRISE:
-                return (
-                    <ProjectMobile
-                        focusedIndex={focusedIndex}
-                        setFocusedIndex={setFocusedIndex}
-                        array={enterpriseProjectData}
+                        array={PROJECT_DATASETS[screen]}
+                        isOpensourceProjects={screen === SCREEN_TYPE.OPENSOURCE}
                     />
                 );
         }
@@ -102,17 +94,12 @@ export default function Page() {
                         <SkillsSide focusedIndex={focusedIndex} />
                     )
                 );
-            case SCREEN_TYPE.HOBBY:
+            // enterprise, hobby, or opensource projects
+            default:
                 return (
-                    hobbyProjectData[focusedIndex] && (
-                        <ProjectSide project={hobbyProjectData[focusedIndex]} />
-                    )
-                );
-            case SCREEN_TYPE.ENTERPRISE:
-                return (
-                    enterpriseProjectData[focusedIndex] && (
+                    PROJECT_DATASETS[screen][focusedIndex] && (
                         <ProjectSide
-                            project={enterpriseProjectData[focusedIndex]}
+                            project={PROJECT_DATASETS[screen][focusedIndex]}
                         />
                     )
                 );
@@ -151,7 +138,10 @@ export default function Page() {
     return (
         <div className="flex flex-1 lg:h-full lg:w-full justify-center">
             <div className="flex flex-1 lg:flex-initial w-full flex-col lg:full lg:max-w-6xl lg:m-auto lg:p-2">
-                <TopSection sectionName={screen} routes={screenRoutes} />
+                <TopSection
+                    sectionName={screen}
+                    routes={screenRoutes as SCREEN_TYPE[]}
+                />
                 <div
                     className="flex flex-1 lg:flex-auto lg:h-[600px] flex-col lg:flex-row"
                     style={{ boxShadow: '3px 10px 10px rgba(0,0,0,0.3)' }}
@@ -189,32 +179,38 @@ export default function Page() {
                         }}
                     >
                         {getSideComponent()}
-                        <div className="w-full flex">
-                            <div
-                                onClick={() => handleArrowPress(-1, maxIndex)}
-                                className="keyboard-button flex justify-center items-center"
-                            >
-                                <div>
-                                    <LeftArrow
-                                        height={30}
-                                        width={30}
-                                        fill={'black'}
-                                    />
+                        {screen !== SCREEN_TYPE.OPENSOURCE && (
+                            <div className="w-full flex">
+                                <div
+                                    onClick={() =>
+                                        handleArrowPress(-1, maxIndex)
+                                    }
+                                    className="keyboard-button flex justify-center items-center"
+                                >
+                                    <div>
+                                        <LeftArrow
+                                            height={30}
+                                            width={30}
+                                            fill={'black'}
+                                        />
+                                    </div>
+                                </div>
+                                <div
+                                    onClick={() =>
+                                        handleArrowPress(1, maxIndex)
+                                    }
+                                    className="keyboard-button flex justify-center items-center"
+                                >
+                                    <div className="rotate-[180deg]" style={{}}>
+                                        <LeftArrow
+                                            height={30}
+                                            width={30}
+                                            fill={'black'}
+                                        />
+                                    </div>
                                 </div>
                             </div>
-                            <div
-                                onClick={() => handleArrowPress(1, maxIndex)}
-                                className="keyboard-button flex justify-center items-center"
-                            >
-                                <div className="rotate-[180deg]" style={{}}>
-                                    <LeftArrow
-                                        height={30}
-                                        width={30}
-                                        fill={'black'}
-                                    />
-                                </div>
-                            </div>
-                        </div>
+                        )}
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-export interface Project {
+export interface IProject {
     name: string;
     links: string[];
     linkTexts: string[];
@@ -10,9 +10,33 @@ export interface Project {
     image?: string;
     mobileImage?: string;
     github?: string;
+    contributions?: string[];
 }
 
-export const hobbyProjectData: Project[] = [
+export const opensourceData: IProject[] = [
+    {
+        name: 'Galoy',
+        github: 'https://github.com/GaloyMoney',
+        links: ['https://galoy.io'],
+        linkTexts: ['Galoy'],
+        desc: "GaloyMoney is an open source project that aims to develop the standard for Bitcoin banking. Originally built as the foundation for the 'Bitcoin Beach Wallet', it has since attracted numerous open source contributors who work alongside Galoy's engineers. The platform includes infrastructure, backend, API, and frontend components essential for launching a Bitcoin bank.",
+        thumb: 'images/galoy-logo.png',
+        languages: ['Typescript'],
+        tech: [
+            'React Native',
+            'Android SDK',
+            'XCode',
+            'Storybook',
+            'GraphQL',
+            'Node.js',
+        ],
+        contributions: [
+            'https://github.com/GaloyMoney/galoy-mobile',
+        ]
+    },
+];
+
+export const hobbyProjectData: IProject[] = [
     {
         name: 'Piecework-BTC',
         github: 'https://github.com/MaxwellDG/piecework-btc',
@@ -23,7 +47,7 @@ export const hobbyProjectData: Project[] = [
         mobileImage: 'images/piecework-btc-mobile.png',
         thumb: 'images/piecework-btc.png',
         languages: ['Typescript'],
-        tech: ['Node.js', 'React', 'Next', 'Mongo' , 'Google Cloud', 'Tailwind'],
+        tech: ['Node.js', 'React', 'Next', 'Mongo', 'Google Cloud', 'Tailwind'],
     },
     // {
     //     name: "Duel Arena",
@@ -61,7 +85,7 @@ export const hobbyProjectData: Project[] = [
     },
 ];
 
-export const enterpriseProjectData: Project[] = [
+export const enterpriseProjectData: IProject[] = [
     {
         name: "The Bard's Quill",
         links: ['https://thebardsquill.com'],
@@ -80,7 +104,15 @@ export const enterpriseProjectData: Project[] = [
         video: 'videos/domination.mp4',
         thumb: 'images/domination_thumb.gif',
         languages: ['Typescript'],
-        tech: ['Node.js', 'React', 'Solana', 'Postgres', 'Recoil', 'Web3.js', 'Tailwind']
+        tech: [
+            'Node.js',
+            'React',
+            'Solana',
+            'Postgres',
+            'Recoil',
+            'Web3.js',
+            'Tailwind',
+        ],
     },
     {
         name: 'Stache',
@@ -88,14 +120,28 @@ export const enterpriseProjectData: Project[] = [
             'https://www.stache.io',
             'https://app.stache.io/bazaar',
             'https://www.xnft.gg/app/DNUrvMF9ytAYNS66pbfcM9FrHHmJqghVeQKgbo9WU1KM',
-            'https://twitter.com/SmartStache'
+            'https://twitter.com/SmartStache',
         ],
-        linkTexts: ['Stache Intro', 'Stache App',  'Stache as xNFT', '@SmartStache'],
+        linkTexts: [
+            'Stache Intro',
+            'Stache App',
+            'Stache as xNFT',
+            '@SmartStache',
+        ],
         desc: "A Solana blockchain infrastructure and application project. First we brought 'Smart Wallet' technology to Solana. Then we created the 'Stache' application to build on that. The current main attraction is the ability for users to make their own shops, thus decentralizing the currently centralized marketplace model.",
         video: 'videos/stache.mp4',
         thumb: 'images/Stache_Logo_Color_Medium.png',
         languages: ['Typescript'],
-        tech: ['Node.js', 'React Native', 'Solana', 'Nest', 'Postgres', 'Recoil', 'Tailwind'],
+        tech: [
+            'Node.js',
+            'React Native',
+            'Expo',
+            'Solana',
+            'Nest',
+            'Postgres',
+            'Recoil',
+            'Tailwind',
+        ],
     },
     {
         name: 'SMART Studio',
@@ -125,9 +171,16 @@ export const enterpriseProjectData: Project[] = [
         image: 'images/tda.jpeg',
         thumb: 'images/tda_thumb.jpeg',
         languages: ['Javascript'],
-        tech: ['React Native', 'XCode', 'Android SDK', 'OAuth2', 'Pusher', 'Kevel'],
+        tech: [
+            'React Native',
+            'XCode',
+            'Android SDK',
+            'OAuth2',
+            'Pusher',
+            'Kevel',
+        ],
     },
-    
+
     // {
     //     name: 'Lucky13 Tattoos',
     //     links: [],

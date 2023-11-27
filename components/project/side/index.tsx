@@ -1,10 +1,10 @@
 import iconsHashmap from '../../../data/iconsHashmap';
-import { Project } from '../../../data/projectData';
+import { IProject } from '../../../data/projectData';
 import Twitter from '../../../public/icons/twitter.svg';
 import Link from '../../../public/icons/link.svg';
 
 interface Props {
-    project: Project;
+    project: IProject;
 }
 
 export default function ProjectSide({ project }: Props) {
@@ -12,7 +12,7 @@ export default function ProjectSide({ project }: Props) {
 
     return (
         <div className="flex flex-col flex-1 relative overflow-y-auto">
-            <h1 className="mx-2 mt-2 text-xl underline">{name}</h1>
+            <h1 className="mx-2 mt-1 text-xl underline">{name}</h1>
             <div className="flex flex-col flex-1 p-2">
                 {links.length ? (
                     <div className="flex flex-col mb-2">
@@ -22,9 +22,7 @@ export default function ProjectSide({ project }: Props) {
                                 className={`shaded-button shaded-hover px-1 ${
                                     i !== links.length - 1 ? 'mb-2' : ''
                                 } text-white rounded-sm border-black border ${
-                                    link === 'https://piecework-btc.com'
-                                        ? 'mt-5'
-                                        : ''
+                                    github && link.length ? 'mt-5' : ''
                                 }`}
                             >
                                 <a
@@ -50,12 +48,9 @@ export default function ProjectSide({ project }: Props) {
                     </div>
                 ) : null}
                 <h2>Language:</h2>
-                <div className="flex flex-col p-2">
+                <div className="flex flex-col p-2 gap-y-2">
                     {languages.map((lang) => (
-                        <div
-                            key={lang}
-                            className="flex items-center gap-x-2 mb-2"
-                        >
+                        <div key={lang} className="flex items-center gap-x-2">
                             <img
                                 src={`/images/${
                                     iconsHashmap[lang.replaceAll(' ', '')]
@@ -67,11 +62,11 @@ export default function ProjectSide({ project }: Props) {
                     ))}
                 </div>
                 <h2>Tech stack:</h2>
-                <div className="flex flex-col p-2">
+                <div className="flex flex-col p-2 gap-y-2">
                     {tech.map((tech) => (
                         <div
                             key={tech}
-                            className="flex items-center gap-x-2 mb-2 whitespace-nowrap"
+                            className="flex items-center gap-x-2 whitespace-nowrap"
                         >
                             <img
                                 src={`/images/${

@@ -30,10 +30,10 @@ export default function Page() {
                             className="text-white text-start font-extralight bg-transparentContainer p-2"
                         >
                             <span>
-                                I used to work in the hospitality industry,
+                                I used to work in the hospitality industry
                                 while spending my free-time coding as a hobby.
                                 Overtime I was able to acquire some contract and
-                                part-time work, which then developed into a
+                                part-time work which then grew into a
                                 full-time career developing applications. I'm
                                 very happy with where I'm at now, and wish to
                                 continue doing much of the same.
