@@ -117,10 +117,8 @@ export default function Project({ project, isMobile }: Props) {
                                         />
                                     </a>
                                 </div>
-                                <a href={contribution} target="_blank">
-                                    <p className="text-link group-hover:text-linkHover">
-                                        {contribution}
-                                    </p>
+                                <a href={contribution} target="_blank" className="text-link group-hover:text-linkHover break-all">
+                                    {contribution}
                                 </a>
                             </div>
                         ))}

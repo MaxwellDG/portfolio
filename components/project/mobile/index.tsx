@@ -6,7 +6,7 @@ import SkillsScroller from '../../skillsScroller';
 // ** The array has its order manipulated here in order to get the css transition animation offset correctly ** //
 
 type Props = {
-    focusedIndex: boolean;
+    focusedIndex: number;
     setFocusedIndex: (number: number) => void;
     array: IProject[];
     isOpensourceProjects: boolean;
@@ -17,7 +17,7 @@ export default function ProjectMobile({
     setFocusedIndex,
     array,
     isOpensourceProjects,
-}) {
+}: Props) {
     return (
         <div className="absolute top-16 left-0 bottom-0 right-0 z-50 flex flex-col w-full">
             {isOpensourceProjects ? (

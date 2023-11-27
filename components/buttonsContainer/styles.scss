@@ -193,7 +193,7 @@ $timing-function: ease-out;
     }
     height: $height - 2 + px;
     margin-top: 2px;
-    padding: 0 (($height/2) + px);
+    padding: 0 (($height/4) + px);
 
     &::before{
         width: 0;
