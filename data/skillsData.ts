@@ -21,14 +21,17 @@ export default [
             'Recoil',
             'Storybook',
             'Webpack',
+            'Vite'
         ],
     },
     {
         name: 'Backend',
         skills: [
             'Node.js',
+            'PHP',
             'Nest',
             'Next',
+            'Laravel',
             'Mongo',
             'Postgres',
             'SQL',
@@ -52,7 +55,7 @@ export default [
     },
     {
         name: 'Project Management',
-        skills: ['Agile', 'Scrum', 'Asana', 'Git', 'GitLabs', 'BitBucket'],
+        skills: ['Agile', 'Jira', 'Scrum', 'Asana', 'Git', 'GitLabs', 'BitBucket'],
     },
     {
         name: 'Design',
