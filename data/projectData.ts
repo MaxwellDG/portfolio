@@ -91,9 +91,9 @@ export const enterpriseProjectData: IProject[] = [
         links: ['https://netcoins.app'],
         linkTexts: ['netcoins.app'],
         desc: 'A Canadian centralized exchange for trading cryptocurrencies.',
-        video: 'videos/thebardsquill_cropped.mp4',
+        video: '',
         languages: ['Typescript', 'PHP'],
-        thumb: 'images/thebardsquill_cropped_thumb.png',
+        thumb: '',
         tech: [
             'React',
             'Vue',
@@ -112,9 +112,9 @@ export const enterpriseProjectData: IProject[] = [
         links: ['https://www.netcoins.com/netcoins-app'],
         linkTexts: ['netcoins.com'],
         desc: 'A Canadian centralized exchange for trading cryptocurrencies.',
-        video: 'videos/thebardsquill_cropped.mp4',
+        video: '',
         languages: ['Typescript'],
-        thumb: 'images/thebardsquill_cropped_thumb.png',
+        thumb: '',
         tech: [
             'React Native',
             'Expo',

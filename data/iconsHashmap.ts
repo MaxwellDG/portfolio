@@ -14,6 +14,7 @@ export default {
     'Node.js': 'nodejs.png',
     Jira: 'jira.png',
     Vite: "vite.png",
+    Webflow: "webflow.png",
     Laravel: 'lar.png',
     PHP: 'php.png',
     Sentry: 'sentry.png',

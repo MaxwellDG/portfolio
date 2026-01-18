@@ -30,13 +30,13 @@ export default function Page() {
                             className="text-white text-start font-extralight bg-transparentContainer p-2"
                         >
                             <span>
-                                I used to work in the hospitality industry
-                                while spending my free-time coding as a hobby.
+                                I used to work in the hospitality industry while
+                                spending my free-time coding as a hobby.
                                 Overtime I was able to acquire some contract and
-                                part-time work which then grew into a
-                                full-time career developing applications. I'm
-                                very happy with where I'm at now, and wish to
-                                continue doing much of the same.
+                                part-time work which then grew into a full-time
+                                career developing applications. I'm very happy
+                                with where I'm at now, and wish to continue
+                                doing much of the same.
                             </span>
                             <br />
                             <br />
@@ -46,18 +46,13 @@ export default function Page() {
                                 desktop. This has ranged a wide variety of
                                 industries including: gaming, health-care,
                                 social media, blockchain, and administration.
-                                During this time, the vast majority of my
-                                work was done in
+                                During this time the vast majority of my work
+                                was done in
                                 <span style={{ color: '#c98659' }}>
                                     &nbsp;Typescript
-                                    <span style={{ color: 'white' }}>,</span>
                                     &nbsp;
                                 </span>
-                                <span style={{ color: '#c98659' }}>
-                                    &nbsp;Solana
-                                    <span style={{ color: 'white' }}>,</span>
-                                </span>{' '}
-                                and/or
+                                and
                                 <span style={{ color: '#c98659' }}>
                                     &nbsp;React (Native)
                                 </span>{' '}
@@ -68,17 +63,16 @@ export default function Page() {
                                 <span>
                                     In my spare time i'm currently advancing in
                                     <span style={{ color: '#c98659' }}>
-                                        &nbsp;Rust
+                                        &nbsp;Webflow
                                     </span>{' '}
                                     and{' '}
                                     <span style={{ color: '#c98659' }}>
                                         Linux
                                     </span>
-                                    . For the former, I've seen its growing
-                                    capabilities in web application development
-                                    - specifically in high performance. And
-                                    per the latter, I've begun experimenting
-                                    with programming{' '}
+                                    . For the former, I've seen how quickly it
+                                    can generate websites for clients. As per
+                                    the latter, it's just for fun. I've begun
+                                    experimenting with programming{' '}
                                     <span style={{ color: '#c98659' }}>
                                         Raspberry-Pis
                                     </span>{' '}
@@ -90,7 +84,7 @@ export default function Page() {
                         <div className="flex flex-col sm:flex-row gap-x-2 items-center w-full sm:items-start">
                             <span
                                 style={{ border: '3px outset rgba(0,0,0,0.3)' }}
-                                className="text-white text-start font-extralight bg-transparentContainer p-2 mb-2 sm:mb-0 " 
+                                className="text-white text-start font-extralight bg-transparentContainer p-2 mb-2 sm:mb-0 "
                             >
                                 What I care about:{' '}
                             </span>
@@ -119,6 +113,12 @@ export default function Page() {
                                     image="/images/btc-logo.png"
                                     id="btc_img"
                                     link="https://bitcoin.org/en/"
+                                />
+                                <ImageLink
+                                    altText="earth_img"
+                                    image="/images/planet-earth.png"
+                                    id="earth_img"
+                                    link="https://theoceancleanup.com/"
                                 />
                                 <ImageLink
                                     altText="gadsden_img"

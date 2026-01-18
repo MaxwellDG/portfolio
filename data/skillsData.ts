@@ -21,7 +21,8 @@ export default [
             'Recoil',
             'Storybook',
             'Webpack',
-            'Vite'
+            'Vite',
+            'Webflow'
         ],
     },
     {
